@@ -96,6 +96,7 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [TranscriptionController](#transcription_controller)
 * [PhoneNumberController](#phone_number_controller)
 * [UsageController](#usage_controller)
+* [EmailController](#email_controller)
 * [SMSController](#sms_controller)
 * [AccountController](#account_controller)
 * [RecordingController](#recording_controller)
@@ -174,8 +175,8 @@ def create_list_participant(conference_sid,
 
 ```ruby
 conference_sid = 'ConferenceSid'
-page = 198
-pagesize = 198
+page = 189
+pagesize = 189
 muted = true
 deaf = true
 response_type = 'json'
@@ -216,7 +217,7 @@ def add_participant(conferencesid,
 ```ruby
 conferencesid = 'conferencesid'
 participantnumber = 'participantnumber'
-tocountrycode = 198
+tocountrycode = 189
 muted = true
 deaf = true
 response_type = 'json'
@@ -286,8 +287,8 @@ def create_list_conference(page = nil,
 #### Example Usage
 
 ```ruby
-page = 198
-page_size = 198
+page = 189
+page_size = 189
 friendly_name = 'FriendlyName'
 status = Message360::InterruptedCallStatusEnum::CANCELED
 date_created = 'DateCreated'
@@ -338,8 +339,8 @@ def create_list_transcription(page = nil,
 #### Example Usage
 
 ```ruby
-page = 198
-page_size = 198
+page = 189
+page_size = 189
 status = Message360::StatusEnum::INPROGRESS
 date_transcribed = 'DateTranscribed'
 response_type = 'json'
@@ -475,7 +476,7 @@ def create_available_phone_number(number_type,
 ```ruby
 number_type = 'NumberType'
 area_code = 'AreaCode'
-page_size = 198
+page_size = 189
 response_type = 'json'
 
 result = phoneNumber.create_available_phone_number(number_type, area_code, page_size, response_type)
@@ -510,8 +511,8 @@ def create_list_number(page = nil,
 #### Example Usage
 
 ```ruby
-page = 198
-page_size = 198
+page = 189
+page_size = 189
 number_type = 'NumberType'
 friendly_name = 'FriendlyName'
 response_type = 'json'
@@ -725,6 +726,373 @@ result = usage.create_list_usage(product_code, start_date, end_date, response_ty
 
 [Back to List of Controllers](#list_of_controllers)
 
+### <a name="email_controller"></a>![Class: ](http://apidocs.io/img/class.png ".EmailController") EmailController
+
+#### Get singleton instance
+
+The singleton instance of the ``` EmailController ``` class can be accessed from the API Client.
+
+```ruby
+email = client.email
+```
+
+#### <a name="create_send_email"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
+
+> Send out an email
+
+
+```ruby
+def create_send_email(to, 
+                          from, 
+                          type, 
+                          subject, 
+                          message, 
+                          cc = nil, 
+                          bcc = nil, 
+                          attachment = nil, 
+                          response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| to |  ``` Required ```  | The to email address |
+| from |  ``` Required ```  | The from email address |
+| type |  ``` Required ```  ``` DefaultValue ```  | email format type, html or text |
+| subject |  ``` Required ```  | Email subject |
+| message |  ``` Required ```  | The body of the email message |
+| cc |  ``` Optional ```  | CC Email address |
+| bcc |  ``` Optional ```  | BCC Email address |
+| attachment |  ``` Optional ```  | File to be attached.File must be less than 7MB. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+to = 'to'
+from = 'from'
+type = 'html'
+subject = 'subject'
+message = 'message'
+cc = 'cc'
+bcc = 'bcc'
+attachment = "PathToFile"
+response_type = 'json'
+
+result = email.create_send_email(to, from, type, subject, message, cc, bcc, attachment, response_type)
+
+```
+
+
+#### <a name="create_delete_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_unsubscribes") create_delete_unsubscribes
+
+> Delete emails from the unsubscribe list
+
+
+```ruby
+def create_delete_unsubscribes(email, 
+                                   response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email to remove from the unsubscribe list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+email = 'email'
+response_type = 'json'
+
+result = email.create_delete_unsubscribes(email, response_type)
+
+```
+
+
+#### <a name="create_list_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_unsubscribes") create_list_unsubscribes
+
+> List all unsubscribed email addresses
+
+
+```ruby
+def create_list_unsubscribes(response_type = 'json', 
+                                 offset = nil, 
+                                 limit = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+| offset |  ``` Optional ```  | Starting record of the list |
+| limit |  ``` Optional ```  | Maximum number of records to be returned |
+
+
+#### Example Usage
+
+```ruby
+response_type = 'json'
+offset = 'offset'
+limit = 'limit'
+
+result = email.create_list_unsubscribes(response_type, offset, limit)
+
+```
+
+
+#### <a name="add_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.add_unsubscribes") add_unsubscribes
+
+> Add an email to the unsubscribe list
+
+
+```ruby
+def add_unsubscribes(email, 
+                         response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email to add to the unsubscribe list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+email = 'email'
+response_type = 'json'
+
+result = email.add_unsubscribes(email, response_type)
+
+```
+
+
+#### <a name="create_delete_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_spam") create_delete_spam
+
+> Deletes a email address marked as spam from the spam list
+
+
+```ruby
+def create_delete_spam(email, 
+                           response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | Email address |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+email = 'email'
+response_type = 'json'
+
+result = email.create_delete_spam(email, response_type)
+
+```
+
+
+#### <a name="create_delete_block"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_block") create_delete_block
+
+> Deletes a blocked email
+
+
+```ruby
+def create_delete_block(email, 
+                            response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | Email address to remove from block list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+email = 'email'
+response_type = 'json'
+
+result = email.create_delete_block(email, response_type)
+
+```
+
+
+#### <a name="create_list_invalid"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_invalid") create_list_invalid
+
+> List out all invalid email addresses
+
+
+```ruby
+def create_list_invalid(response_type = 'json', 
+                            offet = nil, 
+                            limit = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+| offet |  ``` Optional ```  | Starting record for listing out emails |
+| limit |  ``` Optional ```  | Maximum number of records to return |
+
+
+#### Example Usage
+
+```ruby
+response_type = 'json'
+offet = 'offet'
+limit = 'limit'
+
+result = email.create_list_invalid(response_type, offet, limit)
+
+```
+
+
+#### <a name="create_delete_bounces"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_bounces") create_delete_bounces
+
+> Delete an email address from the bounced address list
+
+
+```ruby
+def create_delete_bounces(email, 
+                              response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email address to remove from the bounce list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+email = 'email'
+response_type = 'json'
+
+result = email.create_delete_bounces(email, response_type)
+
+```
+
+
+#### <a name="create_list_bounces"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_bounces") create_list_bounces
+
+> List out all email addresses that have bounced
+
+
+```ruby
+def create_list_bounces(response_type = 'json', 
+                            offset = nil, 
+                            limit = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+| offset |  ``` Optional ```  | The record to start the list at |
+| limit |  ``` Optional ```  | The maximum number of records to return |
+
+
+#### Example Usage
+
+```ruby
+response_type = 'json'
+offset = 'offset'
+limit = 'limit'
+
+result = email.create_list_bounces(response_type, offset, limit)
+
+```
+
+
+#### <a name="create_list_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_spam") create_list_spam
+
+> List out all email addresses marked as spam
+
+
+```ruby
+def create_list_spam(response_type, 
+                         offset = nil, 
+                         limit = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| response_type |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
+| offset |  ``` Optional ```  | The record number to start the list at |
+| limit |  ``` Optional ```  | Maximum number of records to return |
+
+
+#### Example Usage
+
+```ruby
+response_type = 'json'
+offset = 'offset'
+limit = 'limit'
+
+result = email.create_list_spam(response_type, offset, limit)
+
+```
+
+
+#### <a name="create_list_blocks"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_blocks") create_list_blocks
+
+> Outputs email addresses on your blocklist
+
+
+```ruby
+def create_list_blocks(offset = nil, 
+                           limit = nil, 
+                           response_type = 'json'); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| offset |  ``` Optional ```  | Where to start in the output list |
+| limit |  ``` Optional ```  | Maximum number of records to return |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+offset = 'offset'
+limit = 'limit'
+response_type = 'json'
+
+result = email.create_list_blocks(offset, limit, response_type)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ### <a name="sms_controller"></a>![Class: ](http://apidocs.io/img/class.png ".SMSController") SMSController
 
 #### Get singleton instance
@@ -840,8 +1208,8 @@ def create_list_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 156
-pagesize = 156
+page = 6
+pagesize = 6
 from = 'from'
 to = 'to'
 datesent = 'datesent'
@@ -879,7 +1247,7 @@ def create_list_inbound_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 156
+page = 6
 pagesize = 'pagesize'
 from = 'from'
 to = 'to'
@@ -1028,8 +1396,8 @@ def create_list_recording(page = nil,
 #### Example Usage
 
 ```ruby
-page = 156
-page_size = 156
+page = 6
+page_size = 6
 date_created = 'DateCreated'
 call_sid = 'CallSid'
 response_type = 'json'
@@ -1152,14 +1520,14 @@ status_call_back_method = Message360::HttpMethodEnum::GET
 fall_back_url = 'FallBackUrl'
 fall_back_method = Message360::HttpMethodEnum::GET
 heart_beat_url = 'HeartBeatUrl'
-heart_beat_method = true
-timeout = 156
+heart_beat_method = false
+timeout = 6
 play_dtmf = 'PlayDtmf'
-hide_caller_id = true
-record = true
+hide_caller_id = false
+record = false
 record_call_back_url = 'RecordCallBackUrl'
 record_call_back_method = Message360::HttpMethodEnum::GET
-transcribe = true
+transcribe = false
 transcribe_call_back_url = 'TranscribeCallBackUrl'
 if_machine = Message360::IfMachineEnum::CONTINUE
 response_type = 'json'
@@ -1200,10 +1568,10 @@ def create_play_audio(length,
 #### Example Usage
 
 ```ruby
-length = 156
+length = 6
 direction = Message360::DirectionEnum::IN
-loop = true
-mix = true
+loop = false
+mix = false
 call_sid = 'CallSid'
 audio_url = 'AudioUrl'
 response_type = 'json'
@@ -1245,9 +1613,9 @@ def create_record_call(call_sid,
 
 ```ruby
 call_sid = 'CallSid'
-record = true
+record = false
 direction = Message360::DirectionEnum::IN
-time_limit = 156
+time_limit = 6
 call_back_url = 'CallBackUrl'
 fileformat = Message360::AudioFormatEnum::MP3
 response_type = 'json'
@@ -1292,11 +1660,11 @@ def create_voice_effect(call_sid,
 ```ruby
 call_sid = 'CallSid'
 audio_direction = Message360::AudioDirectionEnum::IN
-pitch_semi_tones = 156.766564015656
-pitch_octaves = 156.766564015656
-pitch = 156.766564015656
-rate = 156.766564015656
-tempo = 156.766564015656
+pitch_semi_tones = 6.83268090795385
+pitch_octaves = 6.83268090795385
+pitch = 6.83268090795385
+rate = 6.83268090795385
+tempo = 6.83268090795385
 response_type = 'json'
 
 result = call.create_voice_effect(call_sid, audio_direction, pitch_semi_tones, pitch_octaves, pitch, rate, tempo, response_type)

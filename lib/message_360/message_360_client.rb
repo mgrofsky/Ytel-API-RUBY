@@ -26,6 +26,12 @@ module Message360
       UsageController.instance
     end
 
+    # Singleton access to email controller
+    # @return [EmailController] Returns the controller instance
+    def email
+      EmailController.instance
+    end
+
     # Singleton access to sms controller
     # @return [SMSController] Returns the controller instance
     def sms

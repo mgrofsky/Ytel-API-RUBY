@@ -4,7 +4,7 @@ module Message360
   class BaseController
     attr_accessor :http_client, :http_call_back
 
-    @@http_client = UnirestClient.new
+    @@http_client = UnirestClient.new(10)
 
     def initialize(http_client: nil, http_call_back: nil)
       @http_client = http_client ||= @@http_client

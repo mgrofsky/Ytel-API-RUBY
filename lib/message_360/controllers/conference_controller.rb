@@ -277,7 +277,7 @@ module Message360
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
     # @param [String] friendly_name Optional parameter: Only return conferences with the specified FriendlyName
-    # @param [InterruptedCallStatusEnum] status Optional parameter: Example: 
+    # @param [InterruptedCallStatus] status Optional parameter: Example: 
     # @param [String] date_created Optional parameter: Example: 
     # @param [String] date_updated Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response format, xml or json

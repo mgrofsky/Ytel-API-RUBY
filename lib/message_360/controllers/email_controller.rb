@@ -11,12 +11,12 @@ module Message360
     # Send out an email
     # @param [String] to Required parameter: The to email address
     # @param [String] from Required parameter: The from email address
-    # @param [String] type Required parameter: email format type, html or text
+    # @param [SendEmailAs] type Required parameter: email format type, html or text
     # @param [String] subject Required parameter: Email subject
     # @param [String] message Required parameter: The body of the email message
     # @param [String] cc Optional parameter: CC Email address
     # @param [String] bcc Optional parameter: BCC Email address
-    # @param [File] attachment Optional parameter: File to be attached.File must be less than 7MB.
+    # @param [String] attachment Optional parameter: File to be attached.File must be less than 7MB.
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_send_email(to, 

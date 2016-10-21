@@ -1,9 +1,9 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-  class IfMachineEnum
+  class AudioDirection
     # TODO: Write general description for this element
     # TODO: Write general description for this element
-    IF_MACHINE_ENUM = [CONTINUE = 'continue', HANGUP = 'hangup']
+    AUDIO_DIRECTION = [IN = 'in', OUT = 'out']
   end
 end

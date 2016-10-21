@@ -14,7 +14,7 @@ module Message360
     # @param [Integer] tocountrycode Required parameter: To country code
     # @param [String] to Required parameter: Number to send the SMS to
     # @param [String] body Required parameter: Text Message To Send
-    # @param [HttpMethodEnum] method Optional parameter: Specifies the HTTP method used to request the required URL once SMS sent.
+    # @param [HttpMethod] method Optional parameter: Specifies the HTTP method used to request the required URL once SMS sent.
     # @param [String] messagestatuscallback Optional parameter: URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished.
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call

@@ -72,11 +72,11 @@ module Message360
     # @param [String] to_country_code Required parameter: To cuntry code number
     # @param [String] to Required parameter: To number
     # @param [String] url Required parameter: URL requested once the call connects
-    # @param [HttpMethodEnum] method Optional parameter: Specifies the HTTP method used to request the required URL once call connects.
+    # @param [HttpMethod] method Optional parameter: Specifies the HTTP method used to request the required URL once call connects.
     # @param [String] status_call_back_url Optional parameter: specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
-    # @param [HttpMethodEnum] status_call_back_method Optional parameter: Specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
+    # @param [HttpMethod] status_call_back_method Optional parameter: Specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
     # @param [String] fall_back_url Optional parameter: URL requested if the initial Url parameter fails or encounters an error
-    # @param [HttpMethodEnum] fall_back_method Optional parameter: Specifies the HTTP method used to request the required FallbackUrl once call connects.
+    # @param [HttpMethod] fall_back_method Optional parameter: Specifies the HTTP method used to request the required FallbackUrl once call connects.
     # @param [String] heart_beat_url Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed tim
     # @param [Boolean] heart_beat_method Optional parameter: Specifies the HTTP method used to request HeartbeatUrl.
     # @param [Integer] timeout Optional parameter: Time (in seconds) Message360 should wait while the call is ringing before canceling the call
@@ -84,10 +84,10 @@ module Message360
     # @param [Boolean] hide_caller_id Optional parameter: Specifies if the caller id will be hidden
     # @param [Boolean] record Optional parameter: Specifies if the call should be recorded
     # @param [String] record_call_back_url Optional parameter: Recording parameters will be sent here upon completion
-    # @param [HttpMethodEnum] record_call_back_method Optional parameter: Method used to request the RecordCallback URL.
+    # @param [HttpMethod] record_call_back_method Optional parameter: Method used to request the RecordCallback URL.
     # @param [Boolean] transcribe Optional parameter: Specifies if the call recording should be transcribed
     # @param [String] transcribe_call_back_url Optional parameter: Transcription parameters will be sent here upon completion
-    # @param [IfMachineEnum] if_machine Optional parameter: How Message360 should handle the receiving numbers voicemail machine
+    # @param [IfMachine] if_machine Optional parameter: How Message360 should handle the receiving numbers voicemail machine
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_make_call(from_country_code, 
@@ -198,7 +198,7 @@ module Message360
 
     # Play Dtmf and send the Digit
     # @param [Integer] length Required parameter: Time limit in seconds for audio play back
-    # @param [DirectionEnum] direction Required parameter: The leg of the call audio will be played to
+    # @param [Direction] direction Required parameter: The leg of the call audio will be played to
     # @param [Boolean] loop Required parameter: Repeat audio playback indefinitely
     # @param [Boolean] mix Required parameter: If false, all other audio will be muted
     # @param [String] call_sid Optional parameter: The unique identifier of each call resource
@@ -278,10 +278,10 @@ module Message360
     # Record a Call
     # @param [String] call_sid Required parameter: The unique identifier of each call resource
     # @param [Boolean] record Required parameter: Set true to initiate recording or false to terminate recording
-    # @param [DirectionEnum] direction Optional parameter: The leg of the call to record
+    # @param [Direction] direction Optional parameter: The leg of the call to record
     # @param [Integer] time_limit Optional parameter: Time in seconds the recording duration should not exceed
     # @param [String] call_back_url Optional parameter: URL consulted after the recording completes
-    # @param [AudioFormatEnum] fileformat Optional parameter: Format of the recording file. Can be .mp3 or .wav
+    # @param [AudioFormat] fileformat Optional parameter: Format of the recording file. Can be .mp3 or .wav
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_record_call(call_sid, 
@@ -352,7 +352,7 @@ module Message360
 
     # Voice Effect
     # @param [String] call_sid Required parameter: Example: 
-    # @param [AudioDirectionEnum] audio_direction Optional parameter: Example: 
+    # @param [AudioDirection] audio_direction Optional parameter: Example: 
     # @param [Float] pitch_semi_tones Optional parameter: value between -14 and 14
     # @param [Float] pitch_octaves Optional parameter: value between -1 and 1
     # @param [Float] pitch Optional parameter: value greater than 0
@@ -429,7 +429,7 @@ module Message360
     # Play Dtmf and send the Digit
     # @param [String] call_sid Required parameter: The unique identifier of each call resource
     # @param [String] play_dtmf Required parameter: DTMF digits to play to the call. 0-9, #, *, W, or w
-    # @param [DirectionEnum] play_dtmf_direction Optional parameter: The leg of the call DTMF digits should be sent to
+    # @param [Direction] play_dtmf_direction Optional parameter: The leg of the call DTMF digits should be sent to
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_send_digit(call_sid, 
@@ -495,8 +495,8 @@ module Message360
     # Interrupt the Call by Call Sid
     # @param [String] call_sid Required parameter: Call SId
     # @param [String] url Optional parameter: URL the in-progress call will be redirected to
-    # @param [HttpMethodEnum] method Optional parameter: The method used to request the above Url parameter
-    # @param [InterruptedCallStatusEnum] status Optional parameter: Status to set the in-progress call to
+    # @param [HttpMethod] method Optional parameter: The method used to request the above Url parameter
+    # @param [InterruptedCallStatus] status Optional parameter: Status to set the in-progress call to
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_interrupted_call(call_sid, 

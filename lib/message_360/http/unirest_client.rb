@@ -2,6 +2,11 @@
 
 module Message360
   class UnirestClient < HttpClient
+    # The constructor.
+    def initialize(timeout)
+      Unirest.timeout(timeout)
+    end
+
     # Method overridden from HttpClient.
     def execute_as_string(http_request)
       if http_request.username || http_request.password

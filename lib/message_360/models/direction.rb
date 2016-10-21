@@ -1,9 +1,10 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-  class AudioFormatEnum
-    # mp3 file
-    # wav file
-    AUDIO_FORMAT_ENUM = [MP3 = 'mp3', WAV = 'wav']
+  class Direction
+    # in direction
+    # out direction
+    # both
+    DIRECTION = [IN = 'in', OUT = 'out', BOTH = 'both']
   end
 end

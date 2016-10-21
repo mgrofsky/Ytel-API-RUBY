@@ -18,14 +18,15 @@ require_relative 'message_360/http/http_context.rb'
 require_relative 'message_360/http/unirest_client.rb'
 
 # Models
-require_relative 'message_360/models/http_method_enum.rb'
-require_relative 'message_360/models/audio_direction_enum.rb'
-require_relative 'message_360/models/if_machine_enum.rb'
-require_relative 'message_360/models/audio_format_enum.rb'
-require_relative 'message_360/models/interrupted_call_status_enum.rb'
-require_relative 'message_360/models/direction_enum.rb'
-require_relative 'message_360/models/number_type_enum.rb'
-require_relative 'message_360/models/status_enum.rb'
+require_relative 'message_360/models/http_method.rb'
+require_relative 'message_360/models/audio_direction.rb'
+require_relative 'message_360/models/if_machine.rb'
+require_relative 'message_360/models/audio_format.rb'
+require_relative 'message_360/models/interrupted_call_status.rb'
+require_relative 'message_360/models/direction.rb'
+require_relative 'message_360/models/number_type.rb'
+require_relative 'message_360/models/status.rb'
+require_relative 'message_360/models/send_email_as.rb'
 
 # Exceptions
 require_relative 'message_360/exceptions/api_exception.rb'

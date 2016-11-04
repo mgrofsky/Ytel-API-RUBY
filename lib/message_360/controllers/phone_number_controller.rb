@@ -313,17 +313,17 @@ module Message360
     # @param [String] phone_number Required parameter: Example: 
     # @param [String] friendly_name Optional parameter: Example: 
     # @param [String] voice_url Optional parameter: URL requested once the call connects
-    # @param [HttpMethod] voice_method Optional parameter: Example: 
+    # @param [HttpAction] voice_method Optional parameter: Example: 
     # @param [String] voice_fallback_url Optional parameter: URL requested if the voice URL is not available
-    # @param [HttpMethod] voice_fallback_method Optional parameter: Example: 
+    # @param [HttpAction] voice_fallback_method Optional parameter: Example: 
     # @param [String] hangup_callback Optional parameter: Example: 
-    # @param [HttpMethod] hangup_callback_method Optional parameter: Example: 
+    # @param [HttpAction] hangup_callback_method Optional parameter: Example: 
     # @param [String] heartbeat_url Optional parameter: URL requested once the call connects
-    # @param [HttpMethod] heartbeat_method Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed time
+    # @param [HttpAction] heartbeat_method Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed time
     # @param [String] sms_url Optional parameter: URL requested when an SMS is received
-    # @param [HttpMethod] sms_method Optional parameter: Example: 
+    # @param [HttpAction] sms_method Optional parameter: Example: 
     # @param [String] sms_fallback_url Optional parameter: URL requested once the call connects
-    # @param [HttpMethod] sms_fallback_method Optional parameter: URL requested if the sms URL is not available
+    # @param [HttpAction] sms_fallback_method Optional parameter: URL requested if the sms URL is not available
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def update_phone_number(phone_number, 

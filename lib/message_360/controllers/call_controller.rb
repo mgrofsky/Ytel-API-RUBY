@@ -72,11 +72,11 @@ module Message360
     # @param [String] to_country_code Required parameter: To cuntry code number
     # @param [String] to Required parameter: To number
     # @param [String] url Required parameter: URL requested once the call connects
-    # @param [HttpMethod] method Optional parameter: Specifies the HTTP method used to request the required URL once call connects.
+    # @param [HttpAction] method Optional parameter: Specifies the HTTP method used to request the required URL once call connects.
     # @param [String] status_call_back_url Optional parameter: specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
-    # @param [HttpMethod] status_call_back_method Optional parameter: Specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
+    # @param [HttpAction] status_call_back_method Optional parameter: Specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
     # @param [String] fall_back_url Optional parameter: URL requested if the initial Url parameter fails or encounters an error
-    # @param [HttpMethod] fall_back_method Optional parameter: Specifies the HTTP method used to request the required FallbackUrl once call connects.
+    # @param [HttpAction] fall_back_method Optional parameter: Specifies the HTTP method used to request the required FallbackUrl once call connects.
     # @param [String] heart_beat_url Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed tim
     # @param [Boolean] heart_beat_method Optional parameter: Specifies the HTTP method used to request HeartbeatUrl.
     # @param [Integer] timeout Optional parameter: Time (in seconds) Message360 should wait while the call is ringing before canceling the call
@@ -84,7 +84,7 @@ module Message360
     # @param [Boolean] hide_caller_id Optional parameter: Specifies if the caller id will be hidden
     # @param [Boolean] record Optional parameter: Specifies if the call should be recorded
     # @param [String] record_call_back_url Optional parameter: Recording parameters will be sent here upon completion
-    # @param [HttpMethod] record_call_back_method Optional parameter: Method used to request the RecordCallback URL.
+    # @param [HttpAction] record_call_back_method Optional parameter: Method used to request the RecordCallback URL.
     # @param [Boolean] transcribe Optional parameter: Specifies if the call recording should be transcribed
     # @param [String] transcribe_call_back_url Optional parameter: Transcription parameters will be sent here upon completion
     # @param [IfMachine] if_machine Optional parameter: How Message360 should handle the receiving numbers voicemail machine
@@ -495,7 +495,7 @@ module Message360
     # Interrupt the Call by Call Sid
     # @param [String] call_sid Required parameter: Call SId
     # @param [String] url Optional parameter: URL the in-progress call will be redirected to
-    # @param [HttpMethod] method Optional parameter: The method used to request the above Url parameter
+    # @param [HttpAction] method Optional parameter: The method used to request the above Url parameter
     # @param [InterruptedCallStatus] status Optional parameter: Status to set the in-progress call to
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call

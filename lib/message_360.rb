@@ -18,7 +18,7 @@ require_relative 'message_360/http/http_context.rb'
 require_relative 'message_360/http/unirest_client.rb'
 
 # Models
-require_relative 'message_360/models/http_method.rb'
+require_relative 'message_360/models/http_action.rb'
 require_relative 'message_360/models/audio_direction.rb'
 require_relative 'message_360/models/if_machine.rb'
 require_relative 'message_360/models/audio_format.rb'

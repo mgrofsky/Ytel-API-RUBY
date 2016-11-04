@@ -1,4 +1,4 @@
-#
+#Getting started
 
 ## How to Build
 
@@ -64,7 +64,7 @@ cases as follows:
 
 ## Initialization
 
-### Authentication and Initialization
+### Authentication and 
 In order to setup authentication and initialization of the API client, you need the following information.
 
 | Parameter | Description |
@@ -175,10 +175,10 @@ def create_list_participant(conference_sid,
 
 ```ruby
 conference_sid = 'ConferenceSid'
-page = 172
-pagesize = 172
-muted = true
-deaf = true
+page = 95
+pagesize = 95
+muted = false
+deaf = false
 response_type = 'json'
 
 result = conference.create_list_participant(conference_sid, page, pagesize, muted, deaf, response_type)
@@ -217,9 +217,9 @@ def add_participant(conferencesid,
 ```ruby
 conferencesid = 'conferencesid'
 participantnumber = 'participantnumber'
-tocountrycode = 172
-muted = true
-deaf = true
+tocountrycode = 95
+muted = false
+deaf = false
 response_type = 'json'
 
 result = conference.add_participant(conferencesid, participantnumber, tocountrycode, muted, deaf, response_type)
@@ -287,8 +287,8 @@ def create_list_conference(page = nil,
 #### Example Usage
 
 ```ruby
-page = 172
-page_size = 172
+page = 95
+page_size = 95
 friendly_name = 'FriendlyName'
 status = Message360::InterruptedCallStatus::CANCELED
 date_created = 'DateCreated'
@@ -339,8 +339,8 @@ def create_list_transcription(page = nil,
 #### Example Usage
 
 ```ruby
-page = 80
-page_size = 80
+page = 95
+page_size = 95
 status = Message360::Status::INPROGRESS
 date_transcribed = 'DateTranscribed'
 response_type = 'json'
@@ -476,7 +476,7 @@ def create_available_phone_number(number_type,
 ```ruby
 number_type = 'NumberType'
 area_code = 'AreaCode'
-page_size = 80
+page_size = 53
 response_type = 'json'
 
 result = phoneNumber.create_available_phone_number(number_type, area_code, page_size, response_type)
@@ -511,8 +511,8 @@ def create_list_number(page = nil,
 #### Example Usage
 
 ```ruby
-page = 80
-page_size = 80
+page = 53
+page_size = 53
 number_type = 'NumberType'
 friendly_name = 'FriendlyName'
 response_type = 'json'
@@ -659,17 +659,17 @@ def update_phone_number(phone_number,
 phone_number = 'PhoneNumber'
 friendly_name = 'FriendlyName'
 voice_url = 'VoiceUrl'
-voice_method = Message360::HttpMethod::GET
+voice_method = Message360::HttpAction::GET
 voice_fallback_url = 'VoiceFallbackUrl'
-voice_fallback_method = Message360::HttpMethod::GET
+voice_fallback_method = Message360::HttpAction::GET
 hangup_callback = 'HangupCallback'
-hangup_callback_method = Message360::HttpMethod::GET
+hangup_callback_method = Message360::HttpAction::GET
 heartbeat_url = 'HeartbeatUrl'
-heartbeat_method = Message360::HttpMethod::GET
+heartbeat_method = Message360::HttpAction::GET
 sms_url = 'SmsUrl'
-sms_method = Message360::HttpMethod::GET
+sms_method = Message360::HttpAction::GET
 sms_fallback_url = 'SmsFallbackUrl'
-sms_fallback_method = Message360::HttpMethod::GET
+sms_fallback_method = Message360::HttpAction::GET
 response_type = 'json'
 
 result = phoneNumber.update_phone_number(phone_number, friendly_name, voice_url, voice_method, voice_fallback_url, voice_fallback_method, hangup_callback, hangup_callback_method, heartbeat_url, heartbeat_method, sms_url, sms_method, sms_fallback_url, sms_fallback_method, response_type)
@@ -1141,7 +1141,7 @@ from = 'from'
 tocountrycode = 1
 to = 'to'
 body = 'body'
-method = Message360::HttpMethod::GET
+method = Message360::HttpAction::GET
 messagestatuscallback = 'messagestatuscallback'
 response_type = 'json'
 
@@ -1208,8 +1208,8 @@ def create_list_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 122
-pagesize = 122
+page = 145
+pagesize = 145
 from = 'from'
 to = 'to'
 datesent = 'datesent'
@@ -1247,7 +1247,7 @@ def create_list_inbound_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 122
+page = 145
 pagesize = 'pagesize'
 from = 'from'
 to = 'to'
@@ -1396,8 +1396,8 @@ def create_list_recording(page = nil,
 #### Example Usage
 
 ```ruby
-page = 122
-page_size = 122
+page = 145
+page_size = 145
 date_created = 'DateCreated'
 call_sid = 'CallSid'
 response_type = 'json'
@@ -1514,20 +1514,20 @@ from = 'From'
 to_country_code = 'ToCountryCode'
 to = 'To'
 url = 'Url'
-method = Message360::HttpMethod::GET
+method = Message360::HttpAction::GET
 status_call_back_url = 'StatusCallBackUrl'
-status_call_back_method = Message360::HttpMethod::GET
+status_call_back_method = Message360::HttpAction::GET
 fall_back_url = 'FallBackUrl'
-fall_back_method = Message360::HttpMethod::GET
+fall_back_method = Message360::HttpAction::GET
 heart_beat_url = 'HeartBeatUrl'
-heart_beat_method = false
-timeout = 122
+heart_beat_method = true
+timeout = 145
 play_dtmf = 'PlayDtmf'
-hide_caller_id = false
-record = false
+hide_caller_id = true
+record = true
 record_call_back_url = 'RecordCallBackUrl'
-record_call_back_method = Message360::HttpMethod::GET
-transcribe = false
+record_call_back_method = Message360::HttpAction::GET
+transcribe = true
 transcribe_call_back_url = 'TranscribeCallBackUrl'
 if_machine = Message360::IfMachine::CONTINUE
 response_type = 'json'
@@ -1568,10 +1568,10 @@ def create_play_audio(length,
 #### Example Usage
 
 ```ruby
-length = 122
+length = 145
 direction = Message360::Direction::IN
-loop = false
-mix = false
+loop = true
+mix = true
 call_sid = 'CallSid'
 audio_url = 'AudioUrl'
 response_type = 'json'
@@ -1613,9 +1613,9 @@ def create_record_call(call_sid,
 
 ```ruby
 call_sid = 'CallSid'
-record = false
+record = true
 direction = Message360::Direction::IN
-time_limit = 122
+time_limit = 145
 call_back_url = 'CallBackUrl'
 fileformat = Message360::AudioFormat::MP3
 response_type = 'json'
@@ -1660,11 +1660,11 @@ def create_voice_effect(call_sid,
 ```ruby
 call_sid = 'CallSid'
 audio_direction = Message360::AudioDirection::IN
-pitch_semi_tones = 122.566519229471
-pitch_octaves = 122.566519229471
-pitch = 122.566519229471
-rate = 122.566519229471
-tempo = 122.566519229471
+pitch_semi_tones = 145.369408670985
+pitch_octaves = 145.369408670985
+pitch = 145.369408670985
+rate = 145.369408670985
+tempo = 145.369408670985
 response_type = 'json'
 
 result = call.create_voice_effect(call_sid, audio_direction, pitch_semi_tones, pitch_octaves, pitch, rate, tempo, response_type)
@@ -1736,7 +1736,7 @@ def create_interrupted_call(call_sid,
 ```ruby
 call_sid = 'CallSid'
 url = 'Url'
-method = Message360::HttpMethod::GET
+method = Message360::HttpAction::GET
 status = Message360::InterruptedCallStatus::CANCELED
 response_type = 'json'
 

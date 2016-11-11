@@ -13,16 +13,13 @@ module Message360
     # @param [String] participant_sid Required parameter: Example: 
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
-    def create_view_participant(conference_sid, 
-                                participant_sid, 
-                                response_type = 'json')
+    def create_view_participant(options = Hash.new)
 
-      # Validate required parameters
-      if conference_sid == nil
-        raise ArgumentError.new "Required parameter 'conference_sid' cannot be nil."
-      elsif participant_sid == nil
-        raise ArgumentError.new "Required parameter 'participant_sid' cannot be nil."
-      end
+      # validate required parameters
+      validate_parameters({
+        'conference_sid' => options['conference_sid'],
+        'participant_sid' => options['participant_sid']
+      })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
@@ -32,43 +29,32 @@ module Message360
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => response_type
+        'ResponseType' => options['response_type']
       }
 
       # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare headers
-      _headers = {
-        'user-agent' => 'message360-api'
-      }
-
       # prepare parameters
       _parameters = {
-        'ConferenceSid' => conference_sid,
-        'ParticipantSid' => participant_sid
+        'ConferenceSid' => options['conference_sid'],
+        'ParticipantSid' => options['participant_sid']
       }
 
-      # Create the HttpRequest object for the call
-      _request = @http_client.post _query_url, headers: _headers, parameters: _parameters, username: Configuration.basic_auth_user_name, password: Configuration.basic_auth_password
-      
-      # Call the on_before_request callback
-      @http_call_back.on_before_request(_request) if @http_call_back
+      # create the HttpRequest object for the call
+      _request = @http_client.post _query_url, parameters: _parameters
 
-      # Invoke the API call and get the response
-      _response = @http_client.execute_as_string(_request)
+      # apply authentication
+      BasicAuth.apply(_request)
 
-      # Wrap the request and response in an HttpContext object
-      _context = HttpContext.new(_request, _response)
+      # execute the request
+      _context = execute_request(_request)
 
-      # Call the on_after_response callback
-      @http_call_back.on_after_response(_context) if @http_call_back
-
-      # Global error handling using HTTP status codes.
+      # global error handling using HTTP status codes.
       validate_response(_context)
 
-      # Return appropriate response type
-      return _response.raw_body
+      # return appropriate response type
+      return _context.response.raw_body
     end
 
     # List Participant
@@ -79,17 +65,12 @@ module Message360
     # @param [Boolean] deaf Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
-    def create_list_participant(conference_sid, 
-                                page = nil, 
-                                pagesize = nil, 
-                                muted = nil, 
-                                deaf = nil, 
-                                response_type = 'json')
+    def create_list_participant(options = Hash.new)
 
-      # Validate required parameters
-      if conference_sid == nil
-        raise ArgumentError.new "Required parameter 'conference_sid' cannot be nil."
-      end
+      # validate required parameters
+      validate_parameters({
+        'conference_sid' => options['conference_sid']
+      })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
@@ -99,46 +80,35 @@ module Message360
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => response_type
+        'ResponseType' => options['response_type']
       }
 
       # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare headers
-      _headers = {
-        'user-agent' => 'message360-api'
-      }
-
       # prepare parameters
       _parameters = {
-        'ConferenceSid' => conference_sid,
-        'Page' => page,
-        'Pagesize' => pagesize,
-        'Muted' => muted,
-        'Deaf' => deaf
+        'ConferenceSid' => options['conference_sid'],
+        'Page' => options['page'],
+        'Pagesize' => options['pagesize'],
+        'Muted' => options['muted'],
+        'Deaf' => options['deaf']
       }
 
-      # Create the HttpRequest object for the call
-      _request = @http_client.post _query_url, headers: _headers, parameters: _parameters, username: Configuration.basic_auth_user_name, password: Configuration.basic_auth_password
-      
-      # Call the on_before_request callback
-      @http_call_back.on_before_request(_request) if @http_call_back
+      # create the HttpRequest object for the call
+      _request = @http_client.post _query_url, parameters: _parameters
 
-      # Invoke the API call and get the response
-      _response = @http_client.execute_as_string(_request)
+      # apply authentication
+      BasicAuth.apply(_request)
 
-      # Wrap the request and response in an HttpContext object
-      _context = HttpContext.new(_request, _response)
+      # execute the request
+      _context = execute_request(_request)
 
-      # Call the on_after_response callback
-      @http_call_back.on_after_response(_context) if @http_call_back
-
-      # Global error handling using HTTP status codes.
+      # global error handling using HTTP status codes.
       validate_response(_context)
 
-      # Return appropriate response type
-      return _response.raw_body
+      # return appropriate response type
+      return _context.response.raw_body
     end
 
     # Add Participant in conference 
@@ -149,21 +119,14 @@ module Message360
     # @param [Boolean] deaf Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
-    def add_participant(conferencesid, 
-                        participantnumber, 
-                        tocountrycode, 
-                        muted = nil, 
-                        deaf = nil, 
-                        response_type = 'json')
+    def add_participant(options = Hash.new)
 
-      # Validate required parameters
-      if conferencesid == nil
-        raise ArgumentError.new "Required parameter 'conferencesid' cannot be nil."
-      elsif participantnumber == nil
-        raise ArgumentError.new "Required parameter 'participantnumber' cannot be nil."
-      elsif tocountrycode == nil
-        raise ArgumentError.new "Required parameter 'tocountrycode' cannot be nil."
-      end
+      # validate required parameters
+      validate_parameters({
+        'conferencesid' => options['conferencesid'],
+        'participantnumber' => options['participantnumber'],
+        'tocountrycode' => options['tocountrycode']
+      })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
@@ -173,59 +136,47 @@ module Message360
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => response_type
+        'ResponseType' => options['response_type']
       }
 
       # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare headers
-      _headers = {
-        'user-agent' => 'message360-api'
-      }
-
       # prepare parameters
       _parameters = {
-        'conferencesid' => conferencesid,
-        'participantnumber' => participantnumber,
-        'tocountrycode' => tocountrycode,
-        'muted' => muted,
-        'deaf' => deaf
+        'conferencesid' => options['conferencesid'],
+        'participantnumber' => options['participantnumber'],
+        'tocountrycode' => options['tocountrycode'],
+        'muted' => options['muted'],
+        'deaf' => options['deaf']
       }
 
-      # Create the HttpRequest object for the call
-      _request = @http_client.post _query_url, headers: _headers, parameters: _parameters, username: Configuration.basic_auth_user_name, password: Configuration.basic_auth_password
-      
-      # Call the on_before_request callback
-      @http_call_back.on_before_request(_request) if @http_call_back
+      # create the HttpRequest object for the call
+      _request = @http_client.post _query_url, parameters: _parameters
 
-      # Invoke the API call and get the response
-      _response = @http_client.execute_as_string(_request)
+      # apply authentication
+      BasicAuth.apply(_request)
 
-      # Wrap the request and response in an HttpContext object
-      _context = HttpContext.new(_request, _response)
+      # execute the request
+      _context = execute_request(_request)
 
-      # Call the on_after_response callback
-      @http_call_back.on_after_response(_context) if @http_call_back
-
-      # Global error handling using HTTP status codes.
+      # global error handling using HTTP status codes.
       validate_response(_context)
 
-      # Return appropriate response type
-      return _response.raw_body
+      # return appropriate response type
+      return _context.response.raw_body
     end
 
     # View Conference
     # @param [String] conferencesid Required parameter: The unique identifier of each conference resource
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
-    def create_view_conference(conferencesid, 
-                               response_type = 'json')
+    def create_view_conference(options = Hash.new)
 
-      # Validate required parameters
-      if conferencesid == nil
-        raise ArgumentError.new "Required parameter 'conferencesid' cannot be nil."
-      end
+      # validate required parameters
+      validate_parameters({
+        'conferencesid' => options['conferencesid']
+      })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
@@ -235,42 +186,31 @@ module Message360
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => response_type
+        'ResponseType' => options['response_type']
       }
 
       # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare headers
-      _headers = {
-        'user-agent' => 'message360-api'
-      }
-
       # prepare parameters
       _parameters = {
-        'conferencesid' => conferencesid
+        'conferencesid' => options['conferencesid']
       }
 
-      # Create the HttpRequest object for the call
-      _request = @http_client.post _query_url, headers: _headers, parameters: _parameters, username: Configuration.basic_auth_user_name, password: Configuration.basic_auth_password
-      
-      # Call the on_before_request callback
-      @http_call_back.on_before_request(_request) if @http_call_back
+      # create the HttpRequest object for the call
+      _request = @http_client.post _query_url, parameters: _parameters
 
-      # Invoke the API call and get the response
-      _response = @http_client.execute_as_string(_request)
+      # apply authentication
+      BasicAuth.apply(_request)
 
-      # Wrap the request and response in an HttpContext object
-      _context = HttpContext.new(_request, _response)
+      # execute the request
+      _context = execute_request(_request)
 
-      # Call the on_after_response callback
-      @http_call_back.on_after_response(_context) if @http_call_back
-
-      # Global error handling using HTTP status codes.
+      # global error handling using HTTP status codes.
       validate_response(_context)
 
-      # Return appropriate response type
-      return _response.raw_body
+      # return appropriate response type
+      return _context.response.raw_body
     end
 
     # List Conference
@@ -282,13 +222,8 @@ module Message360
     # @param [String] date_updated Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
-    def create_list_conference(page = nil, 
-                               page_size = nil, 
-                               friendly_name = nil, 
-                               status = nil, 
-                               date_created = nil, 
-                               date_updated = nil, 
-                               response_type = 'json')
+    def create_list_conference(options = Hash.new)
+
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
 
@@ -297,47 +232,36 @@ module Message360
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => response_type
+        'ResponseType' => options['response_type']
       }
 
       # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare headers
-      _headers = {
-        'user-agent' => 'message360-api'
-      }
-
       # prepare parameters
       _parameters = {
-        'Page' => page,
-        'PageSize' => page_size,
-        'FriendlyName' => friendly_name,
-        'Status' => status,
-        'DateCreated' => date_created,
-        'DateUpdated' => date_updated
+        'Page' => options['page'],
+        'PageSize' => options['page_size'],
+        'FriendlyName' => options['friendly_name'],
+        'Status' => options['status'],
+        'DateCreated' => options['date_created'],
+        'DateUpdated' => options['date_updated']
       }
 
-      # Create the HttpRequest object for the call
-      _request = @http_client.post _query_url, headers: _headers, parameters: _parameters, username: Configuration.basic_auth_user_name, password: Configuration.basic_auth_password
-      
-      # Call the on_before_request callback
-      @http_call_back.on_before_request(_request) if @http_call_back
+      # create the HttpRequest object for the call
+      _request = @http_client.post _query_url, parameters: _parameters
 
-      # Invoke the API call and get the response
-      _response = @http_client.execute_as_string(_request)
+      # apply authentication
+      BasicAuth.apply(_request)
 
-      # Wrap the request and response in an HttpContext object
-      _context = HttpContext.new(_request, _response)
+      # execute the request
+      _context = execute_request(_request)
 
-      # Call the on_after_response callback
-      @http_call_back.on_after_response(_context) if @http_call_back
-
-      # Global error handling using HTTP status codes.
+      # global error handling using HTTP status codes.
       validate_response(_context)
 
-      # Return appropriate response type
-      return _response.raw_body
+      # return appropriate response type
+      return _context.response.raw_body
     end
   end
 end

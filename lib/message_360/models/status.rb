@@ -2,9 +2,9 @@
 
 module Message360
   class Status
-    # TODO: Write general description for this element
-    # TODO: Write general description for this element
-    # TODO: Write general description for this element
+    # TODO: Write general description for INPROGRESS
+    # TODO: Write general description for SUCCESS
+    # TODO: Write general description for FAILURE
     STATUS = [INPROGRESS = 'inprogress', SUCCESS = 'success', FAILURE = 'failure']
   end
 end

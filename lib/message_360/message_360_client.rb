@@ -26,6 +26,18 @@ module Message360
       UsageController.instance
     end
 
+    # Singleton access to web_rtc controller
+    # @return [WebRTCController] Returns the controller instance
+    def web_rtc
+      WebRTCController.instance
+    end
+
+    # Singleton access to recording controller
+    # @return [RecordingController] Returns the controller instance
+    def recording
+      RecordingController.instance
+    end
+
     # Singleton access to email controller
     # @return [EmailController] Returns the controller instance
     def email
@@ -44,12 +56,6 @@ module Message360
       AccountController.instance
     end
 
-    # Singleton access to recording controller
-    # @return [RecordingController] Returns the controller instance
-    def recording
-      RecordingController.instance
-    end
-
     # Singleton access to call controller
     # @return [CallController] Returns the controller instance
     def call
@@ -64,8 +70,8 @@ module Message360
 
     # Initializer with authentication and configuration parameters
     def initialize(basic_auth_user_name: nil, basic_auth_password: nil)
-      Configuration.basic_auth_user_name = basic_auth_user_name
-      Configuration.basic_auth_password = basic_auth_password
+      Configuration.basic_auth_user_name = basic_auth_user_name if basic_auth_user_name
+      Configuration.basic_auth_password = basic_auth_password if basic_auth_password
     end
   end
 end

@@ -2,8 +2,8 @@
 
 module Message360
   class AudioDirection
-    # TODO: Write general description for this element
-    # TODO: Write general description for this element
+    # TODO: Write general description for IN
+    # TODO: Write general description for OUT
     AUDIO_DIRECTION = [IN = 'in', OUT = 'out']
   end
 end

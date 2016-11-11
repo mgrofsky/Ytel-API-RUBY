@@ -96,10 +96,11 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [TranscriptionController](#transcription_controller)
 * [PhoneNumberController](#phone_number_controller)
 * [UsageController](#usage_controller)
+* [WebRTCController](#web_rtc_controller)
+* [RecordingController](#recording_controller)
 * [EmailController](#email_controller)
 * [SMSController](#sms_controller)
 * [AccountController](#account_controller)
-* [RecordingController](#recording_controller)
 * [CallController](#call_controller)
 * [CarrierController](#carrier_controller)
 
@@ -119,9 +120,7 @@ conference = client.conference
 
 
 ```ruby
-def create_view_participant(conference_sid, 
-                                participant_sid, 
-                                response_type = 'json'); end
+def create_view_participant(options = Hash.new); end
 ```
 
 #### Parameters
@@ -136,11 +135,19 @@ def create_view_participant(conference_sid,
 #### Example Usage
 
 ```ruby
-conference_sid = 'ConferenceSid'
-participant_sid = 'ParticipantSid'
-response_type = 'json'
+collect = Hash.new
 
-result = conference.create_view_participant(conference_sid, participant_sid, response_type)
+conference_sid = 'ConferenceSid'
+collect['conference_sid'] = conference_sid
+
+participant_sid = 'ParticipantSid'
+collect['participant_sid'] = participant_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = conference.create_view_participant(collect)
 
 ```
 
@@ -151,12 +158,7 @@ result = conference.create_view_participant(conference_sid, participant_sid, res
 
 
 ```ruby
-def create_list_participant(conference_sid, 
-                                page = nil, 
-                                pagesize = nil, 
-                                muted = nil, 
-                                deaf = nil, 
-                                response_type = 'json'); end
+def create_list_participant(options = Hash.new); end
 ```
 
 #### Parameters
@@ -174,14 +176,28 @@ def create_list_participant(conference_sid,
 #### Example Usage
 
 ```ruby
-conference_sid = 'ConferenceSid'
-page = 95
-pagesize = 95
-muted = false
-deaf = false
-response_type = 'json'
+collect = Hash.new
 
-result = conference.create_list_participant(conference_sid, page, pagesize, muted, deaf, response_type)
+conference_sid = 'ConferenceSid'
+collect['conference_sid'] = conference_sid
+
+page = 244
+collect['page'] = page
+
+pagesize = 244
+collect['pagesize'] = pagesize
+
+muted = true
+collect['muted'] = muted
+
+deaf = true
+collect['deaf'] = deaf
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = conference.create_list_participant(collect)
 
 ```
 
@@ -192,12 +208,7 @@ result = conference.create_list_participant(conference_sid, page, pagesize, mute
 
 
 ```ruby
-def add_participant(conferencesid, 
-                        participantnumber, 
-                        tocountrycode, 
-                        muted = nil, 
-                        deaf = nil, 
-                        response_type = 'json'); end
+def add_participant(options = Hash.new); end
 ```
 
 #### Parameters
@@ -215,14 +226,28 @@ def add_participant(conferencesid,
 #### Example Usage
 
 ```ruby
-conferencesid = 'conferencesid'
-participantnumber = 'participantnumber'
-tocountrycode = 95
-muted = false
-deaf = false
-response_type = 'json'
+collect = Hash.new
 
-result = conference.add_participant(conferencesid, participantnumber, tocountrycode, muted, deaf, response_type)
+conferencesid = 'conferencesid'
+collect['conferencesid'] = conferencesid
+
+participantnumber = 'participantnumber'
+collect['participantnumber'] = participantnumber
+
+tocountrycode = 244
+collect['tocountrycode'] = tocountrycode
+
+muted = true
+collect['muted'] = muted
+
+deaf = true
+collect['deaf'] = deaf
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = conference.add_participant(collect)
 
 ```
 
@@ -233,8 +258,7 @@ result = conference.add_participant(conferencesid, participantnumber, tocountryc
 
 
 ```ruby
-def create_view_conference(conferencesid, 
-                               response_type = 'json'); end
+def create_view_conference(options = Hash.new); end
 ```
 
 #### Parameters
@@ -248,10 +272,16 @@ def create_view_conference(conferencesid,
 #### Example Usage
 
 ```ruby
-conferencesid = 'conferencesid'
-response_type = 'json'
+collect = Hash.new
 
-result = conference.create_view_conference(conferencesid, response_type)
+conferencesid = 'conferencesid'
+collect['conferencesid'] = conferencesid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = conference.create_view_conference(collect)
 
 ```
 
@@ -262,13 +292,7 @@ result = conference.create_view_conference(conferencesid, response_type)
 
 
 ```ruby
-def create_list_conference(page = nil, 
-                               page_size = nil, 
-                               friendly_name = nil, 
-                               status = nil, 
-                               date_created = nil, 
-                               date_updated = nil, 
-                               response_type = 'json'); end
+def create_list_conference(options = Hash.new); end
 ```
 
 #### Parameters
@@ -287,15 +311,31 @@ def create_list_conference(page = nil,
 #### Example Usage
 
 ```ruby
-page = 95
-page_size = 95
-friendly_name = 'FriendlyName'
-status = Message360::InterruptedCallStatus::CANCELED
-date_created = 'DateCreated'
-date_updated = 'DateUpdated'
-response_type = 'json'
+collect = Hash.new
 
-result = conference.create_list_conference(page, page_size, friendly_name, status, date_created, date_updated, response_type)
+page = 244
+collect['page'] = page
+
+page_size = 244
+collect['page_size'] = page_size
+
+friendly_name = 'FriendlyName'
+collect['friendly_name'] = friendly_name
+
+status = Message360::InterruptedCallStatus::CANCELED
+collect['status'] = status
+
+date_created = 'DateCreated'
+collect['date_created'] = date_created
+
+date_updated = 'DateUpdated'
+collect['date_updated'] = date_updated
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = conference.create_list_conference(collect)
 
 ```
 
@@ -318,11 +358,7 @@ transcription = client.transcription
 
 
 ```ruby
-def create_list_transcription(page = nil, 
-                                  page_size = nil, 
-                                  status = nil, 
-                                  date_transcribed = nil, 
-                                  response_type = 'json'); end
+def create_list_transcription(options = Hash.new); end
 ```
 
 #### Parameters
@@ -339,42 +375,25 @@ def create_list_transcription(page = nil,
 #### Example Usage
 
 ```ruby
-page = 95
-page_size = 95
+collect = Hash.new
+
+page = 244
+collect['page'] = page
+
+page_size = 244
+collect['page_size'] = page_size
+
 status = Message360::Status::INPROGRESS
+collect['status'] = status
+
 date_transcribed = 'DateTranscribed'
+collect['date_transcribed'] = date_transcribed
+
 response_type = 'json'
-
-result = transcription.create_list_transcription(page, page_size, status, date_transcribed, response_type)
-
-```
+collect['response_type'] = response_type
 
 
-#### <a name="create_recording_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_recording_transcription") create_recording_transcription
-
-> Recording Transcriptions
-
-
-```ruby
-def create_recording_transcription(recording_sid, 
-                                       response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recording_sid |  ``` Required ```  | Unique Recording sid |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-recording_sid = 'RecordingSid'
-response_type = 'json'
-
-result = transcription.create_recording_transcription(recording_sid, response_type)
+result = transcription.create_list_transcription(collect)
 
 ```
 
@@ -385,8 +404,7 @@ result = transcription.create_recording_transcription(recording_sid, response_ty
 
 
 ```ruby
-def create_view_transcription(transcription_sid, 
-                                  response_type = 'json'); end
+def create_view_transcription(options = Hash.new); end
 ```
 
 #### Parameters
@@ -400,10 +418,50 @@ def create_view_transcription(transcription_sid,
 #### Example Usage
 
 ```ruby
-transcription_sid = 'TranscriptionSid'
-response_type = 'json'
+collect = Hash.new
 
-result = transcription.create_view_transcription(transcription_sid, response_type)
+transcription_sid = 'TranscriptionSid'
+collect['transcription_sid'] = transcription_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = transcription.create_view_transcription(collect)
+
+```
+
+
+#### <a name="create_recording_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_recording_transcription") create_recording_transcription
+
+> Recording Transcriptions
+
+
+```ruby
+def create_recording_transcription(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| recording_sid |  ``` Required ```  | Unique Recording sid |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+recording_sid = 'RecordingSid'
+collect['recording_sid'] = recording_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = transcription.create_recording_transcription(collect)
 
 ```
 
@@ -414,8 +472,7 @@ result = transcription.create_view_transcription(transcription_sid, response_typ
 
 
 ```ruby
-def create_audio_url_transcription(audio_url, 
-                                       response_type = 'json'); end
+def create_audio_url_transcription(options = Hash.new); end
 ```
 
 #### Parameters
@@ -429,10 +486,16 @@ def create_audio_url_transcription(audio_url,
 #### Example Usage
 
 ```ruby
-audio_url = 'AudioUrl'
-response_type = 'json'
+collect = Hash.new
 
-result = transcription.create_audio_url_transcription(audio_url, response_type)
+audio_url = 'AudioUrl'
+collect['audio_url'] = audio_url
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = transcription.create_audio_url_transcription(collect)
 
 ```
 
@@ -455,10 +518,7 @@ phoneNumber = client.phone_number
 
 
 ```ruby
-def create_available_phone_number(number_type, 
-                                      area_code, 
-                                      page_size = nil, 
-                                      response_type = 'json'); end
+def create_available_phone_number(options = Hash.new); end
 ```
 
 #### Parameters
@@ -474,12 +534,22 @@ def create_available_phone_number(number_type,
 #### Example Usage
 
 ```ruby
-number_type = 'NumberType'
-area_code = 'AreaCode'
-page_size = 53
-response_type = 'json'
+collect = Hash.new
 
-result = phoneNumber.create_available_phone_number(number_type, area_code, page_size, response_type)
+number_type = 'NumberType'
+collect['number_type'] = number_type
+
+area_code = 'AreaCode'
+collect['area_code'] = area_code
+
+page_size = 80
+collect['page_size'] = page_size
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = phoneNumber.create_available_phone_number(collect)
 
 ```
 
@@ -490,11 +560,7 @@ result = phoneNumber.create_available_phone_number(number_type, area_code, page_
 
 
 ```ruby
-def create_list_number(page = nil, 
-                           page_size = nil, 
-                           number_type = nil, 
-                           friendly_name = nil, 
-                           response_type = 'json'); end
+def create_list_number(options = Hash.new); end
 ```
 
 #### Parameters
@@ -511,71 +577,25 @@ def create_list_number(page = nil,
 #### Example Usage
 
 ```ruby
-page = 53
-page_size = 53
+collect = Hash.new
+
+page = 80
+collect['page'] = page
+
+page_size = 80
+collect['page_size'] = page_size
+
 number_type = 'NumberType'
+collect['number_type'] = number_type
+
 friendly_name = 'FriendlyName'
+collect['friendly_name'] = friendly_name
+
 response_type = 'json'
-
-result = phoneNumber.create_list_number(page, page_size, number_type, friendly_name, response_type)
-
-```
+collect['response_type'] = response_type
 
 
-#### <a name="create_release_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_release_number") create_release_number
-
-> Release number from account
-
-
-```ruby
-def create_release_number(phone_number, 
-                              response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | Phone number to be relase |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-phone_number = 'PhoneNumber'
-response_type = 'json'
-
-result = phoneNumber.create_release_number(phone_number, response_type)
-
-```
-
-
-#### <a name="create_buy_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_buy_number") create_buy_number
-
-> Buy Phone Number 
-
-
-```ruby
-def create_buy_number(phone_number, 
-                          response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | Phone number to be purchase |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-phone_number = 'PhoneNumber'
-response_type = 'json'
-
-result = phoneNumber.create_buy_number(phone_number, response_type)
+result = phoneNumber.create_list_number(collect)
 
 ```
 
@@ -586,8 +606,7 @@ result = phoneNumber.create_buy_number(phone_number, response_type)
 
 
 ```ruby
-def create_view_number_details(phone_number, 
-                                   response_type = 'json'); end
+def create_view_number_details(options = Hash.new); end
 ```
 
 #### Parameters
@@ -601,10 +620,84 @@ def create_view_number_details(phone_number,
 #### Example Usage
 
 ```ruby
-phone_number = 'PhoneNumber'
-response_type = 'json'
+collect = Hash.new
 
-result = phoneNumber.create_view_number_details(phone_number, response_type)
+phone_number = 'PhoneNumber'
+collect['phone_number'] = phone_number
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = phoneNumber.create_view_number_details(collect)
+
+```
+
+
+#### <a name="create_release_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_release_number") create_release_number
+
+> Release number from account
+
+
+```ruby
+def create_release_number(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | Phone number to be relase |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+phone_number = 'PhoneNumber'
+collect['phone_number'] = phone_number
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = phoneNumber.create_release_number(collect)
+
+```
+
+
+#### <a name="create_buy_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_buy_number") create_buy_number
+
+> Buy Phone Number 
+
+
+```ruby
+def create_buy_number(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | Phone number to be purchase |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+phone_number = 'PhoneNumber'
+collect['phone_number'] = phone_number
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = phoneNumber.create_buy_number(collect)
 
 ```
 
@@ -615,21 +708,7 @@ result = phoneNumber.create_view_number_details(phone_number, response_type)
 
 
 ```ruby
-def update_phone_number(phone_number, 
-                            friendly_name = nil, 
-                            voice_url = nil, 
-                            voice_method = nil, 
-                            voice_fallback_url = nil, 
-                            voice_fallback_method = nil, 
-                            hangup_callback = nil, 
-                            hangup_callback_method = nil, 
-                            heartbeat_url = nil, 
-                            heartbeat_method = nil, 
-                            sms_url = nil, 
-                            sms_method = nil, 
-                            sms_fallback_url = nil, 
-                            sms_fallback_method = nil, 
-                            response_type = 'json'); end
+def update_phone_number(options = Hash.new); end
 ```
 
 #### Parameters
@@ -656,23 +735,55 @@ def update_phone_number(phone_number,
 #### Example Usage
 
 ```ruby
-phone_number = 'PhoneNumber'
-friendly_name = 'FriendlyName'
-voice_url = 'VoiceUrl'
-voice_method = Message360::HttpAction::GET
-voice_fallback_url = 'VoiceFallbackUrl'
-voice_fallback_method = Message360::HttpAction::GET
-hangup_callback = 'HangupCallback'
-hangup_callback_method = Message360::HttpAction::GET
-heartbeat_url = 'HeartbeatUrl'
-heartbeat_method = Message360::HttpAction::GET
-sms_url = 'SmsUrl'
-sms_method = Message360::HttpAction::GET
-sms_fallback_url = 'SmsFallbackUrl'
-sms_fallback_method = Message360::HttpAction::GET
-response_type = 'json'
+collect = Hash.new
 
-result = phoneNumber.update_phone_number(phone_number, friendly_name, voice_url, voice_method, voice_fallback_url, voice_fallback_method, hangup_callback, hangup_callback_method, heartbeat_url, heartbeat_method, sms_url, sms_method, sms_fallback_url, sms_fallback_method, response_type)
+phone_number = 'PhoneNumber'
+collect['phone_number'] = phone_number
+
+friendly_name = 'FriendlyName'
+collect['friendly_name'] = friendly_name
+
+voice_url = 'VoiceUrl'
+collect['voice_url'] = voice_url
+
+voice_method = Message360::HttpAction::GET
+collect['voice_method'] = voice_method
+
+voice_fallback_url = 'VoiceFallbackUrl'
+collect['voice_fallback_url'] = voice_fallback_url
+
+voice_fallback_method = Message360::HttpAction::GET
+collect['voice_fallback_method'] = voice_fallback_method
+
+hangup_callback = 'HangupCallback'
+collect['hangup_callback'] = hangup_callback
+
+hangup_callback_method = Message360::HttpAction::GET
+collect['hangup_callback_method'] = hangup_callback_method
+
+heartbeat_url = 'HeartbeatUrl'
+collect['heartbeat_url'] = heartbeat_url
+
+heartbeat_method = Message360::HttpAction::GET
+collect['heartbeat_method'] = heartbeat_method
+
+sms_url = 'SmsUrl'
+collect['sms_url'] = sms_url
+
+sms_method = Message360::HttpAction::GET
+collect['sms_method'] = sms_method
+
+sms_fallback_url = 'SmsFallbackUrl'
+collect['sms_fallback_url'] = sms_fallback_url
+
+sms_fallback_method = Message360::HttpAction::GET
+collect['sms_fallback_method'] = sms_fallback_method
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = phoneNumber.update_phone_number(collect)
 
 ```
 
@@ -695,10 +806,7 @@ usage = client.usage
 
 
 ```ruby
-def create_list_usage(product_code, 
-                          start_date, 
-                          end_date, 
-                          response_type = 'json'); end
+def create_list_usage(options = Hash.new); end
 ```
 
 #### Parameters
@@ -714,12 +822,266 @@ def create_list_usage(product_code,
 #### Example Usage
 
 ```ruby
-product_code = '0'
-start_date = '2016-09-06'
-end_date = '2016-09-06'
-response_type = 'json'
+collect = Hash.new
 
-result = usage.create_list_usage(product_code, start_date, end_date, response_type)
+product_code = '0'
+collect['product_code'] = product_code
+
+start_date = '2016-09-06'
+collect['start_date'] = start_date
+
+end_date = '2016-09-06'
+collect['end_date'] = end_date
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = usage.create_list_usage(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="web_rtc_controller"></a>![Class: ](http://apidocs.io/img/class.png ".WebRTCController") WebRTCController
+
+#### Get singleton instance
+
+The singleton instance of the ``` WebRTCController ``` class can be accessed from the API Client.
+
+```ruby
+webRTC = client.web_rtc
+```
+
+#### <a name="create_check_funds"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_check_funds") create_check_funds
+
+> TODO: Add a method description
+
+
+```ruby
+def create_check_funds(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| account_sid |  ``` Required ```  | Your message360 Account SID |
+| auth_token |  ``` Required ```  | Your message360 Token |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+account_sid = 'account_sid'
+collect['account_sid'] = account_sid
+
+auth_token = 'auth_token'
+collect['auth_token'] = auth_token
+
+
+webRTC.create_check_funds(collect)
+
+```
+
+
+#### <a name="create_authenticate_number"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_authenticate_number") create_authenticate_number
+
+> Authenticate a message360 number for use
+
+
+```ruby
+def create_authenticate_number(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | Phone number to authenticate for use |
+| account_sid |  ``` Required ```  | Your message360 Account SID |
+| auth_token |  ``` Required ```  | Your message360 token |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+phone_number = 'phone_number'
+collect['phone_number'] = phone_number
+
+account_sid = 'account_sid'
+collect['account_sid'] = account_sid
+
+auth_token = 'auth_token'
+collect['auth_token'] = auth_token
+
+
+webRTC.create_authenticate_number(collect)
+
+```
+
+
+#### <a name="create_token"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_token") create_token
+
+> message360 webrtc
+
+
+```ruby
+def create_token(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| account_sid |  ``` Required ```  | Your message360 Account SID |
+| auth_token |  ``` Required ```  | Your message360 Token |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+account_sid = 'account_sid'
+collect['account_sid'] = account_sid
+
+auth_token = 'auth_token'
+collect['auth_token'] = auth_token
+
+
+webRTC.create_token(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="recording_controller"></a>![Class: ](http://apidocs.io/img/class.png ".RecordingController") RecordingController
+
+#### Get singleton instance
+
+The singleton instance of the ``` RecordingController ``` class can be accessed from the API Client.
+
+```ruby
+recording = client.recording
+```
+
+#### <a name="create_view_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_view_recording") create_view_recording
+
+> View a specific Recording
+
+
+```ruby
+def create_view_recording(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| recording_sid |  ``` Required ```  | Search Recording sid |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+recording_sid = 'RecordingSid'
+collect['recording_sid'] = recording_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = recording.create_view_recording(collect)
+
+```
+
+
+#### <a name="create_delete_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_delete_recording") create_delete_recording
+
+> Delete Recording Record
+
+
+```ruby
+def create_delete_recording(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| recording_sid |  ``` Required ```  | Unique Recording Sid to be delete |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+recording_sid = 'RecordingSid'
+collect['recording_sid'] = recording_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = recording.create_delete_recording(collect)
+
+```
+
+
+#### <a name="create_list_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_list_recording") create_list_recording
+
+> List out Recordings
+
+
+```ruby
+def create_list_recording(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| date_created |  ``` Optional ```  | TODO: Add a parameter description |
+| call_sid |  ``` Optional ```  | TODO: Add a parameter description |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+page = 80
+collect['page'] = page
+
+page_size = 80
+collect['page_size'] = page_size
+
+date_created = 'DateCreated'
+collect['date_created'] = date_created
+
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = recording.create_list_recording(collect)
 
 ```
 
@@ -736,21 +1098,115 @@ The singleton instance of the ``` EmailController ``` class can be accessed from
 email = client.email
 ```
 
+#### <a name="create_delete_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_spam") create_delete_spam
+
+> Deletes a email address marked as spam from the spam list
+
+
+```ruby
+def create_delete_spam(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | Email address |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+email = 'email'
+collect['email'] = email
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_delete_spam(collect)
+
+```
+
+
+#### <a name="create_delete_block"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_block") create_delete_block
+
+> Deletes a blocked email
+
+
+```ruby
+def create_delete_block(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | Email address to remove from block list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+email = 'email'
+collect['email'] = email
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_delete_block(collect)
+
+```
+
+
+#### <a name="add_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.add_unsubscribes") add_unsubscribes
+
+> Add an email to the unsubscribe list
+
+
+```ruby
+def add_unsubscribes(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email to add to the unsubscribe list |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+email = 'email'
+collect['email'] = email
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.add_unsubscribes(collect)
+
+```
+
+
 #### <a name="create_send_email"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
 
 > Send out an email
 
 
 ```ruby
-def create_send_email(to, 
-                          from, 
-                          type, 
-                          subject, 
-                          message, 
-                          cc = nil, 
-                          bcc = nil, 
-                          attachment = nil, 
-                          response_type = 'json'); end
+def create_send_email(options = Hash.new); end
 ```
 
 #### Parameters
@@ -771,17 +1227,37 @@ def create_send_email(to,
 #### Example Usage
 
 ```ruby
-to = 'to'
-from = 'from'
-type = Message360::SendEmailAs::HTML
-subject = 'subject'
-message = 'message'
-cc = 'cc'
-bcc = 'bcc'
-attachment = 'attachment'
-response_type = 'json'
+collect = Hash.new
 
-result = email.create_send_email(to, from, type, subject, message, cc, bcc, attachment, response_type)
+to = 'to'
+collect['to'] = to
+
+from = 'from'
+collect['from'] = from
+
+type = Message360::SendEmailAs::HTML
+collect['type'] = type
+
+subject = 'subject'
+collect['subject'] = subject
+
+message = 'message'
+collect['message'] = message
+
+cc = 'cc'
+collect['cc'] = cc
+
+bcc = 'bcc'
+collect['bcc'] = bcc
+
+attachment = 'attachment'
+collect['attachment'] = attachment
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_send_email(collect)
 
 ```
 
@@ -792,8 +1268,7 @@ result = email.create_send_email(to, from, type, subject, message, cc, bcc, atta
 
 
 ```ruby
-def create_delete_unsubscribes(email, 
-                                   response_type = 'json'); end
+def create_delete_unsubscribes(options = Hash.new); end
 ```
 
 #### Parameters
@@ -807,10 +1282,16 @@ def create_delete_unsubscribes(email,
 #### Example Usage
 
 ```ruby
-email = 'email'
-response_type = 'json'
+collect = Hash.new
 
-result = email.create_delete_unsubscribes(email, response_type)
+email = 'email'
+collect['email'] = email
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_delete_unsubscribes(collect)
 
 ```
 
@@ -821,9 +1302,7 @@ result = email.create_delete_unsubscribes(email, response_type)
 
 
 ```ruby
-def create_list_unsubscribes(response_type = 'json', 
-                                 offset = nil, 
-                                 limit = nil); end
+def create_list_unsubscribes(options = Hash.new); end
 ```
 
 #### Parameters
@@ -838,98 +1317,19 @@ def create_list_unsubscribes(response_type = 'json',
 #### Example Usage
 
 ```ruby
+collect = Hash.new
+
 response_type = 'json'
+collect['response_type'] = response_type
+
 offset = 'offset'
+collect['offset'] = offset
+
 limit = 'limit'
-
-result = email.create_list_unsubscribes(response_type, offset, limit)
-
-```
+collect['limit'] = limit
 
 
-#### <a name="add_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.add_unsubscribes") add_unsubscribes
-
-> Add an email to the unsubscribe list
-
-
-```ruby
-def add_unsubscribes(email, 
-                         response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | The email to add to the unsubscribe list |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-email = 'email'
-response_type = 'json'
-
-result = email.add_unsubscribes(email, response_type)
-
-```
-
-
-#### <a name="create_delete_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_spam") create_delete_spam
-
-> Deletes a email address marked as spam from the spam list
-
-
-```ruby
-def create_delete_spam(email, 
-                           response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | Email address |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-email = 'email'
-response_type = 'json'
-
-result = email.create_delete_spam(email, response_type)
-
-```
-
-
-#### <a name="create_delete_block"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_block") create_delete_block
-
-> Deletes a blocked email
-
-
-```ruby
-def create_delete_block(email, 
-                            response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | Email address to remove from block list |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-email = 'email'
-response_type = 'json'
-
-result = email.create_delete_block(email, response_type)
+result = email.create_list_unsubscribes(collect)
 
 ```
 
@@ -940,9 +1340,7 @@ result = email.create_delete_block(email, response_type)
 
 
 ```ruby
-def create_list_invalid(response_type = 'json', 
-                            offet = nil, 
-                            limit = nil); end
+def create_list_invalid(options = Hash.new); end
 ```
 
 #### Parameters
@@ -957,11 +1355,19 @@ def create_list_invalid(response_type = 'json',
 #### Example Usage
 
 ```ruby
-response_type = 'json'
-offet = 'offet'
-limit = 'limit'
+collect = Hash.new
 
-result = email.create_list_invalid(response_type, offet, limit)
+response_type = 'json'
+collect['response_type'] = response_type
+
+offet = 'offet'
+collect['offet'] = offet
+
+limit = 'limit'
+collect['limit'] = limit
+
+
+result = email.create_list_invalid(collect)
 
 ```
 
@@ -972,8 +1378,7 @@ result = email.create_list_invalid(response_type, offet, limit)
 
 
 ```ruby
-def create_delete_bounces(email, 
-                              response_type = 'json'); end
+def create_delete_bounces(options = Hash.new); end
 ```
 
 #### Parameters
@@ -987,10 +1392,16 @@ def create_delete_bounces(email,
 #### Example Usage
 
 ```ruby
-email = 'email'
-response_type = 'json'
+collect = Hash.new
 
-result = email.create_delete_bounces(email, response_type)
+email = 'email'
+collect['email'] = email
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_delete_bounces(collect)
 
 ```
 
@@ -1001,9 +1412,7 @@ result = email.create_delete_bounces(email, response_type)
 
 
 ```ruby
-def create_list_bounces(response_type = 'json', 
-                            offset = nil, 
-                            limit = nil); end
+def create_list_bounces(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1018,11 +1427,19 @@ def create_list_bounces(response_type = 'json',
 #### Example Usage
 
 ```ruby
-response_type = 'json'
-offset = 'offset'
-limit = 'limit'
+collect = Hash.new
 
-result = email.create_list_bounces(response_type, offset, limit)
+response_type = 'json'
+collect['response_type'] = response_type
+
+offset = 'offset'
+collect['offset'] = offset
+
+limit = 'limit'
+collect['limit'] = limit
+
+
+result = email.create_list_bounces(collect)
 
 ```
 
@@ -1033,9 +1450,7 @@ result = email.create_list_bounces(response_type, offset, limit)
 
 
 ```ruby
-def create_list_spam(response_type, 
-                         offset = nil, 
-                         limit = nil); end
+def create_list_spam(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1050,11 +1465,19 @@ def create_list_spam(response_type,
 #### Example Usage
 
 ```ruby
-response_type = 'json'
-offset = 'offset'
-limit = 'limit'
+collect = Hash.new
 
-result = email.create_list_spam(response_type, offset, limit)
+response_type = 'json'
+collect['response_type'] = response_type
+
+offset = 'offset'
+collect['offset'] = offset
+
+limit = 'limit'
+collect['limit'] = limit
+
+
+result = email.create_list_spam(collect)
 
 ```
 
@@ -1065,9 +1488,7 @@ result = email.create_list_spam(response_type, offset, limit)
 
 
 ```ruby
-def create_list_blocks(offset = nil, 
-                           limit = nil, 
-                           response_type = 'json'); end
+def create_list_blocks(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1082,11 +1503,19 @@ def create_list_blocks(offset = nil,
 #### Example Usage
 
 ```ruby
-offset = 'offset'
-limit = 'limit'
-response_type = 'json'
+collect = Hash.new
 
-result = email.create_list_blocks(offset, limit, response_type)
+offset = 'offset'
+collect['offset'] = offset
+
+limit = 'limit'
+collect['limit'] = limit
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = email.create_list_blocks(collect)
 
 ```
 
@@ -1109,14 +1538,7 @@ sMS = client.sms
 
 
 ```ruby
-def create_send_sms(fromcountrycode, 
-                        from, 
-                        tocountrycode, 
-                        to, 
-                        body, 
-                        method = nil, 
-                        messagestatuscallback = nil, 
-                        response_type = 'json'); end
+def create_send_sms(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1136,16 +1558,34 @@ def create_send_sms(fromcountrycode,
 #### Example Usage
 
 ```ruby
-fromcountrycode = 1
-from = 'from'
-tocountrycode = 1
-to = 'to'
-body = 'body'
-method = Message360::HttpAction::GET
-messagestatuscallback = 'messagestatuscallback'
-response_type = 'json'
+collect = Hash.new
 
-result = sMS.create_send_sms(fromcountrycode, from, tocountrycode, to, body, method, messagestatuscallback, response_type)
+fromcountrycode = 1
+collect['fromcountrycode'] = fromcountrycode
+
+from = 'from'
+collect['from'] = from
+
+tocountrycode = 1
+collect['tocountrycode'] = tocountrycode
+
+to = 'to'
+collect['to'] = to
+
+body = 'body'
+collect['body'] = body
+
+method = Message360::HttpAction::GET
+collect['method'] = method
+
+messagestatuscallback = 'messagestatuscallback'
+collect['messagestatuscallback'] = messagestatuscallback
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_send_sms(collect)
 
 ```
 
@@ -1156,8 +1596,7 @@ result = sMS.create_send_sms(fromcountrycode, from, tocountrycode, to, body, met
 
 
 ```ruby
-def create_view_sms(messagesid, 
-                        response_type = 'json'); end
+def create_view_sms(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1171,10 +1610,16 @@ def create_view_sms(messagesid,
 #### Example Usage
 
 ```ruby
-messagesid = 'messagesid'
-response_type = 'json'
+collect = Hash.new
 
-result = sMS.create_view_sms(messagesid, response_type)
+messagesid = 'messagesid'
+collect['messagesid'] = messagesid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_view_sms(collect)
 
 ```
 
@@ -1185,12 +1630,7 @@ result = sMS.create_view_sms(messagesid, response_type)
 
 
 ```ruby
-def create_list_sms(page = nil, 
-                        pagesize = nil, 
-                        from = nil, 
-                        to = nil, 
-                        datesent = nil, 
-                        response_type = 'json'); end
+def create_list_sms(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1208,14 +1648,28 @@ def create_list_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 145
-pagesize = 145
-from = 'from'
-to = 'to'
-datesent = 'datesent'
-response_type = 'json'
+collect = Hash.new
 
-result = sMS.create_list_sms(page, pagesize, from, to, datesent, response_type)
+page = 172
+collect['page'] = page
+
+pagesize = 172
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+to = 'to'
+collect['to'] = to
+
+datesent = 'datesent'
+collect['datesent'] = datesent
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_list_sms(collect)
 
 ```
 
@@ -1226,11 +1680,7 @@ result = sMS.create_list_sms(page, pagesize, from, to, datesent, response_type)
 
 
 ```ruby
-def create_list_inbound_sms(page = nil, 
-                                pagesize = nil, 
-                                from = nil, 
-                                to = nil, 
-                                response_type = 'json'); end
+def create_list_inbound_sms(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1247,13 +1697,25 @@ def create_list_inbound_sms(page = nil,
 #### Example Usage
 
 ```ruby
-page = 145
-pagesize = 'pagesize'
-from = 'from'
-to = 'to'
-response_type = 'json'
+collect = Hash.new
 
-result = sMS.create_list_inbound_sms(page, pagesize, from, to, response_type)
+page = 172
+collect['page'] = page
+
+pagesize = 'pagesize'
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+to = 'to'
+collect['to'] = to
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_list_inbound_sms(collect)
 
 ```
 
@@ -1276,8 +1738,7 @@ account = client.account
 
 
 ```ruby
-def create_view_account(date, 
-                            response_type = 'json'); end
+def create_view_account(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1291,118 +1752,16 @@ def create_view_account(date,
 #### Example Usage
 
 ```ruby
+collect = Hash.new
+
 date = 'date'
+collect['date'] = date
+
 response_type = 'json'
-
-result = account.create_view_account(date, response_type)
-
-```
+collect['response_type'] = response_type
 
 
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="recording_controller"></a>![Class: ](http://apidocs.io/img/class.png ".RecordingController") RecordingController
-
-#### Get singleton instance
-
-The singleton instance of the ``` RecordingController ``` class can be accessed from the API Client.
-
-```ruby
-recording = client.recording
-```
-
-#### <a name="create_delete_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_delete_recording") create_delete_recording
-
-> Delete Recording Record
-
-
-```ruby
-def create_delete_recording(recording_sid, 
-                                response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recording_sid |  ``` Required ```  | Unique Recording Sid to be delete |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-recording_sid = 'RecordingSid'
-response_type = 'json'
-
-result = recording.create_delete_recording(recording_sid, response_type)
-
-```
-
-
-#### <a name="create_view_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_view_recording") create_view_recording
-
-> View a specific Recording
-
-
-```ruby
-def create_view_recording(recording_sid, 
-                              response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recording_sid |  ``` Required ```  | Search Recording sid |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-recording_sid = 'RecordingSid'
-response_type = 'json'
-
-result = recording.create_view_recording(recording_sid, response_type)
-
-```
-
-
-#### <a name="create_list_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_list_recording") create_list_recording
-
-> List out Recordings
-
-
-```ruby
-def create_list_recording(page = nil, 
-                              page_size = nil, 
-                              date_created = nil, 
-                              call_sid = nil, 
-                              response_type = 'json'); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| date_created |  ``` Optional ```  | TODO: Add a parameter description |
-| call_sid |  ``` Optional ```  | TODO: Add a parameter description |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```ruby
-page = 145
-page_size = 145
-date_created = 'DateCreated'
-call_sid = 'CallSid'
-response_type = 'json'
-
-result = recording.create_list_recording(page, page_size, date_created, call_sid, response_type)
+result = account.create_view_account(collect)
 
 ```
 
@@ -1425,8 +1784,7 @@ call = client.call
 
 
 ```ruby
-def create_view_call(callsid, 
-                         response_type = 'json'); end
+def create_view_call(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1440,10 +1798,16 @@ def create_view_call(callsid,
 #### Example Usage
 
 ```ruby
-callsid = 'callsid'
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_view_call(callsid, response_type)
+callsid = 'callsid'
+collect['callsid'] = callsid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_view_call(collect)
 
 ```
 
@@ -1454,28 +1818,7 @@ result = call.create_view_call(callsid, response_type)
 
 
 ```ruby
-def create_make_call(from_country_code, 
-                         from, 
-                         to_country_code, 
-                         to, 
-                         url, 
-                         method = nil, 
-                         status_call_back_url = nil, 
-                         status_call_back_method = nil, 
-                         fall_back_url = nil, 
-                         fall_back_method = nil, 
-                         heart_beat_url = nil, 
-                         heart_beat_method = nil, 
-                         timeout = nil, 
-                         play_dtmf = nil, 
-                         hide_caller_id = nil, 
-                         record = nil, 
-                         record_call_back_url = nil, 
-                         record_call_back_method = nil, 
-                         transcribe = nil, 
-                         transcribe_call_back_url = nil, 
-                         if_machine = nil, 
-                         response_type = 'json'); end
+def create_make_call(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1509,30 +1852,76 @@ def create_make_call(from_country_code,
 #### Example Usage
 
 ```ruby
-from_country_code = 'FromCountryCode'
-from = 'From'
-to_country_code = 'ToCountryCode'
-to = 'To'
-url = 'Url'
-method = Message360::HttpAction::GET
-status_call_back_url = 'StatusCallBackUrl'
-status_call_back_method = Message360::HttpAction::GET
-fall_back_url = 'FallBackUrl'
-fall_back_method = Message360::HttpAction::GET
-heart_beat_url = 'HeartBeatUrl'
-heart_beat_method = true
-timeout = 145
-play_dtmf = 'PlayDtmf'
-hide_caller_id = true
-record = true
-record_call_back_url = 'RecordCallBackUrl'
-record_call_back_method = Message360::HttpAction::GET
-transcribe = true
-transcribe_call_back_url = 'TranscribeCallBackUrl'
-if_machine = Message360::IfMachine::CONTINUE
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_make_call(from_country_code, from, to_country_code, to, url, method, status_call_back_url, status_call_back_method, fall_back_url, fall_back_method, heart_beat_url, heart_beat_method, timeout, play_dtmf, hide_caller_id, record, record_call_back_url, record_call_back_method, transcribe, transcribe_call_back_url, if_machine, response_type)
+from_country_code = 'FromCountryCode'
+collect['from_country_code'] = from_country_code
+
+from = 'From'
+collect['from'] = from
+
+to_country_code = 'ToCountryCode'
+collect['to_country_code'] = to_country_code
+
+to = 'To'
+collect['to'] = to
+
+url = 'Url'
+collect['url'] = url
+
+method = Message360::HttpAction::GET
+collect['method'] = method
+
+status_call_back_url = 'StatusCallBackUrl'
+collect['status_call_back_url'] = status_call_back_url
+
+status_call_back_method = Message360::HttpAction::GET
+collect['status_call_back_method'] = status_call_back_method
+
+fall_back_url = 'FallBackUrl'
+collect['fall_back_url'] = fall_back_url
+
+fall_back_method = Message360::HttpAction::GET
+collect['fall_back_method'] = fall_back_method
+
+heart_beat_url = 'HeartBeatUrl'
+collect['heart_beat_url'] = heart_beat_url
+
+heart_beat_method = true
+collect['heart_beat_method'] = heart_beat_method
+
+timeout = 172
+collect['timeout'] = timeout
+
+play_dtmf = 'PlayDtmf'
+collect['play_dtmf'] = play_dtmf
+
+hide_caller_id = true
+collect['hide_caller_id'] = hide_caller_id
+
+record = true
+collect['record'] = record
+
+record_call_back_url = 'RecordCallBackUrl'
+collect['record_call_back_url'] = record_call_back_url
+
+record_call_back_method = Message360::HttpAction::GET
+collect['record_call_back_method'] = record_call_back_method
+
+transcribe = true
+collect['transcribe'] = transcribe
+
+transcribe_call_back_url = 'TranscribeCallBackUrl'
+collect['transcribe_call_back_url'] = transcribe_call_back_url
+
+if_machine = Message360::IfMachine::CONTINUE
+collect['if_machine'] = if_machine
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_make_call(collect)
 
 ```
 
@@ -1543,13 +1932,7 @@ result = call.create_make_call(from_country_code, from, to_country_code, to, url
 
 
 ```ruby
-def create_play_audio(length, 
-                          direction, 
-                          loop, 
-                          mix, 
-                          call_sid = nil, 
-                          audio_url = nil, 
-                          response_type = 'json'); end
+def create_play_audio(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1568,15 +1951,31 @@ def create_play_audio(length,
 #### Example Usage
 
 ```ruby
-length = 145
-direction = Message360::Direction::IN
-loop = true
-mix = true
-call_sid = 'CallSid'
-audio_url = 'AudioUrl'
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_play_audio(length, direction, loop, mix, call_sid, audio_url, response_type)
+length = 172
+collect['length'] = length
+
+direction = Message360::Direction::IN
+collect['direction'] = direction
+
+loop = true
+collect['loop'] = loop
+
+mix = true
+collect['mix'] = mix
+
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+audio_url = 'AudioUrl'
+collect['audio_url'] = audio_url
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_play_audio(collect)
 
 ```
 
@@ -1587,13 +1986,7 @@ result = call.create_play_audio(length, direction, loop, mix, call_sid, audio_ur
 
 
 ```ruby
-def create_record_call(call_sid, 
-                           record, 
-                           direction = nil, 
-                           time_limit = nil, 
-                           call_back_url = nil, 
-                           fileformat = nil, 
-                           response_type = 'json'); end
+def create_record_call(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1612,15 +2005,31 @@ def create_record_call(call_sid,
 #### Example Usage
 
 ```ruby
-call_sid = 'CallSid'
-record = true
-direction = Message360::Direction::IN
-time_limit = 145
-call_back_url = 'CallBackUrl'
-fileformat = Message360::AudioFormat::MP3
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_record_call(call_sid, record, direction, time_limit, call_back_url, fileformat, response_type)
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+record = true
+collect['record'] = record
+
+direction = Message360::Direction::IN
+collect['direction'] = direction
+
+time_limit = 172
+collect['time_limit'] = time_limit
+
+call_back_url = 'CallBackUrl'
+collect['call_back_url'] = call_back_url
+
+fileformat = Message360::AudioFormat::MP3
+collect['fileformat'] = fileformat
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_record_call(collect)
 
 ```
 
@@ -1631,14 +2040,7 @@ result = call.create_record_call(call_sid, record, direction, time_limit, call_b
 
 
 ```ruby
-def create_voice_effect(call_sid, 
-                            audio_direction = nil, 
-                            pitch_semi_tones = nil, 
-                            pitch_octaves = nil, 
-                            pitch = nil, 
-                            rate = nil, 
-                            tempo = nil, 
-                            response_type = 'json'); end
+def create_voice_effect(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1658,16 +2060,34 @@ def create_voice_effect(call_sid,
 #### Example Usage
 
 ```ruby
-call_sid = 'CallSid'
-audio_direction = Message360::AudioDirection::IN
-pitch_semi_tones = 145.369408670985
-pitch_octaves = 145.369408670985
-pitch = 145.369408670985
-rate = 145.369408670985
-tempo = 145.369408670985
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_voice_effect(call_sid, audio_direction, pitch_semi_tones, pitch_octaves, pitch, rate, tempo, response_type)
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+audio_direction = Message360::AudioDirection::IN
+collect['audio_direction'] = audio_direction
+
+pitch_semi_tones = 172.323244420031
+collect['pitch_semi_tones'] = pitch_semi_tones
+
+pitch_octaves = 172.323244420031
+collect['pitch_octaves'] = pitch_octaves
+
+pitch = 172.323244420031
+collect['pitch'] = pitch
+
+rate = 172.323244420031
+collect['rate'] = rate
+
+tempo = 172.323244420031
+collect['tempo'] = tempo
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_voice_effect(collect)
 
 ```
 
@@ -1678,10 +2098,7 @@ result = call.create_voice_effect(call_sid, audio_direction, pitch_semi_tones, p
 
 
 ```ruby
-def create_send_digit(call_sid, 
-                          play_dtmf, 
-                          play_dtmf_direction = nil, 
-                          response_type = 'json'); end
+def create_send_digit(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1697,12 +2114,22 @@ def create_send_digit(call_sid,
 #### Example Usage
 
 ```ruby
-call_sid = 'CallSid'
-play_dtmf = 'PlayDtmf'
-play_dtmf_direction = Message360::Direction::IN
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_send_digit(call_sid, play_dtmf, play_dtmf_direction, response_type)
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+play_dtmf = 'PlayDtmf'
+collect['play_dtmf'] = play_dtmf
+
+play_dtmf_direction = Message360::Direction::IN
+collect['play_dtmf_direction'] = play_dtmf_direction
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_send_digit(collect)
 
 ```
 
@@ -1713,11 +2140,7 @@ result = call.create_send_digit(call_sid, play_dtmf, play_dtmf_direction, respon
 
 
 ```ruby
-def create_interrupted_call(call_sid, 
-                                url = nil, 
-                                method = nil, 
-                                status = nil, 
-                                response_type = 'json'); end
+def create_interrupted_call(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1734,13 +2157,25 @@ def create_interrupted_call(call_sid,
 #### Example Usage
 
 ```ruby
-call_sid = 'CallSid'
-url = 'Url'
-method = Message360::HttpAction::GET
-status = Message360::InterruptedCallStatus::CANCELED
-response_type = 'json'
+collect = Hash.new
 
-result = call.create_interrupted_call(call_sid, url, method, status, response_type)
+call_sid = 'CallSid'
+collect['call_sid'] = call_sid
+
+url = 'Url'
+collect['url'] = url
+
+method = Message360::HttpAction::GET
+collect['method'] = method
+
+status = Message360::InterruptedCallStatus::CANCELED
+collect['status'] = status
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_interrupted_call(collect)
 
 ```
 
@@ -1751,12 +2186,7 @@ result = call.create_interrupted_call(call_sid, url, method, status, response_ty
 
 
 ```ruby
-def create_list_calls(page = nil, 
-                          page_size = nil, 
-                          to = nil, 
-                          from = nil, 
-                          date_created = nil, 
-                          response_type = 'json'); end
+def create_list_calls(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1774,14 +2204,28 @@ def create_list_calls(page = nil,
 #### Example Usage
 
 ```ruby
-page = 'Page'
-page_size = 'PageSize'
-to = 'To'
-from = 'From'
-date_created = 'DateCreated'
-response_type = 'json'
+collect = Hash.new
 
-call.create_list_calls(page, page_size, to, from, date_created, response_type)
+page = 'Page'
+collect['page'] = page
+
+page_size = 'PageSize'
+collect['page_size'] = page_size
+
+to = 'To'
+collect['to'] = to
+
+from = 'From'
+collect['from'] = from
+
+date_created = 'DateCreated'
+collect['date_created'] = date_created
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+call.create_list_calls(collect)
 
 ```
 
@@ -1804,8 +2248,7 @@ carrier = client.carrier
 
 
 ```ruby
-def create_carrier_lookup(phonenumber, 
-                              response_type = 'json'); end
+def create_carrier_lookup(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1819,10 +2262,16 @@ def create_carrier_lookup(phonenumber,
 #### Example Usage
 
 ```ruby
-phonenumber = 'phonenumber'
-response_type = 'json'
+collect = Hash.new
 
-result = carrier.create_carrier_lookup(phonenumber, response_type)
+phonenumber = 'phonenumber'
+collect['phonenumber'] = phonenumber
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = carrier.create_carrier_lookup(collect)
 
 ```
 
@@ -1833,9 +2282,7 @@ result = carrier.create_carrier_lookup(phonenumber, response_type)
 
 
 ```ruby
-def create_carrier_lookup_list(page = nil, 
-                                   pagesize = nil, 
-                                   response_type = 'json'); end
+def create_carrier_lookup_list(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1850,11 +2297,19 @@ def create_carrier_lookup_list(page = nil,
 #### Example Usage
 
 ```ruby
-page = 'page'
-pagesize = 'pagesize'
-response_type = 'json'
+collect = Hash.new
 
-result = carrier.create_carrier_lookup_list(page, pagesize, response_type)
+page = 'page'
+collect['page'] = page
+
+pagesize = 'pagesize'
+collect['pagesize'] = pagesize
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = carrier.create_carrier_lookup_list(collect)
 
 ```
 

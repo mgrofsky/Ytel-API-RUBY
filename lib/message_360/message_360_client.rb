@@ -8,40 +8,28 @@ module Message360
       ConferenceController.instance
     end
 
-    # Singleton access to transcription controller
-    # @return [TranscriptionController] Returns the controller instance
-    def transcription
-      TranscriptionController.instance
-    end
-
-    # Singleton access to phone_number controller
-    # @return [PhoneNumberController] Returns the controller instance
-    def phone_number
-      PhoneNumberController.instance
-    end
-
-    # Singleton access to usage controller
-    # @return [UsageController] Returns the controller instance
-    def usage
-      UsageController.instance
-    end
-
-    # Singleton access to web_rtc controller
-    # @return [WebRTCController] Returns the controller instance
-    def web_rtc
-      WebRTCController.instance
-    end
-
-    # Singleton access to recording controller
-    # @return [RecordingController] Returns the controller instance
-    def recording
-      RecordingController.instance
-    end
-
     # Singleton access to email controller
     # @return [EmailController] Returns the controller instance
     def email
       EmailController.instance
+    end
+
+    # Singleton access to number_verification controller
+    # @return [NumberVerificationController] Returns the controller instance
+    def number_verification
+      NumberVerificationController.instance
+    end
+
+    # Singleton access to carrier controller
+    # @return [CarrierController] Returns the controller instance
+    def carrier
+      CarrierController.instance
+    end
+
+    # Singleton access to call controller
+    # @return [CallController] Returns the controller instance
+    def call
+      CallController.instance
     end
 
     # Singleton access to sms controller
@@ -56,16 +44,46 @@ module Message360
       AccountController.instance
     end
 
-    # Singleton access to call controller
-    # @return [CallController] Returns the controller instance
-    def call
-      CallController.instance
+    # Singleton access to web_rtc controller
+    # @return [WebRTCController] Returns the controller instance
+    def web_rtc
+      WebRTCController.instance
     end
 
-    # Singleton access to carrier controller
-    # @return [CarrierController] Returns the controller instance
-    def carrier
-      CarrierController.instance
+    # Singleton access to sub_account controller
+    # @return [SubAccountController] Returns the controller instance
+    def sub_account
+      SubAccountController.instance
+    end
+
+    # Singleton access to address controller
+    # @return [AddressController] Returns the controller instance
+    def address
+      AddressController.instance
+    end
+
+    # Singleton access to phone_number controller
+    # @return [PhoneNumberController] Returns the controller instance
+    def phone_number
+      PhoneNumberController.instance
+    end
+
+    # Singleton access to recording controller
+    # @return [RecordingController] Returns the controller instance
+    def recording
+      RecordingController.instance
+    end
+
+    # Singleton access to transcription controller
+    # @return [TranscriptionController] Returns the controller instance
+    def transcription
+      TranscriptionController.instance
+    end
+
+    # Singleton access to usage controller
+    # @return [UsageController] Returns the controller instance
+    def usage
+      UsageController.instance
     end
 
     # Initializer with authentication and configuration parameters

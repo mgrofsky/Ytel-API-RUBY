@@ -1,33 +1,31 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-  class UsageController < BaseController
-    @@instance = UsageController.new
+  class NumberVerificationController < BaseController
+    @@instance = NumberVerificationController.new
     # Singleton instance of the controller class
     def self.instance
       @@instance
     end
 
-    # Get all usage 
-    # @param [ProductCode] product_code Required parameter: Product Code
-    # @param [String] start_date Required parameter: Start Usage Date
-    # @param [String] end_date Required parameter: End Usage Date
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # Number Verification
+    # @param [String] phonenumber Required parameter: Example: 
+    # @param [String] type Required parameter: Example: 
+    # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
-    def create_list_usage(options = Hash.new)
+    def create_verify_number(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'product_code' => options['product_code'],
-        'start_date' => options['start_date'],
-        'end_date' => options['end_date']
+        'phonenumber' => options['phonenumber'],
+        'type' => options['type']
       })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
 
       # prepare query string for API call
-      _query_builder << '/usage/listusage.{ResponseType}'
+      _query_builder << '/verifycallerid/verifynumber.{ResponseType}'
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
@@ -39,9 +37,8 @@ module Message360
 
       # prepare parameters
       _parameters = {
-        'ProductCode' => options['product_code'],
-        'startDate' => options['start_date'],
-        'endDate' => options['end_date']
+        'phonenumber' => options['phonenumber'],
+        'type' => options['type']
       }
 
       # create the HttpRequest object for the call

@@ -4,7 +4,7 @@ module Message360
   class BaseController
     attr_accessor :http_client, :http_call_back
 
-    @@http_client = UnirestClient.new(10)
+    @@http_client = FaradayClient.new(timeout: 10)
 
     @@global_headers = {
       'user-agent' => 'message360-api'      

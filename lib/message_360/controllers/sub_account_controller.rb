@@ -1,27 +1,33 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-  class RecordingController < BaseController
-    @@instance = RecordingController.new
+  class SubAccountController < BaseController
+    @@instance = SubAccountController.new
     # Singleton instance of the controller class
     def self.instance
       @@instance
     end
 
-    # List out Recordings
-    # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
-    # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
-    # @param [String] date_created Optional parameter: Example: 
-    # @param [String] call_sid Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # Create Sub account
+    # @param [String] firstname Required parameter: Example: 
+    # @param [String] lastname Required parameter: Example: 
+    # @param [String] email Required parameter: Example: 
+    # @param [String] response_type Optional parameter: ResponseType Format either json or xml
     # @return String response from the API call
-    def create_list_recording(options = Hash.new)
+    def create_sub_account(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'firstname' => options['firstname'],
+        'lastname' => options['lastname'],
+        'email' => options['email']
+      })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
 
       # prepare query string for API call
-      _query_builder << '/recording/listrecording.{ResponseType}'
+      _query_builder << '/user/createsubaccount.{ResponseType}'
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
@@ -33,10 +39,9 @@ module Message360
 
       # prepare parameters
       _parameters = {
-        'Page' => options['page'],
-        'PageSize' => options['page_size'],
-        'DateCreated' => options['date_created'],
-        'CallSid' => options['call_sid']
+        'firstname' => options['firstname'],
+        'lastname' => options['lastname'],
+        'email' => options['email']
       }
 
       # create the HttpRequest object for the call
@@ -55,22 +60,24 @@ module Message360
       return _context.response.raw_body
     end
 
-    # Delete Recording Record
-    # @param [String] recording_sid Required parameter: Unique Recording Sid to be delete
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # Suspend or unsuspend
+    # @param [String] subaccountsid Required parameter: Example: 
+    # @param [ActivateStatus] activate Required parameter: Example: 
+    # @param [String] response_type Optional parameter: Example: 
     # @return String response from the API call
-    def create_delete_recording(options = Hash.new)
+    def create_suspend_sub_account(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'recording_sid' => options['recording_sid']
+        'subaccountsid' => options['subaccountsid'],
+        'activate' => options['activate']
       })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
 
       # prepare query string for API call
-      _query_builder << '/recording/deleterecording.{ResponseType}'
+      _query_builder << '/user/subaccountactivation.{ResponseType}'
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
@@ -82,7 +89,8 @@ module Message360
 
       # prepare parameters
       _parameters = {
-        'RecordingSid' => options['recording_sid']
+        'subaccountsid' => options['subaccountsid'],
+        'activate' => options['activate']
       }
 
       # create the HttpRequest object for the call
@@ -101,22 +109,24 @@ module Message360
       return _context.response.raw_body
     end
 
-    # View a specific Recording
-    # @param [String] recording_sid Required parameter: Search Recording sid
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # Delete or Merge Sub account
+    # @param [String] subaccountsid Required parameter: Example: 
+    # @param [MergeNumberStatus] mergenumber Required parameter: Example: 
+    # @param [String] response_type Optional parameter: Response type format either json or xml
     # @return String response from the API call
-    def create_view_recording(options = Hash.new)
+    def create_delete_merge_sub_account(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'recording_sid' => options['recording_sid']
+        'subaccountsid' => options['subaccountsid'],
+        'mergenumber' => options['mergenumber']
       })
 
       # the base uri for api requests
       _query_builder = Configuration.base_uri.dup
 
       # prepare query string for API call
-      _query_builder << '/recording/viewrecording.{ResponseType}'
+      _query_builder << '/user/deletesubaccount.{ResponseType}'
 
       # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
@@ -128,7 +138,8 @@ module Message360
 
       # prepare parameters
       _parameters = {
-        'RecordingSid' => options['recording_sid']
+        'subaccountsid' => options['subaccountsid'],
+        'mergenumber' => options['mergenumber']
       }
 
       # create the HttpRequest object for the call

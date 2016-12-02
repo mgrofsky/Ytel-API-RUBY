@@ -10,7 +10,7 @@ module Message360
 
     # Get the Carrier Lookup
     # @param [String] phonenumber Required parameter: The number to lookup
-    # @param [String] response_type Optional parameter: Response format, xml or json
+    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_carrier_lookup(options = Hash.new)
 
@@ -55,9 +55,9 @@ module Message360
     end
 
     # Get the All Purchase Number's Carrier lookup
-    # @param [String] page Optional parameter: Page Number
-    # @param [String] pagesize Optional parameter: Page Size
-    # @param [String] response_type Optional parameter: Response format, xml or json
+    # @param [Integer] page Optional parameter: Page Number
+    # @param [Integer] pagesize Optional parameter: Page Size
+    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_carrier_lookup_list(options = Hash.new)
 

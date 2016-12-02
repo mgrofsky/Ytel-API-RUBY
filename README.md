@@ -190,10 +190,10 @@ def create_list_conference(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 56
+page = 13
 collect['page'] = page
 
-page_size = 56
+page_size = 13
 collect['page_size'] = page_size
 
 friendly_name = 'FriendlyName'
@@ -283,13 +283,13 @@ collect['conferencesid'] = conferencesid
 participantnumber = 'participantnumber'
 collect['participantnumber'] = participantnumber
 
-tocountrycode = 147
+tocountrycode = 13
 collect['tocountrycode'] = tocountrycode
 
-muted = true
+muted = false
 collect['muted'] = muted
 
-deaf = true
+deaf = false
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -330,16 +330,16 @@ collect = Hash.new
 conference_sid = 'ConferenceSid'
 collect['conference_sid'] = conference_sid
 
-page = 147
+page = 13
 collect['page'] = page
 
-pagesize = 147
+pagesize = 13
 collect['pagesize'] = pagesize
 
-muted = true
+muted = false
 collect['muted'] = muted
 
-deaf = true
+deaf = false
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -976,10 +976,10 @@ def create_carrier_lookup_list(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 147
+page = 104
 collect['page'] = page
 
-pagesize = 147
+pagesize = 104
 collect['pagesize'] = pagesize
 
 response_type = 'json'
@@ -1114,7 +1114,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = Message360::HttpAction::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 147
+timeout = 104
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1123,7 +1123,7 @@ collect['play_dtmf'] = play_dtmf
 hide_caller_id = 'HideCallerId'
 collect['hide_caller_id'] = hide_caller_id
 
-record = true
+record = false
 collect['record'] = record
 
 record_call_back_url = 'RecordCallBackUrl'
@@ -1132,7 +1132,7 @@ collect['record_call_back_url'] = record_call_back_url
 record_call_back_method = Message360::HttpAction::GET
 collect['record_call_back_method'] = record_call_back_method
 
-transcribe = true
+transcribe = false
 collect['transcribe'] = transcribe
 
 transcribe_call_back_url = 'TranscribeCallBackUrl'
@@ -1181,19 +1181,19 @@ collect['call_sid'] = call_sid
 audio_direction = Message360::AudioDirection::IN
 collect['audio_direction'] = audio_direction
 
-pitch_semi_tones = 147.987527797458
+pitch_semi_tones = 104.636014052497
 collect['pitch_semi_tones'] = pitch_semi_tones
 
-pitch_octaves = 147.987527797458
+pitch_octaves = 104.636014052497
 collect['pitch_octaves'] = pitch_octaves
 
-pitch = 147.987527797458
+pitch = 104.636014052497
 collect['pitch'] = pitch
 
-rate = 147.987527797458
+rate = 104.636014052497
 collect['rate'] = rate
 
-tempo = 147.987527797458
+tempo = 104.636014052497
 collect['tempo'] = tempo
 
 response_type = 'json'
@@ -1235,13 +1235,13 @@ collect = Hash.new
 call_sid = 'CallSid'
 collect['call_sid'] = call_sid
 
-record = true
+record = false
 collect['record'] = record
 
 direction = Message360::Direction::IN
 collect['direction'] = direction
 
-time_limit = 239
+time_limit = 104
 collect['time_limit'] = time_limit
 
 call_back_url = 'CallBackUrl'
@@ -1292,16 +1292,16 @@ collect['call_sid'] = call_sid
 audio_url = 'AudioUrl'
 collect['audio_url'] = audio_url
 
-length = 239
+length = 104
 collect['length'] = length
 
 direction = Message360::Direction::IN
 collect['direction'] = direction
 
-loop = true
+loop = false
 collect['loop'] = loop
 
-mix = true
+mix = false
 collect['mix'] = mix
 
 response_type = 'json'
@@ -1339,10 +1339,10 @@ def create_list_calls(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 239
+page = 104
 collect['page'] = page
 
-page_size = 239
+page_size = 104
 collect['page_size'] = page_size
 
 to = 'To'
@@ -1526,19 +1526,19 @@ collect['fall_back_method'] = fall_back_method
 heart_beat_url = 'HeartBeatUrl'
 collect['heart_beat_url'] = heart_beat_url
 
-heart_beat_method = true
+heart_beat_method = false
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 239
+timeout = 104
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
 collect['play_dtmf'] = play_dtmf
 
-hide_caller_id = true
+hide_caller_id = false
 collect['hide_caller_id'] = hide_caller_id
 
-record = true
+record = false
 collect['record'] = record
 
 record_call_back_url = 'RecordCallBackUrl'
@@ -1547,7 +1547,7 @@ collect['record_call_back_url'] = record_call_back_url
 record_call_back_method = Message360::HttpAction::GET
 collect['record_call_back_method'] = record_call_back_method
 
-transcribe = true
+transcribe = false
 collect['transcribe'] = transcribe
 
 transcribe_call_back_url = 'TranscribeCallBackUrl'
@@ -1636,7 +1636,7 @@ def create_list_inbound_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 239
+page = 104
 collect['page'] = page
 
 pagesize = 'pagesize'
@@ -1683,10 +1683,10 @@ def create_list_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 239
+page = 104
 collect['page'] = page
 
-pagesize = 239
+pagesize = 104
 collect['pagesize'] = pagesize
 
 from = 'from'
@@ -2510,10 +2510,10 @@ def create_list_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 197
+page = 196
 collect['page'] = page
 
-page_size = 197
+page_size = 196
 collect['page_size'] = page_size
 
 number_type = Message360::NumberType::ALL
@@ -2561,7 +2561,7 @@ collect['number_type'] = number_type
 area_code = 'AreaCode'
 collect['area_code'] = area_code
 
-page_size = 197
+page_size = 196
 collect['page_size'] = page_size
 
 response_type = 'json'
@@ -2610,10 +2610,10 @@ def create_list_recording(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 197
+page = 196
 collect['page'] = page
 
-page_size = 197
+page_size = 196
 collect['page_size'] = page_size
 
 date_created = 'DateCreated'
@@ -2838,10 +2838,10 @@ def create_list_transcription(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 197
+page = 154
 collect['page'] = page
 
-page_size = 197
+page_size = 154
 collect['page_size'] = page_size
 
 status = Message360::Status::INPROGRESS

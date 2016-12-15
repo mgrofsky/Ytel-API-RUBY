@@ -2,6 +2,7 @@
 require 'json'
 require 'faraday'
 require 'certifi'
+require 'logging'
 
 require_relative 'message_360/api_helper.rb'
 require_relative 'message_360/message_360_client.rb'

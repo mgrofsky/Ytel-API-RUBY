@@ -64,7 +64,7 @@ cases as follows:
 
 ## Initialization
 
-### Authentication and 
+### Authentication
 In order to setup authentication and initialization of the API client, you need the following information.
 
 | Parameter | Description |
@@ -148,10 +148,10 @@ collect['conference_sid'] = conference_sid
 participant_sid = 'ParticipantSid'
 collect['participant_sid'] = participant_sid
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -190,10 +190,10 @@ def create_list_conference(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 13
+page = 254
 collect['page'] = page
 
-page_size = 13
+page_size = 254
 collect['page_size'] = page_size
 
 friendly_name = 'FriendlyName'
@@ -283,7 +283,7 @@ collect['conferencesid'] = conferencesid
 participantnumber = 'participantnumber'
 collect['participantnumber'] = participantnumber
 
-tocountrycode = 13
+tocountrycode = 41
 collect['tocountrycode'] = tocountrycode
 
 muted = false
@@ -330,10 +330,10 @@ collect = Hash.new
 conference_sid = 'ConferenceSid'
 collect['conference_sid'] = conference_sid
 
-page = 13
+page = 41
 collect['page'] = page
 
-pagesize = 13
+pagesize = 41
 collect['pagesize'] = pagesize
 
 muted = false
@@ -976,10 +976,10 @@ def create_carrier_lookup_list(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 104
+page = 41
 collect['page'] = page
 
-pagesize = 104
+pagesize = 41
 collect['pagesize'] = pagesize
 
 response_type = 'json'
@@ -1114,7 +1114,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = Message360::HttpAction::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 104
+timeout = 41
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1181,19 +1181,19 @@ collect['call_sid'] = call_sid
 audio_direction = Message360::AudioDirection::IN
 collect['audio_direction'] = audio_direction
 
-pitch_semi_tones = 104.636014052497
+pitch_semi_tones = 41.0568904974763
 collect['pitch_semi_tones'] = pitch_semi_tones
 
-pitch_octaves = 104.636014052497
+pitch_octaves = 41.0568904974763
 collect['pitch_octaves'] = pitch_octaves
 
-pitch = 104.636014052497
+pitch = 41.0568904974763
 collect['pitch'] = pitch
 
-rate = 104.636014052497
+rate = 41.0568904974763
 collect['rate'] = rate
 
-tempo = 104.636014052497
+tempo = 41.0568904974763
 collect['tempo'] = tempo
 
 response_type = 'json'
@@ -1235,13 +1235,13 @@ collect = Hash.new
 call_sid = 'CallSid'
 collect['call_sid'] = call_sid
 
-record = false
+record = true
 collect['record'] = record
 
 direction = Message360::Direction::IN
 collect['direction'] = direction
 
-time_limit = 104
+time_limit = 204
 collect['time_limit'] = time_limit
 
 call_back_url = 'CallBackUrl'
@@ -1292,16 +1292,16 @@ collect['call_sid'] = call_sid
 audio_url = 'AudioUrl'
 collect['audio_url'] = audio_url
 
-length = 104
+length = 204
 collect['length'] = length
 
 direction = Message360::Direction::IN
 collect['direction'] = direction
 
-loop = false
+loop = true
 collect['loop'] = loop
 
-mix = false
+mix = true
 collect['mix'] = mix
 
 response_type = 'json'
@@ -1339,10 +1339,10 @@ def create_list_calls(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 104
+page = 204
 collect['page'] = page
 
-page_size = 104
+page_size = 204
 collect['page_size'] = page_size
 
 to = 'To'
@@ -1526,19 +1526,19 @@ collect['fall_back_method'] = fall_back_method
 heart_beat_url = 'HeartBeatUrl'
 collect['heart_beat_url'] = heart_beat_url
 
-heart_beat_method = false
+heart_beat_method = true
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 104
+timeout = 204
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
 collect['play_dtmf'] = play_dtmf
 
-hide_caller_id = false
+hide_caller_id = true
 collect['hide_caller_id'] = hide_caller_id
 
-record = false
+record = true
 collect['record'] = record
 
 record_call_back_url = 'RecordCallBackUrl'
@@ -1547,7 +1547,7 @@ collect['record_call_back_url'] = record_call_back_url
 record_call_back_method = Message360::HttpAction::GET
 collect['record_call_back_method'] = record_call_back_method
 
-transcribe = false
+transcribe = true
 collect['transcribe'] = transcribe
 
 transcribe_call_back_url = 'TranscribeCallBackUrl'
@@ -1636,7 +1636,7 @@ def create_list_inbound_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 104
+page = 204
 collect['page'] = page
 
 pagesize = 'pagesize'
@@ -1683,10 +1683,10 @@ def create_list_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 104
+page = 204
 collect['page'] = page
 
-pagesize = 104
+pagesize = 204
 collect['pagesize'] = pagesize
 
 from = 'from'
@@ -1823,40 +1823,6 @@ The singleton instance of the ``` WebRTCController ``` class can be accessed fro
 webRTC = client.web_rtc
 ```
 
-#### <a name="create_token"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_token") create_token
-
-> message360 webrtc
-
-
-```ruby
-def create_token(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| account_sid |  ``` Required ```  | Your message360 Account SID |
-| auth_token |  ``` Required ```  | Your message360 Token |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-account_sid = 'account_sid'
-collect['account_sid'] = account_sid
-
-auth_token = 'auth_token'
-collect['auth_token'] = auth_token
-
-
-webRTC.create_token(collect)
-
-```
-
-
 #### <a name="create_check_funds"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_check_funds") create_check_funds
 
 > TODO: Add a method description
@@ -1886,7 +1852,7 @@ auth_token = 'auth_token'
 collect['auth_token'] = auth_token
 
 
-webRTC.create_check_funds(collect)
+result = webRTC.create_check_funds(collect)
 
 ```
 
@@ -1924,7 +1890,41 @@ auth_token = 'auth_token'
 collect['auth_token'] = auth_token
 
 
-webRTC.create_authenticate_number(collect)
+result = webRTC.create_authenticate_number(collect)
+
+```
+
+
+#### <a name="create_token"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_token") create_token
+
+> message360 webrtc
+
+
+```ruby
+def create_token(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| account_sid |  ``` Required ```  | Your message360 Account SID |
+| auth_token |  ``` Required ```  | Your message360 Token |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+account_sid = 'account_sid'
+collect['account_sid'] = account_sid
+
+auth_token = 'auth_token'
+collect['auth_token'] = auth_token
+
+
+result = webRTC.create_token(collect)
 
 ```
 
@@ -2510,10 +2510,10 @@ def create_list_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 196
+page = 113
 collect['page'] = page
 
-page_size = 196
+page_size = 113
 collect['page_size'] = page_size
 
 number_type = Message360::NumberType::ALL
@@ -2561,7 +2561,7 @@ collect['number_type'] = number_type
 area_code = 'AreaCode'
 collect['area_code'] = area_code
 
-page_size = 196
+page_size = 113
 collect['page_size'] = page_size
 
 response_type = 'json'
@@ -2610,10 +2610,10 @@ def create_list_recording(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 196
+page = 113
 collect['page'] = page
 
-page_size = 196
+page_size = 113
 collect['page_size'] = page_size
 
 date_created = 'DateCreated'
@@ -2838,10 +2838,10 @@ def create_list_transcription(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 154
+page = 113
 collect['page'] = page
 
-page_size = 154
+page_size = 113
 collect['page_size'] = page_size
 
 status = Message360::Status::INPROGRESS

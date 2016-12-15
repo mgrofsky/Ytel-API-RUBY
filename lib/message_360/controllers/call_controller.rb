@@ -13,41 +13,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_call(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'callsid' => options['callsid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/viewcalls.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'callsid' => options['callsid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -78,7 +65,6 @@ module Message360
     # @param [String] response_type Optional parameter: Example: json
     # @return String response from the API call
     def create_group_call(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'from_country_code' => options['from_country_code'],
@@ -88,21 +74,15 @@ module Message360
         'url' => options['url']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/groupcall.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'FromCountryCode' => options['from_country_code'],
         'From' => options['from'],
@@ -126,16 +106,10 @@ module Message360
         'TranscribeCallBackUrl' => options['transcribe_call_back_url']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -153,27 +127,20 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_voice_effect(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/voiceeffect.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'CallSid' => options['call_sid'],
         'AudioDirection' => options['audio_direction'],
@@ -184,16 +151,10 @@ module Message360
         'Tempo' => options['tempo']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -210,28 +171,21 @@ module Message360
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_record_call(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
         'record' => options['record']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/recordcalls.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'CallSid' => options['call_sid'],
         'Record' => options['record'],
@@ -241,16 +195,10 @@ module Message360
         'Fileformat' => options['fileformat']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -267,28 +215,21 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_play_audio(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
         'audio_url' => options['audio_url']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/playaudios.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'CallSid' => options['call_sid'],
         'AudioUrl' => options['audio_url'],
@@ -298,16 +239,10 @@ module Message360
         'Mix' => options['mix']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -324,21 +259,15 @@ module Message360
     # @return String response from the API call
     def create_list_calls(options = Hash.new)
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/listcalls.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'Page' => options['page'],
         'PageSize' => options['page_size'],
@@ -347,16 +276,10 @@ module Message360
         'DateCreated' => options['date_created']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -371,27 +294,20 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_interrupted_call(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/interruptcalls.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'CallSid' => options['call_sid'],
         'Url' => options['url'],
@@ -399,16 +315,10 @@ module Message360
         'Status' => options['status']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -422,44 +332,31 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_send_digit(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
         'play_dtmf' => options['play_dtmf']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/senddigits.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'CallSid' => options['call_sid'],
         'PlayDtmf' => options['play_dtmf'],
         'PlayDtmfDirection' => options['play_dtmf_direction']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -491,7 +388,6 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_make_call(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'from_country_code' => options['from_country_code'],
@@ -501,26 +397,18 @@ module Message360
         'url' => options['url']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/calls/makecall.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_query_parameters _query_builder, {
         'Method' => options['method']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'FromCountryCode' => options['from_country_code'],
         'From' => options['from'],
@@ -544,16 +432,10 @@ module Message360
         'IfMachine' => options['if_machine']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type

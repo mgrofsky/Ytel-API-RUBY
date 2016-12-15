@@ -18,12 +18,12 @@ module Message360
     def validate_parameters(args)
       args.each do |name, value|
         if value == nil
-            raise ArgumentError.new "Required parameter #{name} cannot be nil."
+          raise ArgumentError.new 'Required parameter #{name} cannot be nil.'
         end
       end
     end
 
-    def execute_request(request, binary: false) 
+    def execute_request(request, binary: false)
       @http_call_back.on_before_request(request) if @http_call_back
 
       request.headers = @@global_headers.clone.merge(request.headers)

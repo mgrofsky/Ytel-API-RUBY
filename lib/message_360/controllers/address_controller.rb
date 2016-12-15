@@ -21,7 +21,6 @@ module Message360
     # @param [String] response_type Optional parameter: Response Type Either json or xml
     # @return String response from the API call
     def create_address(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'name' => options['name'],
@@ -32,21 +31,15 @@ module Message360
         'zip' => options['zip']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/address/createaddress.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'name' => options['name'],
         'address' => options['address'],
@@ -59,16 +52,10 @@ module Message360
         'phone' => options['phone']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -80,41 +67,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type either json or xml
     # @return String response from the API call
     def create_delete_address(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'addressid' => options['addressid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/address/deleteaddress.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'addressid' => options['addressid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -126,41 +100,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type either JSON or xml
     # @return String response from the API call
     def create_verify_address(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'addressid' => options['addressid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/address/verifyaddress.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'addressid' => options['addressid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -176,21 +137,15 @@ module Message360
     # @return String response from the API call
     def create_list_address(options = Hash.new)
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/address/listaddress.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'page' => options['page'],
         'pageSize' => options['page_size'],
@@ -198,16 +153,10 @@ module Message360
         'dateCreated' => options['date_created']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -219,41 +168,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_view_address(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'address_id' => options['address_id']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/address/viewaddress.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'addressId' => options['address_id']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type

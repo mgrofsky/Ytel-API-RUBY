@@ -13,41 +13,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_audio_url_transcription(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'audio_url' => options['audio_url']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/transcriptions/audiourltranscription.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'AudioUrl' => options['audio_url']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -59,41 +46,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_recording_transcription(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'recording_sid' => options['recording_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/transcriptions/recordingtranscription.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'RecordingSid' => options['recording_sid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -105,41 +79,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_transcription(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'transcription_sid' => options['transcription_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/transcriptions/viewtranscription.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'TranscriptionSid' => options['transcription_sid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -155,21 +116,15 @@ module Message360
     # @return String response from the API call
     def create_list_transcription(options = Hash.new)
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/transcriptions/listtranscription.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'Page' => options['page'],
         'PageSize' => options['page_size'],
@@ -177,16 +132,10 @@ module Message360
         'DateTranscribed' => options['date_transcribed']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type

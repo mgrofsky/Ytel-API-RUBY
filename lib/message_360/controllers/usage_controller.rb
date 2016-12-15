@@ -15,7 +15,6 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_usage(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'product_code' => options['product_code'],
@@ -23,37 +22,25 @@ module Message360
         'end_date' => options['end_date']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/usage/listusage.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'ProductCode' => options['product_code'],
         'startDate' => options['start_date'],
         'endDate' => options['end_date']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type

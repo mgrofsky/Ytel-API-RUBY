@@ -16,28 +16,21 @@ module Message360
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_deaf_mute_participant(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],
         'participant_sid' => options['participant_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/deafMuteParticipant.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'conferenceSid' => options['conference_sid'],
         'ParticipantSid' => options['participant_sid'],
@@ -45,16 +38,10 @@ module Message360
         'Deaf' => options['deaf']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -72,21 +59,15 @@ module Message360
     # @return String response from the API call
     def create_list_conference(options = Hash.new)
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/listconference.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'Page' => options['page'],
         'PageSize' => options['page_size'],
@@ -96,16 +77,10 @@ module Message360
         'DateUpdated' => options['date_updated']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -117,41 +92,28 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_conference(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'conferencesid' => options['conferencesid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/viewconference.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'conferencesid' => options['conferencesid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -167,7 +129,6 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def add_participant(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'conferencesid' => options['conferencesid'],
@@ -175,21 +136,15 @@ module Message360
         'tocountrycode' => options['tocountrycode']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/addParticipant.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'conferencesid' => options['conferencesid'],
         'participantnumber' => options['participantnumber'],
@@ -198,16 +153,10 @@ module Message360
         'deaf' => options['deaf']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -223,27 +172,20 @@ module Message360
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_list_participant(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/listparticipant.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'ConferenceSid' => options['conference_sid'],
         'Page' => options['page'],
@@ -252,16 +194,10 @@ module Message360
         'Deaf' => options['deaf']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type
@@ -274,43 +210,30 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_participant(options = Hash.new)
-
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],
         'participant_sid' => options['participant_sid']
       })
 
-      # the base uri for api requests
-      _query_builder = Configuration.base_uri.dup
-
-      # prepare query string for API call
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
       _query_builder << '/conferences/viewparticipant.{ResponseType}'
-
-      # process optional query parameters
       _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
         'ResponseType' => options['response_type']
       }
-
-      # validate and preprocess url
       _query_url = APIHelper.clean_url _query_builder
 
-      # prepare parameters
+      # prepare form parameters	  
       _parameters = {
         'ConferenceSid' => options['conference_sid'],
         'ParticipantSid' => options['participant_sid']
       }
 
-      # create the HttpRequest object for the call
+      # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
-
-      # apply authentication
       BasicAuth.apply(_request)
-
-      # execute the request
       _context = execute_request(_request)
-
-      # global error handling using HTTP status codes.
       validate_response(_context)
 
       # return appropriate response type

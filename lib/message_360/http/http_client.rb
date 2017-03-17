@@ -73,10 +73,12 @@ module Message360
     # @param [String] The URL to send the request to.
     # @param [Hash, Optional] The headers for the HTTP Request.
     def delete(query_url,
-               headers: {})
+               headers: {},
+               parameters: {})
       return HttpRequest.new(HttpMethodEnum::DELETE,
                              query_url,
-                             headers: headers)
+                             headers: headers,
+                             parameters: parameters)
     end
   end
 end

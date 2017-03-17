@@ -13,6 +13,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_call(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'callsid' => options['callsid']
@@ -65,6 +66,7 @@ module Message360
     # @param [String] response_type Optional parameter: Example: json
     # @return String response from the API call
     def create_group_call(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'from_country_code' => options['from_country_code'],
@@ -127,6 +129,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_voice_effect(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid']
@@ -171,6 +174,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_record_call(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
@@ -215,6 +219,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_play_audio(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
@@ -249,43 +254,6 @@ module Message360
       return _context.response.raw_body
     end
 
-    # A list of calls associated with your Message360 account
-    # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
-    # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
-    # @param [String] to Optional parameter: Only list calls to this number
-    # @param [String] from Optional parameter: Only list calls from this number
-    # @param [String] date_created Optional parameter: Only list calls starting within the specified date range
-    # @param [String] response_type Optional parameter: Response type format xml or json
-    # @return String response from the API call
-    def create_list_calls(options = Hash.new)
-
-      # prepare query url
-      _query_builder = Configuration.get_base_uri()
-      _query_builder << '/calls/listcalls.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
-        'ResponseType' => options['response_type']
-      }
-      _query_url = APIHelper.clean_url _query_builder
-
-      # prepare form parameters	  
-      _parameters = {
-        'Page' => options['page'],
-        'PageSize' => options['page_size'],
-        'To' => options['to'],
-        'From' => options['from'],
-        'DateCreated' => options['date_created']
-      }
-
-      # prepare and execute HttpRequest
-      _request = @http_client.post _query_url, parameters: _parameters
-      BasicAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # return appropriate response type
-      return _context.response.raw_body
-    end
-
     # Interrupt the Call by Call Sid
     # @param [String] call_sid Required parameter: Call SId
     # @param [String] url Optional parameter: URL the in-progress call will be redirected to
@@ -294,6 +262,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_interrupted_call(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid']
@@ -332,6 +301,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_send_digit(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'call_sid' => options['call_sid'],
@@ -388,6 +358,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_make_call(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'from_country_code' => options['from_country_code'],
@@ -430,6 +401,43 @@ module Message360
         'Transcribe' => options['transcribe'],
         'TranscribeCallBackUrl' => options['transcribe_call_back_url'],
         'IfMachine' => options['if_machine']
+      }
+
+      # prepare and execute HttpRequest
+      _request = @http_client.post _query_url, parameters: _parameters
+      BasicAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+
+      # return appropriate response type
+      return _context.response.raw_body
+    end
+
+    # A list of calls associated with your Message360 account
+    # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
+    # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
+    # @param [String] to Optional parameter: Only list calls to this number
+    # @param [String] from Optional parameter: Only list calls from this number
+    # @param [String] date_created Optional parameter: Only list calls starting within the specified date range
+    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @return String response from the API call
+    def create_list_calls(options = Hash.new)
+
+      # prepare query url
+      _query_builder = Configuration.get_base_uri()
+      _query_builder << '/calls/listcalls.{ResponseType}'
+      _query_builder = APIHelper.append_url_with_template_parameters _query_builder, {
+        'ResponseType' => options['response_type']
+      }
+      _query_url = APIHelper.clean_url _query_builder
+
+      # prepare form parameters	  
+      _parameters = {
+        'Page' => options['page'],
+        'PageSize' => options['page_size'],
+        'To' => options['to'],
+        'From' => options['from'],
+        'DateCreated' => options['date_created']
       }
 
       # prepare and execute HttpRequest

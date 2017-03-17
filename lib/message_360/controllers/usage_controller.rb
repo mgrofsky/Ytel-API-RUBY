@@ -15,6 +15,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_usage(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'product_code' => options['product_code'],

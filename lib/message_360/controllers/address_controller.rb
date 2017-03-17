@@ -18,9 +18,10 @@ module Message360
     # @param [String] description Optional parameter: Description of addresses.
     # @param [String] email Optional parameter: Email Id of user.
     # @param [String] phone Optional parameter: Phone number of user.
-    # @param [String] response_type Optional parameter: Response Type Either json or xml
+    # @param [String] response_type Optional parameter: Response type either json or xml
     # @return String response from the API call
     def create_address(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'name' => options['name'],
@@ -41,15 +42,15 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'name' => options['name'],
-        'address' => options['address'],
-        'country' => options['country'],
-        'state' => options['state'],
-        'city' => options['city'],
-        'zip' => options['zip'],
-        'description' => options['description'],
+        'Name' => options['name'],
+        'Address' => options['address'],
+        'Country' => options['country'],
+        'State' => options['state'],
+        'City' => options['city'],
+        'Zip' => options['zip'],
+        'Description' => options['description'],
         'email' => options['email'],
-        'phone' => options['phone']
+        'Phone' => options['phone']
       }
 
       # prepare and execute HttpRequest
@@ -63,13 +64,14 @@ module Message360
     end
 
     # To delete Address to your address book
-    # @param [String] addressid Required parameter: The identifier of the address to be deleted.
+    # @param [String] address_sid Required parameter: The identifier of the address to be deleted.
     # @param [String] response_type Optional parameter: Response type either json or xml
     # @return String response from the API call
     def create_delete_address(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'addressid' => options['addressid']
+        'address_sid' => options['address_sid']
       })
 
       # prepare query url
@@ -82,7 +84,7 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'addressid' => options['addressid']
+        'AddressSID' => options['address_sid']
       }
 
       # prepare and execute HttpRequest
@@ -96,13 +98,14 @@ module Message360
     end
 
     # Validates an address given.
-    # @param [String] addressid Required parameter: The identifier of the address to be verified.
-    # @param [String] response_type Optional parameter: Response type either JSON or xml
+    # @param [String] address_sid Required parameter: The identifier of the address to be verified.
+    # @param [String] response_type Optional parameter: Response type either json or xml
     # @return String response from the API call
     def create_verify_address(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'addressid' => options['addressid']
+        'address_sid' => options['address_sid']
       })
 
       # prepare query url
@@ -115,7 +118,7 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'addressid' => options['addressid']
+        'AddressSID' => options['address_sid']
       }
 
       # prepare and execute HttpRequest
@@ -130,8 +133,8 @@ module Message360
 
     # List All Address 
     # @param [Integer] page Optional parameter: Return requested # of items starting the value, default=0, must be an integer
-    # @param [Integer] page_size Optional parameter: How many results to return, default=10, max 100, must be an integer
-    # @param [String] address_id Optional parameter: addresses Sid
+    # @param [Integer] page_size Optional parameter: How many results to return, default is 10, max is 100, must be an integer
+    # @param [String] address_sid Optional parameter: addresses Sid
     # @param [String] date_created Optional parameter: date created address.
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
@@ -147,10 +150,10 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'page' => options['page'],
-        'pageSize' => options['page_size'],
-        'addressId' => options['address_id'],
-        'dateCreated' => options['date_created']
+        'Page' => options['page'],
+        'PageSize' => options['page_size'],
+        'AddressSID' => options['address_sid'],
+        'DateCreated' => options['date_created']
       }
 
       # prepare and execute HttpRequest
@@ -164,13 +167,14 @@ module Message360
     end
 
     # View Address Specific address Book by providing the address id
-    # @param [String] address_id Required parameter: The identifier of the address to be retrieved.
+    # @param [String] address_sid Required parameter: The identifier of the address to be retrieved.
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_view_address(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'address_id' => options['address_id']
+        'address_sid' => options['address_sid']
       })
 
       # prepare query url
@@ -183,7 +187,7 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'addressId' => options['address_id']
+        'AddressSID' => options['address_sid']
       }
 
       # prepare and execute HttpRequest

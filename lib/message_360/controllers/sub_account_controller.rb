@@ -8,17 +8,18 @@ module Message360
       @@instance
     end
 
-    # Create Sub account
-    # @param [String] firstname Required parameter: Example: 
-    # @param [String] lastname Required parameter: Example: 
-    # @param [String] email Required parameter: Example: 
-    # @param [String] response_type Optional parameter: ResponseType Format either json or xml
+    # Create a sub user account under the parent account
+    # @param [String] first_name Required parameter: Sub account user first name
+    # @param [String] last_name Required parameter: sub account user last name
+    # @param [String] email Required parameter: Sub account email address
+    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_sub_account(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'firstname' => options['firstname'],
-        'lastname' => options['lastname'],
+        'first_name' => options['first_name'],
+        'last_name' => options['last_name'],
         'email' => options['email']
       })
 
@@ -32,9 +33,9 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'firstname' => options['firstname'],
-        'lastname' => options['lastname'],
-        'email' => options['email']
+        'FirstName' => options['first_name'],
+        'LastName' => options['last_name'],
+        'Email' => options['email']
       }
 
       # prepare and execute HttpRequest
@@ -48,14 +49,15 @@ module Message360
     end
 
     # Suspend or unsuspend
-    # @param [String] subaccountsid Required parameter: Example: 
-    # @param [ActivateStatus] activate Required parameter: Example: 
+    # @param [String] sub_account_sid Required parameter: The SubaccountSid to be activated or suspended
+    # @param [ActivateStatus] activate Required parameter: 0 to suspend or 1 to activate
     # @param [String] response_type Optional parameter: Example: 
     # @return String response from the API call
     def create_suspend_sub_account(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'subaccountsid' => options['subaccountsid'],
+        'sub_account_sid' => options['sub_account_sid'],
         'activate' => options['activate']
       })
 
@@ -69,8 +71,8 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'subaccountsid' => options['subaccountsid'],
-        'activate' => options['activate']
+        'SubAccountSID' => options['sub_account_sid'],
+        'Activate' => options['activate']
       }
 
       # prepare and execute HttpRequest
@@ -83,16 +85,17 @@ module Message360
       return _context.response.raw_body
     end
 
-    # Delete or Merge Sub account
-    # @param [String] subaccountsid Required parameter: Example: 
-    # @param [MergeNumberStatus] mergenumber Required parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format either json or xml
+    # Delete sub account or merge numbers into parent
+    # @param [String] sub_account_sid Required parameter: The SubaccountSid to be deleted
+    # @param [MergeNumberStatus] merge_number Required parameter: 0 to delete or 1 to merge numbers to parent account.
+    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
-    def create_delete_merge_sub_account(options = Hash.new)
+    def create_delete_sub_account(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
-        'subaccountsid' => options['subaccountsid'],
-        'mergenumber' => options['mergenumber']
+        'sub_account_sid' => options['sub_account_sid'],
+        'merge_number' => options['merge_number']
       })
 
       # prepare query url
@@ -105,8 +108,8 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'subaccountsid' => options['subaccountsid'],
-        'mergenumber' => options['mergenumber']
+        'SubAccountSID' => options['sub_account_sid'],
+        'MergeNumber' => options['merge_number']
       }
 
       # prepare and execute HttpRequest

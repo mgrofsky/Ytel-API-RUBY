@@ -26,6 +26,7 @@ module Message360
     def execute_request(request, binary: false)
       @http_call_back.on_before_request(request) if @http_call_back
 
+      APIHelper.clean_hash(request.headers)
       request.headers = @@global_headers.clone.merge(request.headers)
       
       response = binary ? @http_client.execute_as_binary(request) : @http_client.execute_as_string(request)

@@ -16,6 +16,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_deaf_mute_participant(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],
@@ -92,6 +93,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_conference(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'conferencesid' => options['conferencesid']
@@ -129,6 +131,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def add_participant(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'conferencesid' => options['conferencesid'],
@@ -172,6 +175,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_list_participant(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid']
@@ -210,6 +214,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_participant(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],

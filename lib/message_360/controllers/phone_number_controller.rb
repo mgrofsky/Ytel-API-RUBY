@@ -12,17 +12,17 @@ module Message360
     # @param [String] phone_number Required parameter: Example: 
     # @param [String] friendly_name Optional parameter: Example: 
     # @param [String] voice_url Optional parameter: URL requested once the call connects
-    # @param [HttpAction] voice_method Optional parameter: Example: 
+    # @param [HttpActionEnum] voice_method Optional parameter: Example: 
     # @param [String] voice_fallback_url Optional parameter: URL requested if the voice URL is not available
-    # @param [HttpAction] voice_fallback_method Optional parameter: Example: 
+    # @param [HttpActionEnum] voice_fallback_method Optional parameter: Example: 
     # @param [String] hangup_callback Optional parameter: Example: 
-    # @param [HttpAction] hangup_callback_method Optional parameter: Example: 
+    # @param [HttpActionEnum] hangup_callback_method Optional parameter: Example: 
     # @param [String] heartbeat_url Optional parameter: URL requested once the call connects
-    # @param [HttpAction] heartbeat_method Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed time
+    # @param [HttpActionEnum] heartbeat_method Optional parameter: URL that can be requested every 60 seconds during the call to notify of elapsed time
     # @param [String] sms_url Optional parameter: URL requested when an SMS is received
-    # @param [HttpAction] sms_method Optional parameter: Example: 
+    # @param [HttpActionEnum] sms_method Optional parameter: Example: 
     # @param [String] sms_fallback_url Optional parameter: URL requested once the call connects
-    # @param [HttpAction] sms_fallback_method Optional parameter: URL requested if the sms URL is not available
+    # @param [HttpActionEnum] sms_fallback_method Optional parameter: URL requested if the sms URL is not available
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def update_phone_number(options = Hash.new)
@@ -173,7 +173,7 @@ module Message360
     # List Account's Phone number details
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
-    # @param [NumberType] number_type Optional parameter: Example: 
+    # @param [NumberTypeEnum] number_type Optional parameter: Example: 
     # @param [String] friendly_name Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
@@ -206,7 +206,7 @@ module Message360
     end
 
     # Available Phone Number
-    # @param [NumberType] number_type Required parameter: Number type either SMS,Voice or all
+    # @param [NumberTypeEnum] number_type Required parameter: Number type either SMS,Voice or all
     # @param [String] area_code Required parameter: Phone Number Area Code
     # @param [Integer] page_size Optional parameter: Page Size
     # @param [String] response_type Optional parameter: Response type format xml or json

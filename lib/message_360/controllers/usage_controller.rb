@@ -9,7 +9,7 @@ module Message360
     end
 
     # Get all usage 
-    # @param [ProductCode] product_code Required parameter: Product Code
+    # @param [ProductCodeEnum] product_code Required parameter: Product Code
     # @param [String] start_date Required parameter: Start Usage Date
     # @param [String] end_date Required parameter: End Usage Date
     # @param [String] response_type Optional parameter: Response type format xml or json

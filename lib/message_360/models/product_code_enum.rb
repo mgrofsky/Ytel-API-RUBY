@@ -1,7 +1,7 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-  class ProductCode
+  class ProductCodeEnum
     # TODO: Write general description for ALL
     # TODO: Write general description for OUTBOUND_CALL
     # TODO: Write general description for INBOUND_CALL
@@ -16,6 +16,6 @@ module Message360
     # TODO: Write general description for DIRECT_MAIL_POSTCARD
     # TODO: Write general description for DIRECT_MAIL_LETTERS
     # TODO: Write general description for DIRECT_MAIL_VERIFIED_ADDRESS
-    PRODUCT_CODE = [ALL = 0, OUTBOUND_CALL = 1, INBOUND_CALL = 2, OUTBOUND_SMS = 3, INBOUND_SMS = 4, TRANSCRIPTION = 5, EMAIL = 6, CONFERENCE = 7, CARRIER = 8, NUMBER_PURCHASED = 9, DIRECT_MAIL_AREAMAIL = 10, DIRECT_MAIL_POSTCARD = 11, DIRECT_MAIL_LETTERS = 12, DIRECT_MAIL_VERIFIED_ADDRESS = 13]
+    PRODUCT_CODE_ENUM = [ALL = 0, OUTBOUND_CALL = 1, INBOUND_CALL = 2, OUTBOUND_SMS = 3, INBOUND_SMS = 4, TRANSCRIPTION = 5, EMAIL = 6, CONFERENCE = 7, CARRIER = 8, NUMBER_PURCHASED = 9, DIRECT_MAIL_AREAMAIL = 10, DIRECT_MAIL_POSTCARD = 11, DIRECT_MAIL_LETTERS = 12, DIRECT_MAIL_VERIFIED_ADDRESS = 13]
   end
 end

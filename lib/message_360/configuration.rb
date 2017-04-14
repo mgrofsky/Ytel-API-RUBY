@@ -1,7 +1,6 @@
 # This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
 
 module Message360
-
   class Configuration
     # An enum for SDK environments
     class Environment
@@ -17,7 +16,7 @@ module Message360
     end
 
     # The environment in which the SDK is running
-    @environment = Environment::PRODUCTION;
+    @environment = Environment::PRODUCTION
 
     # The username to use with basic authentication
     @basic_auth_user_name = 'TODO: Replace'
@@ -28,7 +27,7 @@ module Message360
     # All the environments the SDK can run in
     @environments = {
       Environment::PRODUCTION => {
-        Server::DEFAULT => 'https://api.message360.com/api/v2',
+        Server::DEFAULT => 'https://api.message360.com/api/v3',
       },
       Environment::PREPRODUCTION => {
         Server::DEFAULT => 'https://api-preprod.message360.com/api/v2',
@@ -42,7 +41,7 @@ module Message360
     # @param [Configuration::Server] The server enum for which the base URI is required.
     # @return [String] The base URI.
     def self.get_base_uri(server = Server::DEFAULT)
-      return self.environments[self.environment][server]
+      environments[environment][server]
     end
 
     # The attribute accessors for public properties
@@ -52,6 +51,6 @@ module Message360
       attr_accessor :basic_auth_user_name
       attr_accessor :basic_auth_password
     end
- 
+
   end
 end

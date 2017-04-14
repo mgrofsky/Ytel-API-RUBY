@@ -6,9 +6,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build message_360.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install message_360-2.0.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install message_360-3.0.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Message360-Ruby&workspaceName=Message360-Ruby&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Message360-Ruby&workspaceName=Message360-Ruby&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ## How to Use
 
@@ -18,41 +18,41 @@ The following section explains how to use the Message360 Ruby Gem in a new Rails
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Message360 gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'message_360', '~> 2.0.0' ```
+In order to use the Message360 gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'message_360', '~> 3.0.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ## How to Test
 
@@ -86,7 +86,7 @@ client = Message360::Message360Client.new(basic_auth_user_name, basic_auth_passw
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=message360%20API%20V2-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0&initLine=client%2520%253D%2520Message360Client.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=message360%20API%20V3-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0&initLine=client%2520%253D%2520Message360Client.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
 
 ## Class Reference
 
@@ -236,7 +236,7 @@ def create_list_inbound_short_code(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 200
+page = 247
 collect['page'] = page
 
 pagesize = 10
@@ -286,7 +286,7 @@ def create_list_short_code(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 37
+page = 247
 collect['page'] = page
 
 pagesize = 10
@@ -337,7 +337,7 @@ collect = Hash.new
 type = 'authorization'
 collect['type'] = type
 
-page = 37
+page = 247
 collect['page'] = page
 
 pagesize = 10
@@ -429,10 +429,10 @@ collect['conference_sid'] = conference_sid
 participant_sid = 'ParticipantSid'
 collect['participant_sid'] = participant_sid
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -471,16 +471,16 @@ def create_list_conference(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 37
+page = 247
 collect['page'] = page
 
-page_size = 37
+page_size = 247
 collect['page_size'] = page_size
 
 friendly_name = 'FriendlyName'
 collect['friendly_name'] = friendly_name
 
-status = Message360::InterruptedCallStatus::CANCELED
+status = Message360::InterruptedCallStatusEnum::CANCELED
 collect['status'] = status
 
 date_created = 'DateCreated'
@@ -564,13 +564,13 @@ collect['conferencesid'] = conferencesid
 participantnumber = 'participantnumber'
 collect['participantnumber'] = participantnumber
 
-tocountrycode = 37
+tocountrycode = 183
 collect['tocountrycode'] = tocountrycode
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -611,16 +611,16 @@ collect = Hash.new
 conference_sid = 'ConferenceSid'
 collect['conference_sid'] = conference_sid
 
-page = 37
+page = 183
 collect['page'] = page
 
-pagesize = 37
+pagesize = 183
 collect['pagesize'] = pagesize
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -1111,7 +1111,7 @@ collect['to'] = to
 from = 'from'
 collect['from'] = from
 
-type = Message360::SendEmailAs::HTML
+type = Message360::SendEmailAsEnum::HTML
 collect['type'] = type
 
 subject = 'subject'
@@ -1257,10 +1257,10 @@ def create_carrier_lookup_list(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 250
+page = 183
 collect['page'] = page
 
-pagesize = 250
+pagesize = 183
 collect['pagesize'] = pagesize
 
 response_type = 'json'
@@ -1374,28 +1374,28 @@ collect['to'] = to
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
 status_call_back_url = 'StatusCallBackUrl'
 collect['status_call_back_url'] = status_call_back_url
 
-status_call_back_method = Message360::HttpAction::GET
+status_call_back_method = Message360::HttpActionEnum::GET
 collect['status_call_back_method'] = status_call_back_method
 
 fall_back_url = 'FallBackUrl'
 collect['fall_back_url'] = fall_back_url
 
-fall_back_method = Message360::HttpAction::GET
+fall_back_method = Message360::HttpActionEnum::GET
 collect['fall_back_method'] = fall_back_method
 
 heart_beat_url = 'HeartBeatUrl'
 collect['heart_beat_url'] = heart_beat_url
 
-heart_beat_method = Message360::HttpAction::GET
+heart_beat_method = Message360::HttpActionEnum::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 250
+timeout = 141
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1410,7 +1410,7 @@ collect['record'] = record
 record_call_back_url = 'RecordCallBackUrl'
 collect['record_call_back_url'] = record_call_back_url
 
-record_call_back_method = Message360::HttpAction::GET
+record_call_back_method = Message360::HttpActionEnum::GET
 collect['record_call_back_method'] = record_call_back_method
 
 transcribe = true
@@ -1459,22 +1459,22 @@ collect = Hash.new
 call_sid = 'CallSid'
 collect['call_sid'] = call_sid
 
-audio_direction = Message360::AudioDirection::IN
+audio_direction = Message360::AudioDirectionEnum::IN
 collect['audio_direction'] = audio_direction
 
-pitch_semi_tones = 250.648262610495
+pitch_semi_tones = 141.987823705183
 collect['pitch_semi_tones'] = pitch_semi_tones
 
-pitch_octaves = 250.648262610495
+pitch_octaves = 141.987823705183
 collect['pitch_octaves'] = pitch_octaves
 
-pitch = 250.648262610495
+pitch = 141.987823705183
 collect['pitch'] = pitch
 
-rate = 250.648262610495
+rate = 141.987823705183
 collect['rate'] = rate
 
-tempo = 250.648262610495
+tempo = 141.987823705183
 collect['tempo'] = tempo
 
 response_type = 'json'
@@ -1519,16 +1519,16 @@ collect['call_sid'] = call_sid
 record = true
 collect['record'] = record
 
-direction = Message360::Direction::IN
+direction = Message360::DirectionEnum::IN
 collect['direction'] = direction
 
-time_limit = 250
+time_limit = 141
 collect['time_limit'] = time_limit
 
 call_back_url = 'CallBackUrl'
 collect['call_back_url'] = call_back_url
 
-fileformat = Message360::AudioFormat::MP3
+fileformat = Message360::AudioFormatEnum::MP3
 collect['fileformat'] = fileformat
 
 response_type = 'json'
@@ -1573,10 +1573,10 @@ collect['call_sid'] = call_sid
 audio_url = 'AudioUrl'
 collect['audio_url'] = audio_url
 
-length = 250
+length = 141
 collect['length'] = length
 
-direction = Message360::Direction::IN
+direction = Message360::DirectionEnum::IN
 collect['direction'] = direction
 
 loop = true
@@ -1625,10 +1625,10 @@ collect['call_sid'] = call_sid
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
-status = Message360::InterruptedCallStatus::CANCELED
+status = Message360::InterruptedCallStatusEnum::CANCELED
 collect['status'] = status
 
 response_type = 'json'
@@ -1670,7 +1670,7 @@ collect['call_sid'] = call_sid
 play_dtmf = 'PlayDtmf'
 collect['play_dtmf'] = play_dtmf
 
-play_dtmf_direction = Message360::Direction::IN
+play_dtmf_direction = Message360::DirectionEnum::IN
 collect['play_dtmf_direction'] = play_dtmf_direction
 
 response_type = 'json'
@@ -1739,19 +1739,19 @@ collect['to'] = to
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
 status_call_back_url = 'StatusCallBackUrl'
 collect['status_call_back_url'] = status_call_back_url
 
-status_call_back_method = Message360::HttpAction::GET
+status_call_back_method = Message360::HttpActionEnum::GET
 collect['status_call_back_method'] = status_call_back_method
 
 fall_back_url = 'FallBackUrl'
 collect['fall_back_url'] = fall_back_url
 
-fall_back_method = Message360::HttpAction::GET
+fall_back_method = Message360::HttpActionEnum::GET
 collect['fall_back_method'] = fall_back_method
 
 heart_beat_url = 'HeartBeatUrl'
@@ -1760,7 +1760,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = true
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 250
+timeout = 141
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1775,7 +1775,7 @@ collect['record'] = record
 record_call_back_url = 'RecordCallBackUrl'
 collect['record_call_back_url'] = record_call_back_url
 
-record_call_back_method = Message360::HttpAction::GET
+record_call_back_method = Message360::HttpActionEnum::GET
 collect['record_call_back_method'] = record_call_back_method
 
 transcribe = true
@@ -1784,7 +1784,7 @@ collect['transcribe'] = transcribe
 transcribe_call_back_url = 'TranscribeCallBackUrl'
 collect['transcribe_call_back_url'] = transcribe_call_back_url
 
-if_machine = Message360::IfMachine::CONTINUE
+if_machine = Message360::IfMachineEnum::CONTINUE
 collect['if_machine'] = if_machine
 
 response_type = 'json'
@@ -1822,7 +1822,7 @@ def create_list_calls(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 250
+page = 141
 collect['page'] = page
 
 page_size = 10
@@ -1842,6 +1842,68 @@ collect['response_type'] = response_type
 
 
 result = call.create_list_calls(collect)
+
+```
+
+
+#### <a name="create_send_ringless_vm"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_send_ringless_vm") create_send_ringless_vm
+
+> API endpoint used to send a Ringless Voicemail
+
+
+```ruby
+def create_send_ringless_vm(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from_country_code |  ``` Required ```  | From country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| to_country_code |  ``` Required ```  | To country code |
+| to |  ``` Required ```  | To number |
+| voice_mail_url |  ``` Required ```  | URL to an audio file |
+| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
+| status_call_back_url |  ``` Optional ```  | URL to post the status of the Ringless request |
+| stats_call_back_method |  ``` Optional ```  | POST or GET |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+from_country_code = 'FromCountryCode'
+collect['from_country_code'] = from_country_code
+
+from = 'From'
+collect['from'] = from
+
+to_country_code = 'ToCountryCode'
+collect['to_country_code'] = to_country_code
+
+to = 'To'
+collect['to'] = to
+
+voice_mail_url = 'VoiceMailURL'
+collect['voice_mail_url'] = voice_mail_url
+
+method = 'GET'
+collect['method'] = method
+
+status_call_back_url = 'StatusCallBackUrl'
+collect['status_call_back_url'] = status_call_back_url
+
+stats_call_back_method = 'StatsCallBackMethod'
+collect['stats_call_back_method'] = stats_call_back_method
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = call.create_send_ringless_vm(collect)
 
 ```
 
@@ -2014,7 +2076,7 @@ collect = Hash.new
 sub_account_sid = 'SubAccountSID'
 collect['sub_account_sid'] = sub_account_sid
 
-activate = Message360::ActivateStatus::DEACTIVATE
+activate = Message360::ActivateStatusEnum::DEACTIVATE
 collect['activate'] = activate
 
 response_type = 'ResponseType'
@@ -2052,7 +2114,7 @@ collect = Hash.new
 sub_account_sid = 'SubAccountSID'
 collect['sub_account_sid'] = sub_account_sid
 
-merge_number = Message360::MergeNumberStatus::DELETE
+merge_number = Message360::MergeNumberStatusEnum::DELETE
 collect['merge_number'] = merge_number
 
 response_type = 'json'
@@ -2346,37 +2408,37 @@ collect['friendly_name'] = friendly_name
 voice_url = 'VoiceUrl'
 collect['voice_url'] = voice_url
 
-voice_method = Message360::HttpAction::GET
+voice_method = Message360::HttpActionEnum::GET
 collect['voice_method'] = voice_method
 
 voice_fallback_url = 'VoiceFallbackUrl'
 collect['voice_fallback_url'] = voice_fallback_url
 
-voice_fallback_method = Message360::HttpAction::GET
+voice_fallback_method = Message360::HttpActionEnum::GET
 collect['voice_fallback_method'] = voice_fallback_method
 
 hangup_callback = 'HangupCallback'
 collect['hangup_callback'] = hangup_callback
 
-hangup_callback_method = Message360::HttpAction::GET
+hangup_callback_method = Message360::HttpActionEnum::GET
 collect['hangup_callback_method'] = hangup_callback_method
 
 heartbeat_url = 'HeartbeatUrl'
 collect['heartbeat_url'] = heartbeat_url
 
-heartbeat_method = Message360::HttpAction::GET
+heartbeat_method = Message360::HttpActionEnum::GET
 collect['heartbeat_method'] = heartbeat_method
 
 sms_url = 'SmsUrl'
 collect['sms_url'] = sms_url
 
-sms_method = Message360::HttpAction::GET
+sms_method = Message360::HttpActionEnum::GET
 collect['sms_method'] = sms_method
 
 sms_fallback_url = 'SmsFallbackUrl'
 collect['sms_fallback_url'] = sms_fallback_url
 
-sms_fallback_method = Message360::HttpAction::GET
+sms_fallback_method = Message360::HttpActionEnum::GET
 collect['sms_fallback_method'] = sms_fallback_method
 
 response_type = 'json'
@@ -2515,13 +2577,13 @@ def create_list_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 87
+page = 233
 collect['page'] = page
 
 page_size = 10
 collect['page_size'] = page_size
 
-number_type = Message360::NumberType::ALL
+number_type = Message360::NumberTypeEnum::ALL
 collect['number_type'] = number_type
 
 friendly_name = 'FriendlyName'
@@ -2560,7 +2622,7 @@ def create_available_phone_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-number_type = Message360::NumberType::ALL
+number_type = Message360::NumberTypeEnum::ALL
 collect['number_type'] = number_type
 
 area_code = 'AreaCode'
@@ -2615,10 +2677,10 @@ def create_list_recording(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 87
+page = 233
 collect['page'] = page
 
-page_size = 87
+page_size = 233
 collect['page_size'] = page_size
 
 date_created = 'DateCreated'
@@ -2741,7 +2803,7 @@ def create_list_inbound_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 87
+page = 233
 collect['page'] = page
 
 pagesize = 'pagesize'
@@ -2788,10 +2850,10 @@ def create_list_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 87
+page = 233
 collect['page'] = page
 
-pagesize = 87
+pagesize = 233
 collect['pagesize'] = pagesize
 
 from = 'from'
@@ -2855,7 +2917,7 @@ collect['to'] = to
 body = 'body'
 collect['body'] = body
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
 messagestatuscallback = 'messagestatuscallback'
@@ -3043,13 +3105,13 @@ def create_list_transcription(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 178
+page = 233
 collect['page'] = page
 
-page_size = 178
+page_size = 233
 collect['page_size'] = page_size
 
-status = Message360::Status::INPROGRESS
+status = Message360::StatusEnum::INPROGRESS
 collect['status'] = status
 
 date_transcribed = 'DateTranscribed'
@@ -3100,7 +3162,7 @@ def create_list_usage(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-product_code = Message360::ProductCode::ALL
+product_code = Message360::ProductCodeEnum::ALL
 collect['product_code'] = product_code
 
 start_date = '2016-09-06'

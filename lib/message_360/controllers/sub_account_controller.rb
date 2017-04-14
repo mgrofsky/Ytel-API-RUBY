@@ -50,7 +50,7 @@ module Message360
 
     # Suspend or unsuspend
     # @param [String] sub_account_sid Required parameter: The SubaccountSid to be activated or suspended
-    # @param [ActivateStatus] activate Required parameter: 0 to suspend or 1 to activate
+    # @param [ActivateStatusEnum] activate Required parameter: 0 to suspend or 1 to activate
     # @param [String] response_type Optional parameter: Example: 
     # @return String response from the API call
     def create_suspend_sub_account(options = Hash.new)
@@ -87,7 +87,7 @@ module Message360
 
     # Delete sub account or merge numbers into parent
     # @param [String] sub_account_sid Required parameter: The SubaccountSid to be deleted
-    # @param [MergeNumberStatus] merge_number Required parameter: 0 to delete or 1 to merge numbers to parent account.
+    # @param [MergeNumberStatusEnum] merge_number Required parameter: 0 to delete or 1 to merge numbers to parent account.
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_sub_account(options = Hash.new)

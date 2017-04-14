@@ -1,4 +1,4 @@
-#Getting started
+# Getting started
 
 ## How to Build
 
@@ -6,9 +6,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build message_360.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install message_360-2.0.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install message_360-3.0.0.gem ```
 
-![Building Gem](http://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Message360-Ruby&workspaceName=Message360-Ruby&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Message360-Ruby&workspaceName=Message360-Ruby&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ## How to Use
 
@@ -18,41 +18,41 @@ The following section explains how to use the Message360 Ruby Gem in a new Rails
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](http://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](http://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](http://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Message360 gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'message_360', '~> 2.0.0' ```
+In order to use the Message360 gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'message_360', '~> 3.0.0' ```
 
-![Add references of the Gemfile](http://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](http://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](http://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](http://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](http://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Message360-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0)
 
 ## How to Test
 
@@ -86,28 +86,309 @@ client = Message360::Message360Client.new(basic_auth_user_name, basic_auth_passw
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](http://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=message360%20API%20V2-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=2.0.0&initLine=client%2520%253D%2520Message360Client.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=message360%20API%20V3-Ruby&workspaceName=Message360&projectName=message_360&gemName=message_360&gemVer=3.0.0&initLine=client%2520%253D%2520Message360Client.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
 
 ## Class Reference
 
 ### <a name="list_of_controllers"></a>List of Controllers
 
+* [ShortCodeController](#short_code_controller)
 * [ConferenceController](#conference_controller)
 * [EmailController](#email_controller)
 * [NumberVerificationController](#number_verification_controller)
 * [CarrierController](#carrier_controller)
 * [CallController](#call_controller)
-* [SMSController](#sms_controller)
-* [AccountController](#account_controller)
 * [WebRTCController](#web_rtc_controller)
 * [SubAccountController](#sub_account_controller)
 * [AddressController](#address_controller)
 * [PhoneNumberController](#phone_number_controller)
 * [RecordingController](#recording_controller)
+* [SMSController](#sms_controller)
 * [TranscriptionController](#transcription_controller)
 * [UsageController](#usage_controller)
+* [AccountController](#account_controller)
 
-### <a name="conference_controller"></a>![Class: ](http://apidocs.io/img/class.png ".ConferenceController") ConferenceController
+### <a name="short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ShortCodeController") ShortCodeController
+
+#### Get singleton instance
+
+The singleton instance of the ``` ShortCodeController ``` class can be accessed from the API Client.
+
+```ruby
+shortCode = client.short_code
+```
+
+#### <a name="create_view_template"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_view_template") create_view_template
+
+> View a Shared ShortCode Template
+
+
+```ruby
+def create_view_template(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| templateid |  ``` Required ```  | The unique identifier for a template object |
+| response_type |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+templateid = UUID.new
+collect['templateid'] = templateid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = shortCode.create_view_template(collect)
+
+```
+
+
+#### <a name="create_send_short_code"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_send_short_code") create_send_short_code
+
+> Send an SMS from a message360 ShortCode
+
+
+```ruby
+def create_send_short_code(options = Hash.new, 
+                               _field_parameters = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | The Short Code number that is the sender of this message |
+| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | The country code for sending this message |
+| to |  ``` Required ```  | A valid 10-digit number that should receive the message+ |
+| templateid |  ``` Required ```  | The unique identifier for the template used for the message |
+| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
+| message_status_callback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| _field_parameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+shortcode = 'shortcode'
+collect['shortcode'] = shortcode
+
+tocountrycode = '1'
+collect['tocountrycode'] = tocountrycode
+
+to = 'to'
+collect['to'] = to
+
+templateid = UUID.new
+collect['templateid'] = templateid
+
+method = 'GET'
+collect['method'] = method
+
+message_status_callback = 'MessageStatusCallback'
+collect['message_status_callback'] = message_status_callback
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+# key-value map for optional form parameters
+formParams = { 'key' => 'value' }
+
+result = shortCode.create_send_short_code(collect, formParams, )
+
+```
+
+
+#### <a name="create_list_inbound_short_code"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_inbound_short_code") create_list_inbound_short_code
+
+> List All Inbound ShortCode
+
+
+```ruby
+def create_list_inbound_short_code(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound ShortCode |
+| shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
+| date_received |  ``` Optional ```  | Only list messages sent with the specified date |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+page = 247
+collect['page'] = page
+
+pagesize = 10
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+shortcode = 'Shortcode'
+collect['shortcode'] = shortcode
+
+date_received = 'DateReceived'
+collect['date_received'] = date_received
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = shortCode.create_list_inbound_short_code(collect)
+
+```
+
+
+#### <a name="create_list_short_code"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_short_code") create_list_short_code
+
+> List ShortCode Messages
+
+
+```ruby
+def create_list_short_code(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Messages sent from this number |
+| to |  ``` Optional ```  | Messages sent to this number |
+| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+page = 247
+collect['page'] = page
+
+pagesize = 10
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+to = 'to'
+collect['to'] = to
+
+datesent = 'datesent'
+collect['datesent'] = datesent
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = shortCode.create_list_short_code(collect)
+
+```
+
+
+#### <a name="create_list_templates"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_templates") create_list_templates
+
+> List Shortcode Templates by Type
+
+
+```ruby
+def create_list_templates(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| type |  ``` Optional ```  ``` DefaultValue ```  | The type (category) of template Valid values: marketing, authorization |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+type = 'authorization'
+collect['type'] = type
+
+page = 247
+collect['page'] = page
+
+pagesize = 10
+collect['pagesize'] = pagesize
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = shortCode.create_list_templates(collect)
+
+```
+
+
+#### <a name="create_view_short_code"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_view_short_code") create_view_short_code
+
+> View a ShortCode Message
+
+
+```ruby
+def create_view_short_code(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messagesid |  ``` Required ```  | Message sid |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+messagesid = 'messagesid'
+collect['messagesid'] = messagesid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = shortCode.create_view_short_code(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="conference_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ConferenceController") ConferenceController
 
 #### Get singleton instance
 
@@ -117,7 +398,7 @@ The singleton instance of the ``` ConferenceController ``` class can be accessed
 conference = client.conference
 ```
 
-#### <a name="create_deaf_mute_participant"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.create_deaf_mute_participant") create_deaf_mute_participant
+#### <a name="create_deaf_mute_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_deaf_mute_participant") create_deaf_mute_participant
 
 > Deaf Mute Participant
 
@@ -163,7 +444,7 @@ result = conference.create_deaf_mute_participant(collect)
 ```
 
 
-#### <a name="create_list_conference"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.create_list_conference") create_list_conference
+#### <a name="create_list_conference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_list_conference") create_list_conference
 
 > List Conference
 
@@ -190,16 +471,16 @@ def create_list_conference(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 254
+page = 247
 collect['page'] = page
 
-page_size = 254
+page_size = 247
 collect['page_size'] = page_size
 
 friendly_name = 'FriendlyName'
 collect['friendly_name'] = friendly_name
 
-status = Message360::InterruptedCallStatus::CANCELED
+status = Message360::InterruptedCallStatusEnum::CANCELED
 collect['status'] = status
 
 date_created = 'DateCreated'
@@ -217,7 +498,7 @@ result = conference.create_list_conference(collect)
 ```
 
 
-#### <a name="create_view_conference"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.create_view_conference") create_view_conference
+#### <a name="create_view_conference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_view_conference") create_view_conference
 
 > View Conference
 
@@ -251,7 +532,7 @@ result = conference.create_view_conference(collect)
 ```
 
 
-#### <a name="add_participant"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.add_participant") add_participant
+#### <a name="add_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.add_participant") add_participant
 
 > Add Participant in conference 
 
@@ -283,13 +564,13 @@ collect['conferencesid'] = conferencesid
 participantnumber = 'participantnumber'
 collect['participantnumber'] = participantnumber
 
-tocountrycode = 41
+tocountrycode = 183
 collect['tocountrycode'] = tocountrycode
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -301,7 +582,7 @@ result = conference.add_participant(collect)
 ```
 
 
-#### <a name="create_list_participant"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.create_list_participant") create_list_participant
+#### <a name="create_list_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_list_participant") create_list_participant
 
 > List Participant
 
@@ -330,16 +611,16 @@ collect = Hash.new
 conference_sid = 'ConferenceSid'
 collect['conference_sid'] = conference_sid
 
-page = 41
+page = 183
 collect['page'] = page
 
-pagesize = 41
+pagesize = 183
 collect['pagesize'] = pagesize
 
-muted = false
+muted = true
 collect['muted'] = muted
 
-deaf = false
+deaf = true
 collect['deaf'] = deaf
 
 response_type = 'json'
@@ -351,7 +632,7 @@ result = conference.create_list_participant(collect)
 ```
 
 
-#### <a name="create_view_participant"></a>![Method: ](http://apidocs.io/img/method.png ".ConferenceController.create_view_participant") create_view_participant
+#### <a name="create_view_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_view_participant") create_view_participant
 
 > View Participant
 
@@ -391,7 +672,7 @@ result = conference.create_view_participant(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="email_controller"></a>![Class: ](http://apidocs.io/img/class.png ".EmailController") EmailController
+### <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EmailController") EmailController
 
 #### Get singleton instance
 
@@ -401,7 +682,7 @@ The singleton instance of the ``` EmailController ``` class can be accessed from
 email = client.email
 ```
 
-#### <a name="create_delete_invalid"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_invalid") create_delete_invalid
+#### <a name="create_delete_invalid"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_delete_invalid") create_delete_invalid
 
 > This endpoint allows you to delete entries in the Invalid Emails list.
 
@@ -435,7 +716,7 @@ result = email.create_delete_invalid(collect)
 ```
 
 
-#### <a name="create_list_blocks"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_blocks") create_list_blocks
+#### <a name="create_list_blocks"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_blocks") create_list_blocks
 
 > Outputs email addresses on your blocklist
 
@@ -473,7 +754,7 @@ result = email.create_list_blocks(collect)
 ```
 
 
-#### <a name="create_list_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_spam") create_list_spam
+#### <a name="create_list_spam"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_spam") create_list_spam
 
 > List out all email addresses marked as spam
 
@@ -511,7 +792,7 @@ result = email.create_list_spam(collect)
 ```
 
 
-#### <a name="create_list_bounces"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_bounces") create_list_bounces
+#### <a name="create_list_bounces"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_bounces") create_list_bounces
 
 > List out all email addresses that have bounced
 
@@ -549,7 +830,7 @@ result = email.create_list_bounces(collect)
 ```
 
 
-#### <a name="create_delete_bounces"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_bounces") create_delete_bounces
+#### <a name="create_delete_bounces"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_delete_bounces") create_delete_bounces
 
 > Delete an email address from the bounced address list
 
@@ -583,7 +864,7 @@ result = email.create_delete_bounces(collect)
 ```
 
 
-#### <a name="create_list_invalid"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_invalid") create_list_invalid
+#### <a name="create_list_invalid"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_invalid") create_list_invalid
 
 > List out all invalid email addresses
 
@@ -621,7 +902,7 @@ result = email.create_list_invalid(collect)
 ```
 
 
-#### <a name="create_list_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_list_unsubscribes") create_list_unsubscribes
+#### <a name="create_list_unsubscribes"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_unsubscribes") create_list_unsubscribes
 
 > List all unsubscribed email addresses
 
@@ -659,7 +940,7 @@ result = email.create_list_unsubscribes(collect)
 ```
 
 
-#### <a name="create_delete_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_unsubscribes") create_delete_unsubscribes
+#### <a name="create_delete_unsubscribes"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_delete_unsubscribes") create_delete_unsubscribes
 
 > Delete emails from the unsubscribe list
 
@@ -693,7 +974,7 @@ result = email.create_delete_unsubscribes(collect)
 ```
 
 
-#### <a name="add_unsubscribes"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.add_unsubscribes") add_unsubscribes
+#### <a name="add_unsubscribes"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.add_unsubscribes") add_unsubscribes
 
 > Add an email to the unsubscribe list
 
@@ -727,7 +1008,7 @@ result = email.add_unsubscribes(collect)
 ```
 
 
-#### <a name="create_delete_block"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_block") create_delete_block
+#### <a name="create_delete_block"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_delete_block") create_delete_block
 
 > Deletes a blocked email
 
@@ -761,7 +1042,7 @@ result = email.create_delete_block(collect)
 ```
 
 
-#### <a name="create_delete_spam"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_delete_spam") create_delete_spam
+#### <a name="create_delete_spam"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_delete_spam") create_delete_spam
 
 > Deletes a email address marked as spam from the spam list
 
@@ -795,7 +1076,7 @@ result = email.create_delete_spam(collect)
 ```
 
 
-#### <a name="create_send_email"></a>![Method: ](http://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
+#### <a name="create_send_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
 
 > Send out an email
 
@@ -830,7 +1111,7 @@ collect['to'] = to
 from = 'from'
 collect['from'] = from
 
-type = Message360::SendEmailAs::HTML
+type = Message360::SendEmailAsEnum::HTML
 collect['type'] = type
 
 subject = 'subject'
@@ -859,7 +1140,7 @@ result = email.create_send_email(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="number_verification_controller"></a>![Class: ](http://apidocs.io/img/class.png ".NumberVerificationController") NumberVerificationController
+### <a name="number_verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NumberVerificationController") NumberVerificationController
 
 #### Get singleton instance
 
@@ -869,7 +1150,7 @@ The singleton instance of the ``` NumberVerificationController ``` class can be 
 numberVerification = client.number_verification
 ```
 
-#### <a name="create_verify_number"></a>![Method: ](http://apidocs.io/img/method.png ".NumberVerificationController.create_verify_number") create_verify_number
+#### <a name="create_verify_number"></a>![Method: ](https://apidocs.io/img/method.png ".NumberVerificationController.create_verify_number") create_verify_number
 
 > Number Verification
 
@@ -909,7 +1190,7 @@ result = numberVerification.create_verify_number(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="carrier_controller"></a>![Class: ](http://apidocs.io/img/class.png ".CarrierController") CarrierController
+### <a name="carrier_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CarrierController") CarrierController
 
 #### Get singleton instance
 
@@ -919,7 +1200,7 @@ The singleton instance of the ``` CarrierController ``` class can be accessed fr
 carrier = client.carrier
 ```
 
-#### <a name="create_carrier_lookup"></a>![Method: ](http://apidocs.io/img/method.png ".CarrierController.create_carrier_lookup") create_carrier_lookup
+#### <a name="create_carrier_lookup"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_carrier_lookup") create_carrier_lookup
 
 > Get the Carrier Lookup
 
@@ -953,7 +1234,7 @@ result = carrier.create_carrier_lookup(collect)
 ```
 
 
-#### <a name="create_carrier_lookup_list"></a>![Method: ](http://apidocs.io/img/method.png ".CarrierController.create_carrier_lookup_list") create_carrier_lookup_list
+#### <a name="create_carrier_lookup_list"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_carrier_lookup_list") create_carrier_lookup_list
 
 > Get the All Purchase Number's Carrier lookup
 
@@ -976,10 +1257,10 @@ def create_carrier_lookup_list(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 41
+page = 183
 collect['page'] = page
 
-pagesize = 41
+pagesize = 183
 collect['pagesize'] = pagesize
 
 response_type = 'json'
@@ -993,7 +1274,7 @@ result = carrier.create_carrier_lookup_list(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="call_controller"></a>![Class: ](http://apidocs.io/img/class.png ".CallController") CallController
+### <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CallController") CallController
 
 #### Get singleton instance
 
@@ -1003,7 +1284,7 @@ The singleton instance of the ``` CallController ``` class can be accessed from 
 call = client.call
 ```
 
-#### <a name="create_view_call"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_view_call") create_view_call
+#### <a name="create_view_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_view_call") create_view_call
 
 > View Call Response
 
@@ -1037,7 +1318,7 @@ result = call.create_view_call(collect)
 ```
 
 
-#### <a name="create_group_call"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_group_call") create_group_call
+#### <a name="create_group_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_group_call") create_group_call
 
 > Group Call
 
@@ -1093,28 +1374,28 @@ collect['to'] = to
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
 status_call_back_url = 'StatusCallBackUrl'
 collect['status_call_back_url'] = status_call_back_url
 
-status_call_back_method = Message360::HttpAction::GET
+status_call_back_method = Message360::HttpActionEnum::GET
 collect['status_call_back_method'] = status_call_back_method
 
 fall_back_url = 'FallBackUrl'
 collect['fall_back_url'] = fall_back_url
 
-fall_back_method = Message360::HttpAction::GET
+fall_back_method = Message360::HttpActionEnum::GET
 collect['fall_back_method'] = fall_back_method
 
 heart_beat_url = 'HeartBeatUrl'
 collect['heart_beat_url'] = heart_beat_url
 
-heart_beat_method = Message360::HttpAction::GET
+heart_beat_method = Message360::HttpActionEnum::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 41
+timeout = 141
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1123,16 +1404,16 @@ collect['play_dtmf'] = play_dtmf
 hide_caller_id = 'HideCallerId'
 collect['hide_caller_id'] = hide_caller_id
 
-record = false
+record = true
 collect['record'] = record
 
 record_call_back_url = 'RecordCallBackUrl'
 collect['record_call_back_url'] = record_call_back_url
 
-record_call_back_method = Message360::HttpAction::GET
+record_call_back_method = Message360::HttpActionEnum::GET
 collect['record_call_back_method'] = record_call_back_method
 
-transcribe = false
+transcribe = true
 collect['transcribe'] = transcribe
 
 transcribe_call_back_url = 'TranscribeCallBackUrl'
@@ -1147,7 +1428,7 @@ result = call.create_group_call(collect)
 ```
 
 
-#### <a name="create_voice_effect"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_voice_effect") create_voice_effect
+#### <a name="create_voice_effect"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_voice_effect") create_voice_effect
 
 > Voice Effect
 
@@ -1178,22 +1459,22 @@ collect = Hash.new
 call_sid = 'CallSid'
 collect['call_sid'] = call_sid
 
-audio_direction = Message360::AudioDirection::IN
+audio_direction = Message360::AudioDirectionEnum::IN
 collect['audio_direction'] = audio_direction
 
-pitch_semi_tones = 41.0568904974763
+pitch_semi_tones = 141.987823705183
 collect['pitch_semi_tones'] = pitch_semi_tones
 
-pitch_octaves = 41.0568904974763
+pitch_octaves = 141.987823705183
 collect['pitch_octaves'] = pitch_octaves
 
-pitch = 41.0568904974763
+pitch = 141.987823705183
 collect['pitch'] = pitch
 
-rate = 41.0568904974763
+rate = 141.987823705183
 collect['rate'] = rate
 
-tempo = 41.0568904974763
+tempo = 141.987823705183
 collect['tempo'] = tempo
 
 response_type = 'json'
@@ -1205,7 +1486,7 @@ result = call.create_voice_effect(collect)
 ```
 
 
-#### <a name="create_record_call"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_record_call") create_record_call
+#### <a name="create_record_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_record_call") create_record_call
 
 > Record a Call
 
@@ -1238,16 +1519,16 @@ collect['call_sid'] = call_sid
 record = true
 collect['record'] = record
 
-direction = Message360::Direction::IN
+direction = Message360::DirectionEnum::IN
 collect['direction'] = direction
 
-time_limit = 204
+time_limit = 141
 collect['time_limit'] = time_limit
 
 call_back_url = 'CallBackUrl'
 collect['call_back_url'] = call_back_url
 
-fileformat = Message360::AudioFormat::MP3
+fileformat = Message360::AudioFormatEnum::MP3
 collect['fileformat'] = fileformat
 
 response_type = 'json'
@@ -1259,7 +1540,7 @@ result = call.create_record_call(collect)
 ```
 
 
-#### <a name="create_play_audio"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_play_audio") create_play_audio
+#### <a name="create_play_audio"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_play_audio") create_play_audio
 
 > Play Dtmf and send the Digit
 
@@ -1292,10 +1573,10 @@ collect['call_sid'] = call_sid
 audio_url = 'AudioUrl'
 collect['audio_url'] = audio_url
 
-length = 204
+length = 141
 collect['length'] = length
 
-direction = Message360::Direction::IN
+direction = Message360::DirectionEnum::IN
 collect['direction'] = direction
 
 loop = true
@@ -1313,57 +1594,7 @@ result = call.create_play_audio(collect)
 ```
 
 
-#### <a name="create_list_calls"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_list_calls") create_list_calls
-
-> A list of calls associated with your Message360 account
-
-
-```ruby
-def create_list_calls(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Only list calls to this number |
-| from |  ``` Optional ```  | Only list calls from this number |
-| date_created |  ``` Optional ```  | Only list calls starting within the specified date range |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 204
-collect['page'] = page
-
-page_size = 204
-collect['page_size'] = page_size
-
-to = 'To'
-collect['to'] = to
-
-from = 'From'
-collect['from'] = from
-
-date_created = 'DateCreated'
-collect['date_created'] = date_created
-
-response_type = 'json'
-collect['response_type'] = response_type
-
-
-result = call.create_list_calls(collect)
-
-```
-
-
-#### <a name="create_interrupted_call"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_interrupted_call") create_interrupted_call
+#### <a name="create_interrupted_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_interrupted_call") create_interrupted_call
 
 > Interrupt the Call by Call Sid
 
@@ -1394,10 +1625,10 @@ collect['call_sid'] = call_sid
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
-status = Message360::InterruptedCallStatus::CANCELED
+status = Message360::InterruptedCallStatusEnum::CANCELED
 collect['status'] = status
 
 response_type = 'json'
@@ -1409,7 +1640,7 @@ result = call.create_interrupted_call(collect)
 ```
 
 
-#### <a name="create_send_digit"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_send_digit") create_send_digit
+#### <a name="create_send_digit"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_send_digit") create_send_digit
 
 > Play Dtmf and send the Digit
 
@@ -1439,7 +1670,7 @@ collect['call_sid'] = call_sid
 play_dtmf = 'PlayDtmf'
 collect['play_dtmf'] = play_dtmf
 
-play_dtmf_direction = Message360::Direction::IN
+play_dtmf_direction = Message360::DirectionEnum::IN
 collect['play_dtmf_direction'] = play_dtmf_direction
 
 response_type = 'json'
@@ -1451,7 +1682,7 @@ result = call.create_send_digit(collect)
 ```
 
 
-#### <a name="create_make_call"></a>![Method: ](http://apidocs.io/img/method.png ".CallController.create_make_call") create_make_call
+#### <a name="create_make_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_make_call") create_make_call
 
 > You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
 
@@ -1508,19 +1739,19 @@ collect['to'] = to
 url = 'Url'
 collect['url'] = url
 
-method = Message360::HttpAction::GET
+method = Message360::HttpActionEnum::GET
 collect['method'] = method
 
 status_call_back_url = 'StatusCallBackUrl'
 collect['status_call_back_url'] = status_call_back_url
 
-status_call_back_method = Message360::HttpAction::GET
+status_call_back_method = Message360::HttpActionEnum::GET
 collect['status_call_back_method'] = status_call_back_method
 
 fall_back_url = 'FallBackUrl'
 collect['fall_back_url'] = fall_back_url
 
-fall_back_method = Message360::HttpAction::GET
+fall_back_method = Message360::HttpActionEnum::GET
 collect['fall_back_method'] = fall_back_method
 
 heart_beat_url = 'HeartBeatUrl'
@@ -1529,7 +1760,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = true
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 204
+timeout = 141
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -1544,7 +1775,7 @@ collect['record'] = record
 record_call_back_url = 'RecordCallBackUrl'
 collect['record_call_back_url'] = record_call_back_url
 
-record_call_back_method = Message360::HttpAction::GET
+record_call_back_method = Message360::HttpActionEnum::GET
 collect['record_call_back_method'] = record_call_back_method
 
 transcribe = true
@@ -1553,7 +1784,7 @@ collect['transcribe'] = transcribe
 transcribe_call_back_url = 'TranscribeCallBackUrl'
 collect['transcribe_call_back_url'] = transcribe_call_back_url
 
-if_machine = Message360::IfMachine::CONTINUE
+if_machine = Message360::IfMachineEnum::CONTINUE
 collect['if_machine'] = if_machine
 
 response_type = 'json'
@@ -1565,59 +1796,13 @@ result = call.create_make_call(collect)
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+#### <a name="create_list_calls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_list_calls") create_list_calls
 
-### <a name="sms_controller"></a>![Class: ](http://apidocs.io/img/class.png ".SMSController") SMSController
-
-#### Get singleton instance
-
-The singleton instance of the ``` SMSController ``` class can be accessed from the API Client.
-
-```ruby
-sMS = client.sms
-```
-
-#### <a name="create_view_sms"></a>![Method: ](http://apidocs.io/img/method.png ".SMSController.create_view_sms") create_view_sms
-
-> View Particular SMS
+> A list of calls associated with your Message360 account
 
 
 ```ruby
-def create_view_sms(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| messagesid |  ``` Required ```  | Message sid |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-messagesid = 'messagesid'
-collect['messagesid'] = messagesid
-
-response_type = 'json'
-collect['response_type'] = response_type
-
-
-result = sMS.create_view_sms(collect)
-
-```
-
-
-#### <a name="create_list_inbound_sms"></a>![Method: ](http://apidocs.io/img/method.png ".SMSController.create_list_inbound_sms") create_list_inbound_sms
-
-> List All Inbound SMS
-
-
-```ruby
-def create_list_inbound_sms(options = Hash.new); end
+def create_list_calls(options = Hash.new); end
 ```
 
 #### Parameters
@@ -1625,9 +1810,10 @@ def create_list_inbound_sms(options = Hash.new); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound SMS |
-| to |  ``` Optional ```  | To Number to get Inbound SMS |
+| page_size |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Only list calls to this number |
+| from |  ``` Optional ```  | Only list calls from this number |
+| date_created |  ``` Optional ```  | Only list calls starting within the specified date range |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1636,45 +1822,51 @@ def create_list_inbound_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 204
+page = 141
 collect['page'] = page
 
-pagesize = 'pagesize'
-collect['pagesize'] = pagesize
+page_size = 10
+collect['page_size'] = page_size
 
-from = 'from'
+to = 'To'
+collect['to'] = to
+
+from = 'From'
 collect['from'] = from
 
-to = 'to'
-collect['to'] = to
+date_created = 'DateCreated'
+collect['date_created'] = date_created
 
 response_type = 'json'
 collect['response_type'] = response_type
 
 
-result = sMS.create_list_inbound_sms(collect)
+result = call.create_list_calls(collect)
 
 ```
 
 
-#### <a name="create_list_sms"></a>![Method: ](http://apidocs.io/img/method.png ".SMSController.create_list_sms") create_list_sms
+#### <a name="create_send_ringless_vm"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_send_ringless_vm") create_send_ringless_vm
 
-> List All SMS
+> API endpoint used to send a Ringless Voicemail
 
 
 ```ruby
-def create_list_sms(options = Hash.new); end
+def create_send_ringless_vm(options = Hash.new); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Messages sent from this number |
-| to |  ``` Optional ```  | Messages sent to this number |
-| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+| from_country_code |  ``` Required ```  | From country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| to_country_code |  ``` Required ```  | To country code |
+| to |  ``` Required ```  | To number |
+| voice_mail_url |  ``` Required ```  | URL to an audio file |
+| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
+| status_call_back_url |  ``` Optional ```  | URL to post the status of the Ringless request |
+| stats_call_back_method |  ``` Optional ```  | POST or GET |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1683,137 +1875,42 @@ def create_list_sms(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 204
-collect['page'] = page
+from_country_code = 'FromCountryCode'
+collect['from_country_code'] = from_country_code
 
-pagesize = 204
-collect['pagesize'] = pagesize
-
-from = 'from'
+from = 'From'
 collect['from'] = from
 
-to = 'to'
+to_country_code = 'ToCountryCode'
+collect['to_country_code'] = to_country_code
+
+to = 'To'
 collect['to'] = to
 
-datesent = 'datesent'
-collect['datesent'] = datesent
+voice_mail_url = 'VoiceMailURL'
+collect['voice_mail_url'] = voice_mail_url
 
-response_type = 'json'
-collect['response_type'] = response_type
-
-
-result = sMS.create_list_sms(collect)
-
-```
-
-
-#### <a name="create_send_sms"></a>![Method: ](http://apidocs.io/img/method.png ".SMSController.create_send_sms") create_send_sms
-
-> Send an SMS from a message360 number
-
-
-```ruby
-def create_send_sms(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
-| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
-| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
-| to |  ``` Required ```  | Number to send the SMS to |
-| body |  ``` Required ```  | Text Message To Send |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-fromcountrycode = 1
-collect['fromcountrycode'] = fromcountrycode
-
-from = 'from'
-collect['from'] = from
-
-tocountrycode = 1
-collect['tocountrycode'] = tocountrycode
-
-to = 'to'
-collect['to'] = to
-
-body = 'body'
-collect['body'] = body
-
-method = Message360::HttpAction::GET
+method = 'GET'
 collect['method'] = method
 
-messagestatuscallback = 'messagestatuscallback'
-collect['messagestatuscallback'] = messagestatuscallback
+status_call_back_url = 'StatusCallBackUrl'
+collect['status_call_back_url'] = status_call_back_url
+
+stats_call_back_method = 'StatsCallBackMethod'
+collect['stats_call_back_method'] = stats_call_back_method
 
 response_type = 'json'
 collect['response_type'] = response_type
 
 
-result = sMS.create_send_sms(collect)
+result = call.create_send_ringless_vm(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="account_controller"></a>![Class: ](http://apidocs.io/img/class.png ".AccountController") AccountController
-
-#### Get singleton instance
-
-The singleton instance of the ``` AccountController ``` class can be accessed from the API Client.
-
-```ruby
-account = client.account
-```
-
-#### <a name="create_view_account"></a>![Method: ](http://apidocs.io/img/method.png ".AccountController.create_view_account") create_view_account
-
-> Display Account Description
-
-
-```ruby
-def create_view_account(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| date |  ``` Required ```  | TODO: Add a parameter description |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-date = 'date'
-collect['date'] = date
-
-response_type = 'json'
-collect['response_type'] = response_type
-
-
-result = account.create_view_account(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="web_rtc_controller"></a>![Class: ](http://apidocs.io/img/class.png ".WebRTCController") WebRTCController
+### <a name="web_rtc_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebRTCController") WebRTCController
 
 #### Get singleton instance
 
@@ -1823,7 +1920,7 @@ The singleton instance of the ``` WebRTCController ``` class can be accessed fro
 webRTC = client.web_rtc
 ```
 
-#### <a name="create_check_funds"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_check_funds") create_check_funds
+#### <a name="create_check_funds"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.create_check_funds") create_check_funds
 
 > TODO: Add a method description
 
@@ -1857,45 +1954,7 @@ result = webRTC.create_check_funds(collect)
 ```
 
 
-#### <a name="create_authenticate_number"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_authenticate_number") create_authenticate_number
-
-> Authenticate a message360 number for use
-
-
-```ruby
-def create_authenticate_number(options = Hash.new); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | Phone number to authenticate for use |
-| account_sid |  ``` Required ```  | Your message360 Account SID |
-| auth_token |  ``` Required ```  | Your message360 token |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-phone_number = 'phone_number'
-collect['phone_number'] = phone_number
-
-account_sid = 'account_sid'
-collect['account_sid'] = account_sid
-
-auth_token = 'auth_token'
-collect['auth_token'] = auth_token
-
-
-result = webRTC.create_authenticate_number(collect)
-
-```
-
-
-#### <a name="create_token"></a>![Method: ](http://apidocs.io/img/method.png ".WebRTCController.create_token") create_token
+#### <a name="create_token"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.create_token") create_token
 
 > message360 webrtc
 
@@ -1910,6 +1969,8 @@ def create_token(options = Hash.new); end
 |-----------|------|-------------|
 | account_sid |  ``` Required ```  | Your message360 Account SID |
 | auth_token |  ``` Required ```  | Your message360 Token |
+| username |  ``` Required ```  | WebRTC username authentication |
+| password |  ``` Required ```  | WebRTC password authentication |
 
 
 #### Example Usage
@@ -1923,6 +1984,12 @@ collect['account_sid'] = account_sid
 auth_token = 'auth_token'
 collect['auth_token'] = auth_token
 
+username = 'username'
+collect['username'] = username
+
+password = 'password'
+collect['password'] = password
+
 
 result = webRTC.create_token(collect)
 
@@ -1931,7 +1998,7 @@ result = webRTC.create_token(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="sub_account_controller"></a>![Class: ](http://apidocs.io/img/class.png ".SubAccountController") SubAccountController
+### <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SubAccountController") SubAccountController
 
 #### Get singleton instance
 
@@ -1941,9 +2008,9 @@ The singleton instance of the ``` SubAccountController ``` class can be accessed
 subAccount = client.sub_account
 ```
 
-#### <a name="create_sub_account"></a>![Method: ](http://apidocs.io/img/method.png ".SubAccountController.create_sub_account") create_sub_account
+#### <a name="create_sub_account"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_sub_account") create_sub_account
 
-> Create Sub account
+> Create a sub user account under the parent account
 
 
 ```ruby
@@ -1954,10 +2021,10 @@ def create_sub_account(options = Hash.new); end
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| firstname |  ``` Required ```  | TODO: Add a parameter description |
-| lastname |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | ResponseType Format either json or xml |
+| first_name |  ``` Required ```  | Sub account user first name |
+| last_name |  ``` Required ```  | sub account user last name |
+| email |  ``` Required ```  | Sub account email address |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -1965,13 +2032,13 @@ def create_sub_account(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-firstname = 'firstname'
-collect['firstname'] = firstname
+first_name = 'FirstName'
+collect['first_name'] = first_name
 
-lastname = 'lastname'
-collect['lastname'] = lastname
+last_name = 'LastName'
+collect['last_name'] = last_name
 
-email = 'email'
+email = 'Email'
 collect['email'] = email
 
 response_type = 'json'
@@ -1983,7 +2050,7 @@ result = subAccount.create_sub_account(collect)
 ```
 
 
-#### <a name="create_suspend_sub_account"></a>![Method: ](http://apidocs.io/img/method.png ".SubAccountController.create_suspend_sub_account") create_suspend_sub_account
+#### <a name="create_suspend_sub_account"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_suspend_sub_account") create_suspend_sub_account
 
 > Suspend or unsuspend
 
@@ -1996,8 +2063,8 @@ def create_suspend_sub_account(options = Hash.new); end
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountsid |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
+| sub_account_sid |  ``` Required ```  | The SubaccountSid to be activated or suspended |
+| activate |  ``` Required ```  ``` DefaultValue ```  | 0 to suspend or 1 to activate |
 | response_type |  ``` Optional ```  | TODO: Add a parameter description |
 
 
@@ -2006,10 +2073,10 @@ def create_suspend_sub_account(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-subaccountsid = 'subaccountsid'
-collect['subaccountsid'] = subaccountsid
+sub_account_sid = 'SubAccountSID'
+collect['sub_account_sid'] = sub_account_sid
 
-activate = Message360::ActivateStatus::ACTIVATE
+activate = Message360::ActivateStatusEnum::DEACTIVATE
 collect['activate'] = activate
 
 response_type = 'ResponseType'
@@ -2021,22 +2088,22 @@ result = subAccount.create_suspend_sub_account(collect)
 ```
 
 
-#### <a name="create_delete_merge_sub_account"></a>![Method: ](http://apidocs.io/img/method.png ".SubAccountController.create_delete_merge_sub_account") create_delete_merge_sub_account
+#### <a name="create_delete_sub_account"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_delete_sub_account") create_delete_sub_account
 
-> Delete or Merge Sub account
+> Delete sub account or merge numbers into parent
 
 
 ```ruby
-def create_delete_merge_sub_account(options = Hash.new); end
+def create_delete_sub_account(options = Hash.new); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| subaccountsid |  ``` Required ```  | TODO: Add a parameter description |
-| mergenumber |  ``` Required ```  | TODO: Add a parameter description |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format either json or xml |
+| sub_account_sid |  ``` Required ```  | The SubaccountSid to be deleted |
+| merge_number |  ``` Required ```  ``` DefaultValue ```  | 0 to delete or 1 to merge numbers to parent account. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -2044,24 +2111,24 @@ def create_delete_merge_sub_account(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-subaccountsid = 'subaccountsid'
-collect['subaccountsid'] = subaccountsid
+sub_account_sid = 'SubAccountSID'
+collect['sub_account_sid'] = sub_account_sid
 
-mergenumber = Message360::MergeNumberStatus::DELETE
-collect['mergenumber'] = mergenumber
+merge_number = Message360::MergeNumberStatusEnum::DELETE
+collect['merge_number'] = merge_number
 
 response_type = 'json'
 collect['response_type'] = response_type
 
 
-result = subAccount.create_delete_merge_sub_account(collect)
+result = subAccount.create_delete_sub_account(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="address_controller"></a>![Class: ](http://apidocs.io/img/class.png ".AddressController") AddressController
+### <a name="address_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AddressController") AddressController
 
 #### Get singleton instance
 
@@ -2071,7 +2138,7 @@ The singleton instance of the ``` AddressController ``` class can be accessed fr
 address = client.address
 ```
 
-#### <a name="create_address"></a>![Method: ](http://apidocs.io/img/method.png ".AddressController.create_address") create_address
+#### <a name="create_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_address") create_address
 
 > To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
 
@@ -2093,7 +2160,7 @@ def create_address(options = Hash.new); end
 | description |  ``` Optional ```  | Description of addresses. |
 | email |  ``` Optional ```  | Email Id of user. |
 | phone |  ``` Optional ```  | Phone number of user. |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response Type Either json or xml |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
 #### Example Usage
@@ -2101,31 +2168,31 @@ def create_address(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-name = 'name'
+name = 'Name'
 collect['name'] = name
 
-address = 'address'
+address = 'Address'
 collect['address'] = address
 
-country = 'country'
+country = 'Country'
 collect['country'] = country
 
-state = 'state'
+state = 'State'
 collect['state'] = state
 
-city = 'city'
+city = 'City'
 collect['city'] = city
 
-zip = 'zip'
+zip = 'Zip'
 collect['zip'] = zip
 
-description = 'description'
+description = 'Description'
 collect['description'] = description
 
 email = 'email'
 collect['email'] = email
 
-phone = 'phone'
+phone = 'Phone'
 collect['phone'] = phone
 
 response_type = 'json'
@@ -2137,7 +2204,7 @@ result = address.create_address(collect)
 ```
 
 
-#### <a name="create_delete_address"></a>![Method: ](http://apidocs.io/img/method.png ".AddressController.create_delete_address") create_delete_address
+#### <a name="create_delete_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_delete_address") create_delete_address
 
 > To delete Address to your address book
 
@@ -2150,7 +2217,7 @@ def create_delete_address(options = Hash.new); end
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressid |  ``` Required ```  | The identifier of the address to be deleted. |
+| address_sid |  ``` Required ```  | The identifier of the address to be deleted. |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
@@ -2159,8 +2226,8 @@ def create_delete_address(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-addressid = 'addressid'
-collect['addressid'] = addressid
+address_sid = 'AddressSID'
+collect['address_sid'] = address_sid
 
 response_type = 'json'
 collect['response_type'] = response_type
@@ -2171,7 +2238,7 @@ result = address.create_delete_address(collect)
 ```
 
 
-#### <a name="create_verify_address"></a>![Method: ](http://apidocs.io/img/method.png ".AddressController.create_verify_address") create_verify_address
+#### <a name="create_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_verify_address") create_verify_address
 
 > Validates an address given.
 
@@ -2184,8 +2251,8 @@ def create_verify_address(options = Hash.new); end
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressid |  ``` Required ```  | The identifier of the address to be verified. |
-| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type either JSON or xml |
+| address_sid |  ``` Required ```  | The identifier of the address to be verified. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
 #### Example Usage
@@ -2193,8 +2260,8 @@ def create_verify_address(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-addressid = 'addressid'
-collect['addressid'] = addressid
+address_sid = 'AddressSID'
+collect['address_sid'] = address_sid
 
 response_type = 'json'
 collect['response_type'] = response_type
@@ -2205,7 +2272,7 @@ result = address.create_verify_address(collect)
 ```
 
 
-#### <a name="create_list_address"></a>![Method: ](http://apidocs.io/img/method.png ".AddressController.create_list_address") create_list_address
+#### <a name="create_list_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_list_address") create_list_address
 
 > List All Address 
 
@@ -2219,8 +2286,8 @@ def create_list_address(options = Hash.new); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | page |  ``` Optional ```  ``` DefaultValue ```  | Return requested # of items starting the value, default=0, must be an integer |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | How many results to return, default=10, max 100, must be an integer |
-| address_id |  ``` Optional ```  | addresses Sid |
+| page_size |  ``` Optional ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
+| address_sid |  ``` Optional ```  | addresses Sid |
 | date_created |  ``` Optional ```  | date created address. |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
 
@@ -2236,10 +2303,10 @@ collect['page'] = page
 page_size = 10
 collect['page_size'] = page_size
 
-address_id = 'addressId'
-collect['address_id'] = address_id
+address_sid = 'AddressSID'
+collect['address_sid'] = address_sid
 
-date_created = 'dateCreated'
+date_created = 'DateCreated'
 collect['date_created'] = date_created
 
 response_type = 'json'
@@ -2251,7 +2318,7 @@ result = address.create_list_address(collect)
 ```
 
 
-#### <a name="create_view_address"></a>![Method: ](http://apidocs.io/img/method.png ".AddressController.create_view_address") create_view_address
+#### <a name="create_view_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_view_address") create_view_address
 
 > View Address Specific address Book by providing the address id
 
@@ -2264,7 +2331,7 @@ def create_view_address(options = Hash.new); end
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| address_id |  ``` Required ```  | The identifier of the address to be retrieved. |
+| address_sid |  ``` Required ```  | The identifier of the address to be retrieved. |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
@@ -2273,8 +2340,8 @@ def create_view_address(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-address_id = 'addressId'
-collect['address_id'] = address_id
+address_sid = 'AddressSID'
+collect['address_sid'] = address_sid
 
 response_type = 'json'
 collect['response_type'] = response_type
@@ -2287,7 +2354,7 @@ result = address.create_view_address(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="phone_number_controller"></a>![Class: ](http://apidocs.io/img/class.png ".PhoneNumberController") PhoneNumberController
+### <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PhoneNumberController") PhoneNumberController
 
 #### Get singleton instance
 
@@ -2297,7 +2364,7 @@ The singleton instance of the ``` PhoneNumberController ``` class can be accesse
 phoneNumber = client.phone_number
 ```
 
-#### <a name="update_phone_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.update_phone_number") update_phone_number
+#### <a name="update_phone_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.update_phone_number") update_phone_number
 
 > Update Phone Number Details
 
@@ -2341,37 +2408,37 @@ collect['friendly_name'] = friendly_name
 voice_url = 'VoiceUrl'
 collect['voice_url'] = voice_url
 
-voice_method = Message360::HttpAction::GET
+voice_method = Message360::HttpActionEnum::GET
 collect['voice_method'] = voice_method
 
 voice_fallback_url = 'VoiceFallbackUrl'
 collect['voice_fallback_url'] = voice_fallback_url
 
-voice_fallback_method = Message360::HttpAction::GET
+voice_fallback_method = Message360::HttpActionEnum::GET
 collect['voice_fallback_method'] = voice_fallback_method
 
 hangup_callback = 'HangupCallback'
 collect['hangup_callback'] = hangup_callback
 
-hangup_callback_method = Message360::HttpAction::GET
+hangup_callback_method = Message360::HttpActionEnum::GET
 collect['hangup_callback_method'] = hangup_callback_method
 
 heartbeat_url = 'HeartbeatUrl'
 collect['heartbeat_url'] = heartbeat_url
 
-heartbeat_method = Message360::HttpAction::GET
+heartbeat_method = Message360::HttpActionEnum::GET
 collect['heartbeat_method'] = heartbeat_method
 
 sms_url = 'SmsUrl'
 collect['sms_url'] = sms_url
 
-sms_method = Message360::HttpAction::GET
+sms_method = Message360::HttpActionEnum::GET
 collect['sms_method'] = sms_method
 
 sms_fallback_url = 'SmsFallbackUrl'
 collect['sms_fallback_url'] = sms_fallback_url
 
-sms_fallback_method = Message360::HttpAction::GET
+sms_fallback_method = Message360::HttpActionEnum::GET
 collect['sms_fallback_method'] = sms_fallback_method
 
 response_type = 'json'
@@ -2383,7 +2450,7 @@ result = phoneNumber.update_phone_number(collect)
 ```
 
 
-#### <a name="create_buy_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_buy_number") create_buy_number
+#### <a name="create_buy_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_buy_number") create_buy_number
 
 > Buy Phone Number 
 
@@ -2417,7 +2484,7 @@ result = phoneNumber.create_buy_number(collect)
 ```
 
 
-#### <a name="create_release_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_release_number") create_release_number
+#### <a name="create_release_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_release_number") create_release_number
 
 > Release number from account
 
@@ -2451,7 +2518,7 @@ result = phoneNumber.create_release_number(collect)
 ```
 
 
-#### <a name="create_view_number_details"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_view_number_details") create_view_number_details
+#### <a name="create_view_number_details"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_view_number_details") create_view_number_details
 
 > Get Phone Number Details
 
@@ -2485,7 +2552,7 @@ result = phoneNumber.create_view_number_details(collect)
 ```
 
 
-#### <a name="create_list_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_list_number") create_list_number
+#### <a name="create_list_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_list_number") create_list_number
 
 > List Account's Phone number details
 
@@ -2499,7 +2566,7 @@ def create_list_number(options = Hash.new); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| page_size |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | number_type |  ``` Optional ```  | TODO: Add a parameter description |
 | friendly_name |  ``` Optional ```  | TODO: Add a parameter description |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
@@ -2510,13 +2577,13 @@ def create_list_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 113
+page = 233
 collect['page'] = page
 
-page_size = 113
+page_size = 10
 collect['page_size'] = page_size
 
-number_type = Message360::NumberType::ALL
+number_type = Message360::NumberTypeEnum::ALL
 collect['number_type'] = number_type
 
 friendly_name = 'FriendlyName'
@@ -2531,7 +2598,7 @@ result = phoneNumber.create_list_number(collect)
 ```
 
 
-#### <a name="create_available_phone_number"></a>![Method: ](http://apidocs.io/img/method.png ".PhoneNumberController.create_available_phone_number") create_available_phone_number
+#### <a name="create_available_phone_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_available_phone_number") create_available_phone_number
 
 > Available Phone Number
 
@@ -2546,7 +2613,7 @@ def create_available_phone_number(options = Hash.new); end
 |-----------|------|-------------|
 | number_type |  ``` Required ```  | Number type either SMS,Voice or all |
 | area_code |  ``` Required ```  | Phone Number Area Code |
-| page_size |  ``` Optional ```  | Page Size |
+| page_size |  ``` Optional ```  ``` DefaultValue ```  | Page Size |
 | response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -2555,13 +2622,13 @@ def create_available_phone_number(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-number_type = Message360::NumberType::ALL
+number_type = Message360::NumberTypeEnum::ALL
 collect['number_type'] = number_type
 
 area_code = 'AreaCode'
 collect['area_code'] = area_code
 
-page_size = 113
+page_size = 10
 collect['page_size'] = page_size
 
 response_type = 'json'
@@ -2575,7 +2642,7 @@ result = phoneNumber.create_available_phone_number(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="recording_controller"></a>![Class: ](http://apidocs.io/img/class.png ".RecordingController") RecordingController
+### <a name="recording_controller"></a>![Class: ](https://apidocs.io/img/class.png ".RecordingController") RecordingController
 
 #### Get singleton instance
 
@@ -2585,7 +2652,7 @@ The singleton instance of the ``` RecordingController ``` class can be accessed 
 recording = client.recording
 ```
 
-#### <a name="create_list_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_list_recording") create_list_recording
+#### <a name="create_list_recording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_list_recording") create_list_recording
 
 > List out Recordings
 
@@ -2610,10 +2677,10 @@ def create_list_recording(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 113
+page = 233
 collect['page'] = page
 
-page_size = 113
+page_size = 233
 collect['page_size'] = page_size
 
 date_created = 'DateCreated'
@@ -2631,7 +2698,7 @@ result = recording.create_list_recording(collect)
 ```
 
 
-#### <a name="create_delete_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_delete_recording") create_delete_recording
+#### <a name="create_delete_recording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_delete_recording") create_delete_recording
 
 > Delete Recording Record
 
@@ -2665,7 +2732,7 @@ result = recording.create_delete_recording(collect)
 ```
 
 
-#### <a name="create_view_recording"></a>![Method: ](http://apidocs.io/img/method.png ".RecordingController.create_view_recording") create_view_recording
+#### <a name="create_view_recording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_view_recording") create_view_recording
 
 > View a specific Recording
 
@@ -2701,7 +2768,207 @@ result = recording.create_view_recording(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="transcription_controller"></a>![Class: ](http://apidocs.io/img/class.png ".TranscriptionController") TranscriptionController
+### <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SMSController") SMSController
+
+#### Get singleton instance
+
+The singleton instance of the ``` SMSController ``` class can be accessed from the API Client.
+
+```ruby
+sMS = client.sms
+```
+
+#### <a name="create_list_inbound_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_list_inbound_sms") create_list_inbound_sms
+
+> List All Inbound SMS
+
+
+```ruby
+def create_list_inbound_sms(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound SMS |
+| to |  ``` Optional ```  | To Number to get Inbound SMS |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+page = 233
+collect['page'] = page
+
+pagesize = 'pagesize'
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+to = 'to'
+collect['to'] = to
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_list_inbound_sms(collect)
+
+```
+
+
+#### <a name="create_list_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_list_sms") create_list_sms
+
+> List All SMS
+
+
+```ruby
+def create_list_sms(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Messages sent from this number |
+| to |  ``` Optional ```  | Messages sent to this number |
+| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+page = 233
+collect['page'] = page
+
+pagesize = 233
+collect['pagesize'] = pagesize
+
+from = 'from'
+collect['from'] = from
+
+to = 'to'
+collect['to'] = to
+
+datesent = 'datesent'
+collect['datesent'] = datesent
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_list_sms(collect)
+
+```
+
+
+#### <a name="create_send_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_send_sms") create_send_sms
+
+> Send an SMS from a message360 number
+
+
+```ruby
+def create_send_sms(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
+| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
+| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
+| to |  ``` Required ```  | Number to send the SMS to |
+| body |  ``` Required ```  | Text Message To Send |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+fromcountrycode = 1
+collect['fromcountrycode'] = fromcountrycode
+
+from = 'from'
+collect['from'] = from
+
+tocountrycode = 1
+collect['tocountrycode'] = tocountrycode
+
+to = 'to'
+collect['to'] = to
+
+body = 'body'
+collect['body'] = body
+
+method = Message360::HttpActionEnum::GET
+collect['method'] = method
+
+messagestatuscallback = 'messagestatuscallback'
+collect['messagestatuscallback'] = messagestatuscallback
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_send_sms(collect)
+
+```
+
+
+#### <a name="create_view_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_view_sms") create_view_sms
+
+> View a Particular SMS
+
+
+```ruby
+def create_view_sms(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messagesid |  ``` Required ```  | Message sid |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+messagesid = 'messagesid'
+collect['messagesid'] = messagesid
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = sMS.create_view_sms(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="transcription_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TranscriptionController") TranscriptionController
 
 #### Get singleton instance
 
@@ -2711,7 +2978,7 @@ The singleton instance of the ``` TranscriptionController ``` class can be acces
 transcription = client.transcription
 ```
 
-#### <a name="create_audio_url_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_audio_url_transcription") create_audio_url_transcription
+#### <a name="create_audio_url_transcription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_audio_url_transcription") create_audio_url_transcription
 
 > Audio URL Transcriptions
 
@@ -2745,7 +3012,7 @@ result = transcription.create_audio_url_transcription(collect)
 ```
 
 
-#### <a name="create_recording_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_recording_transcription") create_recording_transcription
+#### <a name="create_recording_transcription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_recording_transcription") create_recording_transcription
 
 > Recording Transcriptions
 
@@ -2779,7 +3046,7 @@ result = transcription.create_recording_transcription(collect)
 ```
 
 
-#### <a name="create_view_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_view_transcription") create_view_transcription
+#### <a name="create_view_transcription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_view_transcription") create_view_transcription
 
 > View Specific Transcriptions
 
@@ -2813,7 +3080,7 @@ result = transcription.create_view_transcription(collect)
 ```
 
 
-#### <a name="create_list_transcription"></a>![Method: ](http://apidocs.io/img/method.png ".TranscriptionController.create_list_transcription") create_list_transcription
+#### <a name="create_list_transcription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_list_transcription") create_list_transcription
 
 > Get All transcriptions
 
@@ -2838,13 +3105,13 @@ def create_list_transcription(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-page = 113
+page = 233
 collect['page'] = page
 
-page_size = 113
+page_size = 233
 collect['page_size'] = page_size
 
-status = Message360::Status::INPROGRESS
+status = Message360::StatusEnum::INPROGRESS
 collect['status'] = status
 
 date_transcribed = 'DateTranscribed'
@@ -2861,7 +3128,7 @@ result = transcription.create_list_transcription(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="usage_controller"></a>![Class: ](http://apidocs.io/img/class.png ".UsageController") UsageController
+### <a name="usage_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UsageController") UsageController
 
 #### Get singleton instance
 
@@ -2871,7 +3138,7 @@ The singleton instance of the ``` UsageController ``` class can be accessed from
 usage = client.usage
 ```
 
-#### <a name="create_list_usage"></a>![Method: ](http://apidocs.io/img/method.png ".UsageController.create_list_usage") create_list_usage
+#### <a name="create_list_usage"></a>![Method: ](https://apidocs.io/img/method.png ".UsageController.create_list_usage") create_list_usage
 
 > Get all usage 
 
@@ -2895,7 +3162,7 @@ def create_list_usage(options = Hash.new); end
 ```ruby
 collect = Hash.new
 
-product_code = Message360::ProductCode::ALL
+product_code = Message360::ProductCodeEnum::ALL
 collect['product_code'] = product_code
 
 start_date = '2016-09-06'
@@ -2909,6 +3176,52 @@ collect['response_type'] = response_type
 
 
 result = usage.create_list_usage(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="account_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AccountController") AccountController
+
+#### Get singleton instance
+
+The singleton instance of the ``` AccountController ``` class can be accessed from the API Client.
+
+```ruby
+account = client.account
+```
+
+#### <a name="create_view_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_view_account") create_view_account
+
+> Display Account Description
+
+
+```ruby
+def create_view_account(options = Hash.new); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| date |  ``` Required ```  | TODO: Add a parameter description |
+| response_type |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+date = 'Date'
+collect['date'] = date
+
+response_type = 'json'
+collect['response_type'] = response_type
+
+
+result = account.create_view_account(collect)
 
 ```
 

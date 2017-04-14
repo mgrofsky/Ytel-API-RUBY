@@ -13,6 +13,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_carrier_lookup(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'phonenumber' => options['phonenumber']

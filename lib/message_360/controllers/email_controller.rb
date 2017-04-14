@@ -13,6 +13,7 @@ module Message360
     # @param [String] response_type Optional parameter: Example: json
     # @return String response from the API call
     def create_delete_invalid(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -139,6 +140,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_bounces(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -234,6 +236,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_unsubscribes(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -267,6 +270,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def add_unsubscribes(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -300,6 +304,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_block(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -333,6 +338,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_spam(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'email' => options['email']
@@ -364,7 +370,7 @@ module Message360
     # Send out an email
     # @param [String] to Required parameter: The to email address
     # @param [String] from Required parameter: The from email address
-    # @param [SendEmailAs] type Required parameter: email format type, html or text
+    # @param [SendEmailAsEnum] type Required parameter: email format type, html or text
     # @param [String] subject Required parameter: Email subject
     # @param [String] message Required parameter: The body of the email message
     # @param [String] cc Optional parameter: CC Email address
@@ -373,6 +379,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_send_email(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'to' => options['to'],

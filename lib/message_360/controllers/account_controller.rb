@@ -13,6 +13,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_account(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'date' => options['date']
@@ -28,7 +29,7 @@ module Message360
 
       # prepare form parameters	  
       _parameters = {
-        'date' => options['date']
+        'Date' => options['date']
       }
 
       # prepare and execute HttpRequest

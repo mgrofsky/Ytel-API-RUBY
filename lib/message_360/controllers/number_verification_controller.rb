@@ -14,6 +14,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_verify_number(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'phonenumber' => options['phonenumber'],

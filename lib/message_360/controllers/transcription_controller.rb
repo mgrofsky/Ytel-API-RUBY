@@ -13,6 +13,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_audio_url_transcription(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'audio_url' => options['audio_url']
@@ -46,6 +47,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_recording_transcription(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'recording_sid' => options['recording_sid']
@@ -79,6 +81,7 @@ module Message360
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_transcription(options = Hash.new)
+
       # validate required parameters
       validate_parameters({
         'transcription_sid' => options['transcription_sid']
@@ -110,7 +113,7 @@ module Message360
     # Get All transcriptions
     # @param [Integer] page Optional parameter: Example: 
     # @param [Integer] page_size Optional parameter: Example: 
-    # @param [Status] status Optional parameter: Example: 
+    # @param [StatusEnum] status Optional parameter: Example: 
     # @param [String] date_transcribed Optional parameter: Example: 
     # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call

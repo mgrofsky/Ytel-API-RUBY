@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name = 'message_360'
-  s.version = '2.0.0'
+  s.version = '3.0.0'
   s.summary = 'message_360'
-  s.description = 'message360 API version 2'
+  s.description = 'message360 API version 3'
   s.authors = ['APIMATIC', 'Zeeshan Ejaz Bhatti']
   s.email = 'zeeshan@apimatic.io'
   s.homepage = 'https://apimatic.io'

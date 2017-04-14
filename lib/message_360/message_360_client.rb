@@ -2,6 +2,12 @@
 
 module Message360
   class Message360Client
+    # Singleton access to short_code controller
+    # @return [ShortCodeController] Returns the controller instance
+    def short_code
+      ShortCodeController.instance
+    end
+
     # Singleton access to conference controller
     # @return [ConferenceController] Returns the controller instance
     def conference
@@ -30,18 +36,6 @@ module Message360
     # @return [CallController] Returns the controller instance
     def call
       CallController.instance
-    end
-
-    # Singleton access to sms controller
-    # @return [SMSController] Returns the controller instance
-    def sms
-      SMSController.instance
-    end
-
-    # Singleton access to account controller
-    # @return [AccountController] Returns the controller instance
-    def account
-      AccountController.instance
     end
 
     # Singleton access to web_rtc controller
@@ -74,6 +68,12 @@ module Message360
       RecordingController.instance
     end
 
+    # Singleton access to sms controller
+    # @return [SMSController] Returns the controller instance
+    def sms
+      SMSController.instance
+    end
+
     # Singleton access to transcription controller
     # @return [TranscriptionController] Returns the controller instance
     def transcription
@@ -84,6 +84,12 @@ module Message360
     # @return [UsageController] Returns the controller instance
     def usage
       UsageController.instance
+    end
+
+    # Singleton access to account controller
+    # @return [AccountController] Returns the controller instance
+    def account
+      AccountController.instance
     end
 
     # Initializer with authentication and configuration parameters

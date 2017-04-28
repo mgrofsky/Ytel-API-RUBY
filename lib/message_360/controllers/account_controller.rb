@@ -10,13 +10,14 @@ module Message360
 
     # Display Account Description
     # @param [String] date Required parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_account(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'date' => options['date']
+        'date' => options['date'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

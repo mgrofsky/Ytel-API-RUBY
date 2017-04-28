@@ -12,7 +12,7 @@ module Message360
     # @param [ProductCodeEnum] product_code Required parameter: Product Code
     # @param [String] start_date Required parameter: Start Usage Date
     # @param [String] end_date Required parameter: End Usage Date
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_usage(options = Hash.new)
 
@@ -20,7 +20,8 @@ module Message360
       validate_parameters({
         'product_code' => options['product_code'],
         'start_date' => options['start_date'],
-        'end_date' => options['end_date']
+        'end_date' => options['end_date'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

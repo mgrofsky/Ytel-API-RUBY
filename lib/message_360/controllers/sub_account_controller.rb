@@ -12,7 +12,7 @@ module Message360
     # @param [String] first_name Required parameter: Sub account user first name
     # @param [String] last_name Required parameter: sub account user last name
     # @param [String] email Required parameter: Sub account email address
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_sub_account(options = Hash.new)
 
@@ -20,7 +20,8 @@ module Message360
       validate_parameters({
         'first_name' => options['first_name'],
         'last_name' => options['last_name'],
-        'email' => options['email']
+        'email' => options['email'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -51,14 +52,15 @@ module Message360
     # Suspend or unsuspend
     # @param [String] sub_account_sid Required parameter: The SubaccountSid to be activated or suspended
     # @param [ActivateStatusEnum] activate Required parameter: 0 to suspend or 1 to activate
-    # @param [String] response_type Optional parameter: Example: 
+    # @param [String] response_type Required parameter: Example: 
     # @return String response from the API call
     def create_suspend_sub_account(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'sub_account_sid' => options['sub_account_sid'],
-        'activate' => options['activate']
+        'activate' => options['activate'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -88,14 +90,15 @@ module Message360
     # Delete sub account or merge numbers into parent
     # @param [String] sub_account_sid Required parameter: The SubaccountSid to be deleted
     # @param [MergeNumberStatusEnum] merge_number Required parameter: 0 to delete or 1 to merge numbers to parent account.
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_sub_account(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'sub_account_sid' => options['sub_account_sid'],
-        'merge_number' => options['merge_number']
+        'merge_number' => options['merge_number'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

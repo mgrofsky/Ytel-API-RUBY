@@ -14,34 +14,22 @@ module Message360
       ConferenceController.instance
     end
 
-    # Singleton access to email controller
-    # @return [EmailController] Returns the controller instance
-    def email
-      EmailController.instance
-    end
-
     # Singleton access to number_verification controller
     # @return [NumberVerificationController] Returns the controller instance
     def number_verification
       NumberVerificationController.instance
     end
 
-    # Singleton access to carrier controller
-    # @return [CarrierController] Returns the controller instance
-    def carrier
-      CarrierController.instance
+    # Singleton access to web_rtc controller
+    # @return [WebRTCController] Returns the controller instance
+    def web_rtc
+      WebRTCController.instance
     end
 
     # Singleton access to call controller
     # @return [CallController] Returns the controller instance
     def call
       CallController.instance
-    end
-
-    # Singleton access to web_rtc controller
-    # @return [WebRTCController] Returns the controller instance
-    def web_rtc
-      WebRTCController.instance
     end
 
     # Singleton access to sub_account controller
@@ -56,10 +44,16 @@ module Message360
       AddressController.instance
     end
 
-    # Singleton access to phone_number controller
-    # @return [PhoneNumberController] Returns the controller instance
-    def phone_number
-      PhoneNumberController.instance
+    # Singleton access to email controller
+    # @return [EmailController] Returns the controller instance
+    def email
+      EmailController.instance
+    end
+
+    # Singleton access to sms controller
+    # @return [SMSController] Returns the controller instance
+    def sms
+      SMSController.instance
     end
 
     # Singleton access to recording controller
@@ -68,10 +62,16 @@ module Message360
       RecordingController.instance
     end
 
-    # Singleton access to sms controller
-    # @return [SMSController] Returns the controller instance
-    def sms
-      SMSController.instance
+    # Singleton access to carrier controller
+    # @return [CarrierController] Returns the controller instance
+    def carrier
+      CarrierController.instance
+    end
+
+    # Singleton access to phone_number controller
+    # @return [PhoneNumberController] Returns the controller instance
+    def phone_number
+      PhoneNumberController.instance
     end
 
     # Singleton access to transcription controller

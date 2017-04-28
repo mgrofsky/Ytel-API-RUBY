@@ -9,13 +9,18 @@ module Message360
     end
 
     # List out Recordings
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
     # @param [String] date_created Optional parameter: Example: 
     # @param [String] call_sid Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_recording(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -45,13 +50,14 @@ module Message360
 
     # Delete Recording Record
     # @param [String] recording_sid Required parameter: Unique Recording Sid to be delete
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_delete_recording(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'recording_sid' => options['recording_sid']
+        'recording_sid' => options['recording_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -79,13 +85,14 @@ module Message360
 
     # View a specific Recording
     # @param [String] recording_sid Required parameter: Search Recording sid
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_recording(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'recording_sid' => options['recording_sid']
+        'recording_sid' => options['recording_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

@@ -11,14 +11,15 @@ module Message360
     # Number Verification
     # @param [String] phonenumber Required parameter: Example: 
     # @param [String] type Required parameter: Example: 
-    # @param [String] response_type Optional parameter: Response Type either json or xml
+    # @param [String] response_type Required parameter: Response Type either json or xml
     # @return String response from the API call
     def create_verify_number(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'phonenumber' => options['phonenumber'],
-        'type' => options['type']
+        'type' => options['type'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

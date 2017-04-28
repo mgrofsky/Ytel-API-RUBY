@@ -48,20 +48,21 @@ module Message360
     # @param [String] tocountrycode Required parameter: The country code for sending this message
     # @param [String] to Required parameter: A valid 10-digit number that should receive the message+
     # @param [UUID | String] templateid Required parameter: The unique identifier for the template used for the message
+    # @param [String] response_type Required parameter: Response type format xml or json
+    # @param [String] data Required parameter: format of your data, example: {companyname}:test,{otpcode}:1234
     # @param [String] method Optional parameter: Specifies the HTTP method used to request the required URL once the Short Code message is sent.
     # @param [String] message_status_callback Optional parameter: URL that can be requested to receive notification when Short Code message was sent.
-    # @param [String] response_type Optional parameter: Response type format xml or json
-    # @param [Hash] _field_parameters Additional optional form parameters are supported by this endpoint
     # @return String response from the API call
-    def create_send_short_code(options = Hash.new, 
-                               _field_parameters = nil)
+    def create_send_short_code(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'shortcode' => options['shortcode'],
         'tocountrycode' => options['tocountrycode'],
         'to' => options['to'],
-        'templateid' => options['templateid']
+        'templateid' => options['templateid'],
+        'response_type' => options['response_type'],
+        'data' => options['data']
       })
 
       # prepare query url
@@ -78,13 +79,10 @@ module Message360
         'tocountrycode' => options['tocountrycode'],
         'to' => options['to'],
         'templateid' => options['templateid'],
+        'data' => options['data'],
         'Method' => options['method'],
         'MessageStatusCallback' => options['message_status_callback']
       }
-      if _parameters != nil && _field_parameters != nil
-        _parameters.merge!(APIHelper.form_encode_parameters(_field_parameters))
-      end
-
 
       # prepare and execute HttpRequest
       _request = @http_client.post _query_url, parameters: _parameters
@@ -97,14 +95,19 @@ module Message360
     end
 
     # List All Inbound ShortCode
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] pagesize Optional parameter: Number of individual resources listed in the response per page
     # @param [String] from Optional parameter: From Number to Inbound ShortCode
     # @param [String] shortcode Optional parameter: Only list messages sent to this Short Code
     # @param [String] date_received Optional parameter: Only list messages sent with the specified date
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_inbound_short_code(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -136,14 +139,19 @@ module Message360
     end
 
     # List ShortCode Messages
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] pagesize Optional parameter: Number of individual resources listed in the response per page
     # @param [String] from Optional parameter: Messages sent from this number
     # @param [String] to Optional parameter: Messages sent to this number
     # @param [String] datesent Optional parameter: Only list SMS messages sent in the specified date range
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_short_code(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -173,12 +181,17 @@ module Message360
     end
 
     # List Shortcode Templates by Type
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [String] type Optional parameter: The type (category) of template Valid values: marketing, authorization
     # @param [Integer] page Optional parameter: The page count to retrieve from the total results in the collection. Page indexing starts at 1.
     # @param [Integer] pagesize Optional parameter: The count of objects to return per page.
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_templates(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -207,13 +220,14 @@ module Message360
 
     # View a ShortCode Message
     # @param [String] messagesid Required parameter: Message sid
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_short_code(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'messagesid' => options['messagesid']
+        'messagesid' => options['messagesid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

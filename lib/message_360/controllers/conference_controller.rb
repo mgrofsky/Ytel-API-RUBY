@@ -11,16 +11,17 @@ module Message360
     # Deaf Mute Participant
     # @param [String] conference_sid Required parameter: Example: 
     # @param [String] participant_sid Required parameter: Example: 
+    # @param [String] response_type Required parameter: Response Type either json or xml
     # @param [Boolean] muted Optional parameter: Example: 
     # @param [Boolean] deaf Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_deaf_mute_participant(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],
-        'participant_sid' => options['participant_sid']
+        'participant_sid' => options['participant_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -50,15 +51,20 @@ module Message360
     end
 
     # List Conference
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Integer] page Optional parameter: Which page of the overall response will be returned. Zero indexed
     # @param [Integer] page_size Optional parameter: Number of individual resources listed in the response per page
     # @param [String] friendly_name Optional parameter: Only return conferences with the specified FriendlyName
     # @param [InterruptedCallStatusEnum] status Optional parameter: Example: 
     # @param [String] date_created Optional parameter: Example: 
     # @param [String] date_updated Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_conference(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -90,13 +96,14 @@ module Message360
 
     # View Conference
     # @param [String] conferencesid Required parameter: The unique identifier of each conference resource
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_conference(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'conferencesid' => options['conferencesid']
+        'conferencesid' => options['conferencesid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -126,9 +133,9 @@ module Message360
     # @param [String] conferencesid Required parameter: Unique Conference Sid
     # @param [String] participantnumber Required parameter: Particiant Number
     # @param [Integer] tocountrycode Required parameter: Example: 
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Boolean] muted Optional parameter: Example: 
     # @param [Boolean] deaf Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def add_participant(options = Hash.new)
 
@@ -136,7 +143,8 @@ module Message360
       validate_parameters({
         'conferencesid' => options['conferencesid'],
         'participantnumber' => options['participantnumber'],
-        'tocountrycode' => options['tocountrycode']
+        'tocountrycode' => options['tocountrycode'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -168,17 +176,18 @@ module Message360
 
     # List Participant
     # @param [String] conference_sid Required parameter: unique conference sid
+    # @param [String] response_type Required parameter: Response format, xml or json
     # @param [Integer] page Optional parameter: page number
     # @param [Integer] pagesize Optional parameter: Example: 
     # @param [Boolean] muted Optional parameter: Example: 
     # @param [Boolean] deaf Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response format, xml or json
     # @return String response from the API call
     def create_list_participant(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'conference_sid' => options['conference_sid']
+        'conference_sid' => options['conference_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -211,14 +220,15 @@ module Message360
     # View Participant
     # @param [String] conference_sid Required parameter: unique conference sid
     # @param [String] participant_sid Required parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_participant(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
         'conference_sid' => options['conference_sid'],
-        'participant_sid' => options['participant_sid']
+        'participant_sid' => options['participant_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

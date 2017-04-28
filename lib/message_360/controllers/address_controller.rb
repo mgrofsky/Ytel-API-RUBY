@@ -15,10 +15,10 @@ module Message360
     # @param [String] state Required parameter: Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters.
     # @param [String] city Required parameter: City Name.
     # @param [String] zip Required parameter: Zip code of city.
+    # @param [String] response_type Required parameter: Response type either json or xml
     # @param [String] description Optional parameter: Description of addresses.
     # @param [String] email Optional parameter: Email Id of user.
     # @param [String] phone Optional parameter: Phone number of user.
-    # @param [String] response_type Optional parameter: Response type either json or xml
     # @return String response from the API call
     def create_address(options = Hash.new)
 
@@ -29,7 +29,8 @@ module Message360
         'country' => options['country'],
         'state' => options['state'],
         'city' => options['city'],
-        'zip' => options['zip']
+        'zip' => options['zip'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -65,13 +66,14 @@ module Message360
 
     # To delete Address to your address book
     # @param [String] address_sid Required parameter: The identifier of the address to be deleted.
-    # @param [String] response_type Optional parameter: Response type either json or xml
+    # @param [String] response_type Required parameter: Response type either json or xml
     # @return String response from the API call
     def create_delete_address(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'address_sid' => options['address_sid']
+        'address_sid' => options['address_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -99,13 +101,14 @@ module Message360
 
     # Validates an address given.
     # @param [String] address_sid Required parameter: The identifier of the address to be verified.
-    # @param [String] response_type Optional parameter: Response type either json or xml
+    # @param [String] response_type Required parameter: Response type either json or xml
     # @return String response from the API call
     def create_verify_address(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'address_sid' => options['address_sid']
+        'address_sid' => options['address_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -132,13 +135,18 @@ module Message360
     end
 
     # List All Address 
+    # @param [String] response_type Required parameter: Response Type either json or xml
     # @param [Integer] page Optional parameter: Return requested # of items starting the value, default=0, must be an integer
     # @param [Integer] page_size Optional parameter: How many results to return, default is 10, max is 100, must be an integer
     # @param [String] address_sid Optional parameter: addresses Sid
     # @param [String] date_created Optional parameter: date created address.
-    # @param [String] response_type Optional parameter: Response Type either json or xml
     # @return String response from the API call
     def create_list_address(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()
@@ -168,13 +176,14 @@ module Message360
 
     # View Address Specific address Book by providing the address id
     # @param [String] address_sid Required parameter: The identifier of the address to be retrieved.
-    # @param [String] response_type Optional parameter: Response Type either json or xml
+    # @param [String] response_type Required parameter: Response Type either json or xml
     # @return String response from the API call
     def create_view_address(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'address_sid' => options['address_sid']
+        'address_sid' => options['address_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url

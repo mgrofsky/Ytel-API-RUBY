@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.version = '3.0.0'
   s.summary = 'message_360'
   s.description = 'message360 API version 3'
-  s.authors = ['APIMATIC', 'Zeeshan Ejaz Bhatti']
-  s.email = 'zeeshan@apimatic.io'
+  s.authors = ['APIMatic SDK Generator']
+  s.email = 'support@apimatic.io'
   s.homepage = 'https://apimatic.io'
   s.license = 'MIT'
   s.add_dependency('logging', '~> 2.0')

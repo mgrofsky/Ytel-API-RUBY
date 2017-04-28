@@ -10,13 +10,14 @@ module Message360
 
     # Audio URL Transcriptions
     # @param [String] audio_url Required parameter: Audio url
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_audio_url_transcription(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'audio_url' => options['audio_url']
+        'audio_url' => options['audio_url'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -44,13 +45,14 @@ module Message360
 
     # Recording Transcriptions
     # @param [String] recording_sid Required parameter: Unique Recording sid
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_recording_transcription(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'recording_sid' => options['recording_sid']
+        'recording_sid' => options['recording_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -78,13 +80,14 @@ module Message360
 
     # View Specific Transcriptions
     # @param [String] transcription_sid Required parameter: Unique Transcription ID
-    # @param [String] response_type Optional parameter: Response type format xml or json
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @return String response from the API call
     def create_view_transcription(options = Hash.new)
 
       # validate required parameters
       validate_parameters({
-        'transcription_sid' => options['transcription_sid']
+        'transcription_sid' => options['transcription_sid'],
+        'response_type' => options['response_type']
       })
 
       # prepare query url
@@ -111,13 +114,18 @@ module Message360
     end
 
     # Get All transcriptions
+    # @param [String] response_type Required parameter: Response type format xml or json
     # @param [Integer] page Optional parameter: Example: 
     # @param [Integer] page_size Optional parameter: Example: 
     # @param [StatusEnum] status Optional parameter: Example: 
     # @param [String] date_transcribed Optional parameter: Example: 
-    # @param [String] response_type Optional parameter: Response type format xml or json
     # @return String response from the API call
     def create_list_transcription(options = Hash.new)
+
+      # validate required parameters
+      validate_parameters({
+        'response_type' => options['response_type']
+      })
 
       # prepare query url
       _query_builder = Configuration.get_base_uri()

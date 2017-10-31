@@ -1,9 +1,15 @@
-# This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
+# This file was automatically generated for message360 by APIMATIC v2.0
+# ( https://apimatic.io ).
 
 module Message360
+  # Types Of Method
   class HttpActionEnum
-    # Get type
-    # Post Type
-    HTTP_ACTION_ENUM = [GET = 'GET', POST = 'POST']
+    HTTP_ACTION_ENUM = [
+      # Get type
+      GET = 'GET'.freeze,
+
+      # Post Type
+      POST = 'POST'.freeze
+    ].freeze
   end
 end

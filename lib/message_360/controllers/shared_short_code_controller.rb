@@ -2,9 +2,9 @@
 # ( https://apimatic.io ).
 
 module Message360
-  # EmailController
-  class EmailController < BaseController
-    @instance = EmailController.new
+  # SharedShortCodeController
+  class SharedShortCodeController < BaseController
+    @instance = SharedShortCodeController.new
 
     class << self
       attr_accessor :instance
@@ -14,59 +14,21 @@ module Message360
       self.class.instance
     end
 
-    # Deletes a email address marked as spam from the spam list
-    # @param [String] response_type Required parameter: Response type format xml
-    # or json
-    # @param [String] email Required parameter: Email address
-    # @return String response from the API call
-    def delete_spam(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'response_type' => options['response_type'],
-        'email' => options['email']
-      )
-      # Prepare query url.
-      _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/deletespamemail.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters(
-        _query_builder,
-        'ResponseType' => options['response_type']
-      )
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare form parameters.
-      _parameters = {
-        'email' => options['email']
-      }
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        parameters: _parameters
-      )
-      BasicAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # Return appropriate response type.
-      _context.response.raw_body
-    end
-
-    # Deletes a blocked email
-    # @param [String] email Required parameter: Email address to remove from
-    # block list
+    # View a Shared ShortCode Template
+    # @param [UUID | String] templateid Required parameter: The unique
+    # identifier for a template object
     # @param [String] response_type Required parameter: Response type format xml
     # or json
     # @return String response from the API call
-    def delete_block(options = {})
+    def view_template(options = {})
       # Validate required parameters.
       validate_parameters(
-        'email' => options['email'],
+        'templateid' => options['templateid'],
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/deleteblocksemail.{ResponseType}'
+      _query_builder << '/template/view.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -75,7 +37,7 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'email' => options['email']
+        'templateid' => options['templateid']
       }
 
       # Prepare and execute HttpRequest.
@@ -91,21 +53,20 @@ module Message360
       _context.response.raw_body
     end
 
-    # Add an email to the unsubscribe list
-    # @param [String] email Required parameter: The email to add to the
-    # unsubscribe list
+    # View a ShortCode Message
+    # @param [String] messagesid Required parameter: Message sid
     # @param [String] response_type Required parameter: Response type format xml
     # or json
     # @return String response from the API call
-    def add_unsubscribes(options = {})
+    def view_shared_shortcodes(options = {})
       # Validate required parameters.
       validate_parameters(
-        'email' => options['email'],
+        'messagesid' => options['messagesid'],
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/addunsubscribesemail.{ResponseType}'
+      _query_builder << '/shortcode/viewsms.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -114,7 +75,7 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'email' => options['email']
+        'messagesid' => options['messagesid']
       }
 
       # Prepare and execute HttpRequest.
@@ -130,50 +91,93 @@ module Message360
       _context.response.raw_body
     end
 
-    # Send out an email
-    # @param [String] to Required parameter: The to email address
-    # @param [String] from Required parameter: The from email address
-    # @param [SendEmailAsEnum] type Required parameter: email format type, html
-    # or text
-    # @param [String] subject Required parameter: Email subject
-    # @param [String] message Required parameter: The body of the email
-    # message
+    # List ShortCode Messages
     # @param [String] response_type Required parameter: Response type format xml
     # or json
-    # @param [String] cc Optional parameter: CC Email address
-    # @param [String] bcc Optional parameter: BCC Email address
-    # @param [String] attachment Optional parameter: File to be attached.File
-    # must be less than 7MB.
+    # @param [Integer] page Optional parameter: Which page of the overall
+    # response will be returned. Zero indexed
+    # @param [Integer] pagesize Optional parameter: Number of individual
+    # resources listed in the response per page
+    # @param [String] from Optional parameter: Messages sent from this number
+    # @param [String] to Optional parameter: Messages sent to this number
+    # @param [String] datesent Optional parameter: Only list SMS messages sent
+    # in the specified date range
     # @return String response from the API call
-    def send_email(options = {})
+    def list_outbound_shared_shortcodes(options = {})
       # Validate required parameters.
       validate_parameters(
-        'to' => options['to'],
+        'response_type' => options['response_type']
+      )
+      # Prepare query url.
+      _query_builder = Configuration.get_base_uri
+      _query_builder << '/shortcode/listsms.{ResponseType}'
+      _query_builder = APIHelper.append_url_with_template_parameters(
+        _query_builder,
+        'ResponseType' => options['response_type']
+      )
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare form parameters.
+      _parameters = {
+        'page' => options['page'],
+        'pagesize' => options['pagesize'],
         'from' => options['from'],
-        'type' => options['type'],
-        'subject' => options['subject'],
-        'message' => options['message'],
-        'response_type' => options['response_type']
-      )
-      # Prepare query url.
-      _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/sendemails.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters(
-        _query_builder,
-        'ResponseType' => options['response_type']
-      )
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare form parameters.
-      _parameters = {
         'to' => options['to'],
+        'datesent' => options['datesent']
+      }
+
+      # Prepare and execute HttpRequest.
+      _request = @http_client.post(
+        _query_url,
+        parameters: _parameters
+      )
+      BasicAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+
+      # Return appropriate response type.
+      _context.response.raw_body
+    end
+
+    # List All Inbound ShortCode
+    # @param [String] response_type Required parameter: Response type format xml
+    # or json
+    # @param [Integer] page Optional parameter: Which page of the overall
+    # response will be returned. Zero indexed
+    # @param [Integer] pagesize Optional parameter: Number of individual
+    # resources listed in the response per page
+    # @param [String] from Optional parameter: From Number to Inbound
+    # ShortCode
+    # @param [String] shortcode Optional parameter: Only list messages sent to
+    # this Short Code
+    # @param [String] date_received Optional parameter: Only list messages sent
+    # with the specified date
+    # @return String response from the API call
+    def list_inbound_shared_shortcodes(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'response_type' => options['response_type']
+      )
+      # Prepare query url.
+      _query_builder = Configuration.get_base_uri
+      _query_builder << '/shortcode/getinboundsms.{ResponseType}'
+      _query_builder = APIHelper.append_url_with_template_parameters(
+        _query_builder,
+        'ResponseType' => options['response_type']
+      )
+      _query_builder = APIHelper.append_url_with_query_parameters(
+        _query_builder,
+        'DateReceived' => options['date_received'],
+        array_serialization: Configuration.array_serialization
+      )
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare form parameters.
+      _parameters = {
+        'page' => options['page'],
+        'pagesize' => options['pagesize'],
         'from' => options['from'],
-        'type' => options['type'],
-        'subject' => options['subject'],
-        'message' => options['message'],
-        'cc' => options['cc'],
-        'bcc' => options['bcc'],
-        'attachment' => options['attachment']
+        'Shortcode' => options['shortcode']
       }
 
       # Prepare and execute HttpRequest.
@@ -189,141 +193,35 @@ module Message360
       _context.response.raw_body
     end
 
-    # Delete emails from the unsubscribe list
-    # @param [String] email Required parameter: The email to remove from the
-    # unsubscribe list
+    # Send an SMS from a message360 ShortCode
+    # @param [String] shortcode Required parameter: The Short Code number that
+    # is the sender of this message
+    # @param [String] to Required parameter: A valid 10-digit number that should
+    # receive the message
+    # @param [UUID | String] templateid Required parameter: The unique
+    # identifier for the template used for the message
     # @param [String] response_type Required parameter: Response type format xml
     # or json
+    # @param [String] data Required parameter: format of your data, example:
+    # {companyname}:test,{otpcode}:1234
+    # @param [HttpActionEnum] method Optional parameter: Specifies the HTTP
+    # method used to request the required URL once the Short Code message is
+    # sent.
+    # @param [String] message_status_callback Optional parameter: URL that can
+    # be requested to receive notification when Short Code message was sent.
     # @return String response from the API call
-    def delete_unsubscribes(options = {})
+    def send_shared_shortcode(options = {})
       # Validate required parameters.
       validate_parameters(
-        'email' => options['email'],
-        'response_type' => options['response_type']
-      )
-      # Prepare query url.
-      _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/deleteunsubscribedemail.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters(
-        _query_builder,
-        'ResponseType' => options['response_type']
-      )
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare form parameters.
-      _parameters = {
-        'email' => options['email']
-      }
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        parameters: _parameters
-      )
-      BasicAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # Return appropriate response type.
-      _context.response.raw_body
-    end
-
-    # List all unsubscribed email addresses
-    # @param [String] response_type Required parameter: Response type format xml
-    # or json
-    # @param [String] offset Optional parameter: Starting record of the list
-    # @param [String] limit Optional parameter: Maximum number of records to be
-    # returned
-    # @return String response from the API call
-    def list_unsubscribes(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'response_type' => options['response_type']
-      )
-      # Prepare query url.
-      _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/listunsubscribedemail.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters(
-        _query_builder,
-        'ResponseType' => options['response_type']
-      )
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare form parameters.
-      _parameters = {
-        'offset' => options['offset'],
-        'limit' => options['limit']
-      }
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        parameters: _parameters
-      )
-      BasicAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # Return appropriate response type.
-      _context.response.raw_body
-    end
-
-    # List out all invalid email addresses
-    # @param [String] response_type Required parameter: Response type format xml
-    # or json
-    # @param [String] offet Optional parameter: Starting record for listing out
-    # emails
-    # @param [String] limit Optional parameter: Maximum number of records to
-    # return
-    # @return String response from the API call
-    def list_invalid(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'response_type' => options['response_type']
-      )
-      # Prepare query url.
-      _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/listinvalidemail.{ResponseType}'
-      _query_builder = APIHelper.append_url_with_template_parameters(
-        _query_builder,
-        'ResponseType' => options['response_type']
-      )
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare form parameters.
-      _parameters = {
-        'offet' => options['offet'],
-        'limit' => options['limit']
-      }
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        parameters: _parameters
-      )
-      BasicAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # Return appropriate response type.
-      _context.response.raw_body
-    end
-
-    # Delete an email address from the bounced address list
-    # @param [String] response_type Required parameter: Response type format xml
-    # or json
-    # @param [String] email Required parameter: The email address to remove from
-    # the bounce list
-    # @return String response from the API call
-    def delete_bounces(options = {})
-      # Validate required parameters.
-      validate_parameters(
+        'shortcode' => options['shortcode'],
+        'to' => options['to'],
+        'templateid' => options['templateid'],
         'response_type' => options['response_type'],
-        'email' => options['email']
+        'data' => options['data']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/deletebouncesemail.{ResponseType}'
+      _query_builder << '/shortcode/sendsms.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -332,7 +230,12 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'email' => options['email']
+        'shortcode' => options['shortcode'],
+        'to' => options['to'],
+        'templateid' => options['templateid'],
+        'data' => options['data'],
+        'Method' => options['method'],
+        'MessageStatusCallback' => options['message_status_callback']
       }
 
       # Prepare and execute HttpRequest.
@@ -348,22 +251,26 @@ module Message360
       _context.response.raw_body
     end
 
-    # List out all email addresses that have bounced
+    # List Shortcode Templates by Type
     # @param [String] response_type Required parameter: Response type format xml
     # or json
-    # @param [String] offset Optional parameter: The record to start the list
-    # at
-    # @param [String] limit Optional parameter: The maximum number of records to
-    # return
+    # @param [String] type Optional parameter: The type (category) of template
+    # Valid values: marketing, authorization
+    # @param [Integer] page Optional parameter: The page count to retrieve from
+    # the total results in the collection. Page indexing starts at 1.
+    # @param [Integer] pagesize Optional parameter: The count of objects to
+    # return per page.
+    # @param [String] shortcode Optional parameter: Only list templates of
+    # type
     # @return String response from the API call
-    def list_bounces(options = {})
+    def list_templates(options = {})
       # Validate required parameters.
       validate_parameters(
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/listbounceemail.{ResponseType}'
+      _query_builder << '/template/lists.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -372,8 +279,10 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'offset' => options['offset'],
-        'limit' => options['limit']
+        'type' => options['type'],
+        'page' => options['page'],
+        'pagesize' => options['pagesize'],
+        'Shortcode' => options['shortcode']
       }
 
       # Prepare and execute HttpRequest.
@@ -389,22 +298,21 @@ module Message360
       _context.response.raw_body
     end
 
-    # List out all email addresses marked as spam
+    # View a set of properties for a single keyword.
+    # @param [String] keywordid Required parameter: The unique identifier of
+    # each keyword
     # @param [String] response_type Required parameter: Response type format xml
     # or json
-    # @param [String] offset Optional parameter: The record number to start the
-    # list at
-    # @param [String] limit Optional parameter: Maximum number of records to
-    # return
     # @return String response from the API call
-    def list_spam(options = {})
+    def view_keyword(options = {})
       # Validate required parameters.
       validate_parameters(
+        'keywordid' => options['keywordid'],
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/listspamemail.{ResponseType}'
+      _query_builder << '/keyword/view.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -413,8 +321,7 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'offset' => options['offset'],
-        'limit' => options['limit']
+        'Keywordid' => options['keywordid']
       }
 
       # Prepare and execute HttpRequest.
@@ -430,22 +337,26 @@ module Message360
       _context.response.raw_body
     end
 
-    # Outputs email addresses on your blocklist
+    # Retrieve a list of keywords associated with your message360 account.
     # @param [String] response_type Required parameter: Response type format xml
     # or json
-    # @param [String] offset Optional parameter: Where to start in the output
-    # list
-    # @param [String] limit Optional parameter: Maximum number of records to
-    # return
+    # @param [Integer] page Optional parameter: Which page of the overall
+    # response will be returned. Zero indexed
+    # @param [Integer] page_size Optional parameter: Number of individual
+    # resources listed in the response per page
+    # @param [String] keyword Optional parameter: Only list keywords of
+    # keyword
+    # @param [Integer] shortcode Optional parameter: Only list keywords of
+    # shortcode
     # @return String response from the API call
-    def list_blocks(options = {})
+    def list_keyword(options = {})
       # Validate required parameters.
       validate_parameters(
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/listblockemail.{ResponseType}'
+      _query_builder << '/keyword/lists.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -454,8 +365,10 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'offset' => options['offset'],
-        'limit' => options['limit']
+        'Page' => options['page'],
+        'PageSize' => options['page_size'],
+        'Keyword' => options['keyword'],
+        'Shortcode' => options['shortcode']
       }
 
       # Prepare and execute HttpRequest.
@@ -471,19 +384,22 @@ module Message360
       _context.response.raw_body
     end
 
-    # This endpoint allows you to delete entries in the Invalid Emails list.
-    # @param [String] email Required parameter: Email that was marked invalid
-    # @param [String] response_type Required parameter: Json or xml
+    # The response returned here contains all resource properties associated
+    # with the given Shortcode.
+    # @param [String] shortcode Required parameter: List of valid Shortcode to
+    # your message360 account
+    # @param [String] response_type Required parameter: Response type format xml
+    # or json
     # @return String response from the API call
-    def delete_invalid(options = {})
+    def view_assignement(options = {})
       # Validate required parameters.
       validate_parameters(
-        'email' => options['email'],
+        'shortcode' => options['shortcode'],
         'response_type' => options['response_type']
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/email/deleteinvalidemail.{ResponseType}'
+      _query_builder << '/shortcode/viewshortcode.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']
@@ -492,7 +408,114 @@ module Message360
 
       # Prepare form parameters.
       _parameters = {
-        'email' => options['email']
+        'Shortcode' => options['shortcode']
+      }
+
+      # Prepare and execute HttpRequest.
+      _request = @http_client.post(
+        _query_url,
+        parameters: _parameters
+      )
+      BasicAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+
+      # Return appropriate response type.
+      _context.response.raw_body
+    end
+
+    # Retrieve a list of shortcode assignment associated with your message360
+    # account.
+    # @param [String] response_type Required parameter: Response type format xml
+    # or json
+    # @param [Integer] page Optional parameter: Which page of the overall
+    # response will be returned. Zero indexed
+    # @param [Integer] page_size Optional parameter: Number of individual
+    # resources listed in the response per page
+    # @param [String] shortcode Optional parameter: Only list keywords of
+    # shortcode
+    # @return String response from the API call
+    def list_assignment(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'response_type' => options['response_type']
+      )
+      # Prepare query url.
+      _query_builder = Configuration.get_base_uri
+      _query_builder << '/shortcode/listshortcode.{ResponseType}'
+      _query_builder = APIHelper.append_url_with_template_parameters(
+        _query_builder,
+        'ResponseType' => options['response_type']
+      )
+      _query_builder = APIHelper.append_url_with_query_parameters(
+        _query_builder,
+        'Shortcode' => options['shortcode'],
+        array_serialization: Configuration.array_serialization
+      )
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare form parameters.
+      _parameters = {
+        'Page' => options['page'],
+        'PageSize' => options['page_size']
+      }
+
+      # Prepare and execute HttpRequest.
+      _request = @http_client.post(
+        _query_url,
+        parameters: _parameters
+      )
+      BasicAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+
+      # Return appropriate response type.
+      _context.response.raw_body
+    end
+
+    # TODO: type endpoint description here
+    # @param [String] shortcode Required parameter: List of valid shortcode to
+    # your message360 account
+    # @param [String] response_type Required parameter: Response type format xml
+    # or json
+    # @param [String] friendly_name Optional parameter: User generated name of
+    # the shortcode
+    # @param [String] callback_url Optional parameter: URL that can be requested
+    # to receive notification when call has ended. A set of default parameters
+    # will be sent here once the call is finished.
+    # @param [HttpActionEnum] callback_method Optional parameter: Specifies the
+    # HTTP method used to request the required StatusCallBackUrl once call
+    # connects.
+    # @param [String] fallback_url Optional parameter: URL used if any errors
+    # occur during execution of InboundXML or at initial request of the required
+    # Url provided with the POST.
+    # @param [HttpActionEnum] fallback_url_method Optional parameter: Specifies
+    # the HTTP method used to request the required FallbackUrl once call
+    # connects.
+    # @return String response from the API call
+    def update_assignment(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'shortcode' => options['shortcode'],
+        'response_type' => options['response_type']
+      )
+      # Prepare query url.
+      _query_builder = Configuration.get_base_uri
+      _query_builder << '/shortcode/updateshortcode.{ResponseType}'
+      _query_builder = APIHelper.append_url_with_template_parameters(
+        _query_builder,
+        'ResponseType' => options['response_type']
+      )
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare form parameters.
+      _parameters = {
+        'Shortcode' => options['shortcode'],
+        'FriendlyName' => options['friendly_name'],
+        'CallbackUrl' => options['callback_url'],
+        'CallbackMethod' => options['callback_method'],
+        'FallbackUrl' => options['fallback_url'],
+        'FallbackUrlMethod' => options['fallback_url_method']
       }
 
       # Prepare and execute HttpRequest.

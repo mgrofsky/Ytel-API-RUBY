@@ -1,10 +1,18 @@
-# This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
+# This file was automatically generated for message360 by APIMATIC v2.0
+# ( https://apimatic.io ).
 
 module Message360
+  # Play DTMF Direction & in play audio & sendDigit 
   class DirectionEnum
-    # in direction
-    # out direction
-    # both
-    DIRECTION_ENUM = [IN = 'in', OUT = 'out', BOTH = 'both']
+    DIRECTION_ENUM = [
+      # in direction
+      IN = 'in'.freeze,
+
+      # out direction
+      OUT = 'out'.freeze,
+
+      # both
+      BOTH = 'both'.freeze
+    ].freeze
   end
 end

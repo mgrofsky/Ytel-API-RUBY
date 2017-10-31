@@ -1,6 +1,8 @@
-# This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
+# This file was automatically generated for message360 by APIMATIC v2.0
+# ( https://apimatic.io ).
 
 module Message360
+  # TemplateDataModel Model.
   class TemplateDataModel < BaseModel
     # TODO: Write general description for this method
     # @return [String]
@@ -10,14 +12,14 @@ module Message360
     # @return [String]
     attr_accessor :otpcode
 
-    # A mapping from model property names to API property names
+    # A mapping from model property names to API property names.
     def self.names
-      if @hash.nil?
-        @hash = {}
-        @hash["companyname"] = "companyname"
-        @hash["otpcode"] = "otpcode"
+      if @_hash.nil?
+        @_hash = {}
+        @_hash['companyname'] = 'companyname'
+        @_hash['otpcode'] = 'otpcode'
       end
-      @hash
+      @_hash
     end
 
     def initialize(companyname = nil,
@@ -26,19 +28,17 @@ module Message360
       @otpcode = otpcode
     end
 
-    # Creates an instance of the object from a hash
+    # Creates an instance of the object from a hash.
     def self.from_hash(hash)
-      if hash == nil
-        nil
-      else
-        # Extract variables from the hash
-        companyname = hash['companyname']
-        otpcode = hash['otpcode']
+      return nil unless hash
 
-        # Create object from extracted values
-        TemplateDataModel.new(companyname,
-                              otpcode)
-      end
+      # Extract variables from the hash.
+      companyname = hash['companyname']
+      otpcode = hash['otpcode']
+
+      # Create object from extracted values.
+      TemplateDataModel.new(companyname,
+                            otpcode)
     end
   end
 end

@@ -1,6 +1,8 @@
-# This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
+# This file was automatically generated for message360 by APIMATIC v2.0
+# ( https://apimatic.io ).
 
 module Message360
+  # MessageModel Model.
   class MessageModel < BaseModel
     # TODO: Write general description for this method
     # @return [String]
@@ -42,22 +44,22 @@ module Message360
     # @return [TemplateDataModel]
     attr_accessor :template_data
 
-    # A mapping from model property names to API property names
+    # A mapping from model property names to API property names.
     def self.names
-      if @hash.nil?
-        @hash = {}
-        @hash["api_version"] = "ApiVersion"
-        @hash["message_sid"] = "MessageSid"
-        @hash["from"] = "From"
-        @hash["to"] = "To"
-        @hash["message_price"] = "MessagePrice"
-        @hash["body"] = "Body"
-        @hash["date_sent"] = "DateSent"
-        @hash["status"] = "Status"
-        @hash["template_id"] = "TemplateId"
-        @hash["template_data"] = "TemplateData"
+      if @_hash.nil?
+        @_hash = {}
+        @_hash['api_version'] = 'ApiVersion'
+        @_hash['message_sid'] = 'MessageSid'
+        @_hash['from'] = 'From'
+        @_hash['to'] = 'To'
+        @_hash['message_price'] = 'MessagePrice'
+        @_hash['body'] = 'Body'
+        @_hash['date_sent'] = 'DateSent'
+        @_hash['status'] = 'Status'
+        @_hash['template_id'] = 'TemplateId'
+        @_hash['template_data'] = 'TemplateData'
       end
-      @hash
+      @_hash
     end
 
     def initialize(api_version = nil,
@@ -82,35 +84,34 @@ module Message360
       @template_data = template_data
     end
 
-    # Creates an instance of the object from a hash
+    # Creates an instance of the object from a hash.
     def self.from_hash(hash)
-      if hash == nil
-        nil
-      else
-        # Extract variables from the hash
-        api_version = hash['ApiVersion']
-        message_sid = hash['MessageSid']
-        from = hash['From']
-        to = hash['To']
-        message_price = hash['MessagePrice']
-        body = hash['Body']
-        date_sent = hash['DateSent']
-        status = hash['Status']
-        template_id = hash['TemplateId']
-        template_data = TemplateDataModel.from_hash(hash['TemplateData']) if hash['TemplateData']
+      return nil unless hash
 
-        # Create object from extracted values
-        MessageModel.new(api_version,
-                         message_sid,
-                         from,
-                         to,
-                         message_price,
-                         body,
-                         date_sent,
-                         status,
-                         template_id,
-                         template_data)
-      end
+      # Extract variables from the hash.
+      api_version = hash['ApiVersion']
+      message_sid = hash['MessageSid']
+      from = hash['From']
+      to = hash['To']
+      message_price = hash['MessagePrice']
+      body = hash['Body']
+      date_sent = hash['DateSent']
+      status = hash['Status']
+      template_id = hash['TemplateId']
+      template_data = TemplateDataModel.from_hash(hash['TemplateData']) if
+        hash['TemplateData']
+
+      # Create object from extracted values.
+      MessageModel.new(api_version,
+                       message_sid,
+                       from,
+                       to,
+                       message_price,
+                       body,
+                       date_sent,
+                       status,
+                       template_id,
+                       template_data)
     end
   end
 end

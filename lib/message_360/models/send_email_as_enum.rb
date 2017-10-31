@@ -1,9 +1,15 @@
-# This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
+# This file was automatically generated for message360 by APIMATIC v2.0
+# ( https://apimatic.io ).
 
 module Message360
+  # send email TEXT or HTML format
   class SendEmailAsEnum
-    # Email send as text format
-    # Email send as HTML format
-    SEND_EMAIL_AS_ENUM = [TEXT = 'text', HTML = 'html']
+    SEND_EMAIL_AS_ENUM = [
+      # Email send as text format
+      TEXT = 'text'.freeze,
+
+      # Email send as HTML format
+      HTML = 'html'.freeze
+    ].freeze
   end
 end

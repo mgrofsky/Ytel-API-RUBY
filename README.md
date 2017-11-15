@@ -464,7 +464,7 @@ collect['page_size'] = page_size
 keyword = 'Keyword'
 collect['keyword'] = keyword
 
-shortcode = 183
+shortcode = 17
 collect['shortcode'] = shortcode
 
 
@@ -649,10 +649,10 @@ collect['participant_sid'] = participant_sid
 response_type = 'json'
 collect['response_type'] = response_type
 
-muted = true
+muted = false
 collect['muted'] = muted
 
-deaf = true
+deaf = false
 collect['deaf'] = deaf
 
 
@@ -733,10 +733,10 @@ collect['participantnumber'] = participantnumber
 response_type = 'json'
 collect['response_type'] = response_type
 
-muted = true
+muted = false
 collect['muted'] = muted
 
-deaf = true
+deaf = false
 collect['deaf'] = deaf
 
 
@@ -843,7 +843,7 @@ collect['fall_back_url'] = fall_back_url
 fall_back_method = Message360::HttpActionEnum::GET
 collect['fall_back_method'] = fall_back_method
 
-record = true
+record = false
 collect['record'] = record
 
 record_callback_method = Message360::HttpActionEnum::GET
@@ -852,7 +852,7 @@ collect['record_callback_method'] = record_callback_method
 schdeule_time = 'SchdeuleTime'
 collect['schdeule_time'] = schdeule_time
 
-timeout = 183
+timeout = 17
 collect['timeout'] = timeout
 
 
@@ -979,10 +979,10 @@ collect['page'] = page
 pagesize = 10
 collect['pagesize'] = pagesize
 
-muted = true
+muted = false
 collect['muted'] = muted
 
-deaf = true
+deaf = false
 collect['deaf'] = deaf
 
 
@@ -2510,7 +2510,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = Message360::HttpActionEnum::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 233
+timeout = 200
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -2594,7 +2594,7 @@ collect['say_text'] = say_text
 response_type = 'json'
 collect['response_type'] = response_type
 
-length = 233
+length = 200
 collect['length'] = length
 
 direction = Message360::DirectionEnum::IN
@@ -2648,7 +2648,7 @@ collect['response_type'] = response_type
 direction = Message360::DirectionEnum::IN
 collect['direction'] = direction
 
-time_limit = 233
+time_limit = 200
 collect['time_limit'] = time_limit
 
 call_back_url = 'CallBackUrl'
@@ -2700,19 +2700,19 @@ collect['response_type'] = response_type
 audio_direction = Message360::AudioDirectionEnum::IN
 collect['audio_direction'] = audio_direction
 
-pitch_semi_tones = 233.233573817757
+pitch_semi_tones = 200.971947755186
 collect['pitch_semi_tones'] = pitch_semi_tones
 
-pitch_octaves = 233.233573817757
+pitch_octaves = 200.971947755186
 collect['pitch_octaves'] = pitch_octaves
 
-pitch = 233.233573817757
+pitch = 200.971947755186
 collect['pitch'] = pitch
 
-rate = 233.233573817757
+rate = 200.971947755186
 collect['rate'] = rate
 
-tempo = 233.233573817757
+tempo = 200.971947755186
 collect['tempo'] = tempo
 
 
@@ -2889,7 +2889,7 @@ collect['heart_beat_url'] = heart_beat_url
 heart_beat_method = Message360::HttpActionEnum::GET
 collect['heart_beat_method'] = heart_beat_method
 
-timeout = 233
+timeout = 200
 collect['timeout'] = timeout
 
 play_dtmf = 'PlayDtmf'
@@ -3475,6 +3475,8 @@ def create_sub_account(options = {}); end
 | first_name |  ``` Required ```  | Sub account user first name |
 | last_name |  ``` Required ```  | sub account user last name |
 | email |  ``` Required ```  | Sub account email address |
+| friendly_name |  ``` Required ```  | Descriptive name of the sub account |
+| password |  ``` Required ```  | The password of the sub account.  Please make sure to make as password that is at least 8 characters long, contain a symbol, uppercase and a number. |
 | response_type |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -3491,6 +3493,12 @@ collect['last_name'] = last_name
 
 email = 'Email'
 collect['email'] = email
+
+friendly_name = 'FriendlyName'
+collect['friendly_name'] = friendly_name
+
+password = 'Password'
+collect['password'] = password
 
 response_type = 'json'
 collect['response_type'] = response_type
@@ -3585,10 +3593,10 @@ def send_dedicated_shortcode(options = {}); end
 ```ruby
 collect = Hash.new
 
-shortcode = 69
+shortcode = 159
 collect['shortcode'] = shortcode
 
-to = 69.7288557094191
+to = 159.248774528619
 collect['to'] = to
 
 body = 'body'
@@ -3678,7 +3686,7 @@ collect['shortcode'] = shortcode
 to = 'To'
 collect['to'] = to
 
-date_sent = DateTime.now
+date_sent = 'DateSent'
 collect['date_sent'] = date_sent
 
 page = 1

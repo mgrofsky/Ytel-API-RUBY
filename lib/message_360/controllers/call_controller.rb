@@ -558,7 +558,7 @@ module Message360
       )
       # Prepare query url.
       _query_builder = Configuration.get_base_uri
-      _query_builder << '/calls/makeringlessvoicemailcall.{ResponseType}'
+      _query_builder << '/calls/makervm.{ResponseType}'
       _query_builder = APIHelper.append_url_with_template_parameters(
         _query_builder,
         'ResponseType' => options['response_type']

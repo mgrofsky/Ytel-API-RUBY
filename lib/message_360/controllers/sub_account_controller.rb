@@ -104,6 +104,11 @@ module Message360
     # name
     # @param [String] last_name Required parameter: sub account user last name
     # @param [String] email Required parameter: Sub account email address
+    # @param [String] friendly_name Required parameter: Descriptive name of the
+    # sub account
+    # @param [String] password Required parameter: The password of the sub
+    # account.  Please make sure to make as password that is at least 8
+    # characters long, contain a symbol, uppercase and a number.
     # @param [String] response_type Required parameter: Response type format xml
     # or json
     # @return String response from the API call
@@ -113,6 +118,8 @@ module Message360
         'first_name' => options['first_name'],
         'last_name' => options['last_name'],
         'email' => options['email'],
+        'friendly_name' => options['friendly_name'],
+        'password' => options['password'],
         'response_type' => options['response_type']
       )
       # Prepare query url.
@@ -128,7 +135,9 @@ module Message360
       _parameters = {
         'FirstName' => options['first_name'],
         'LastName' => options['last_name'],
-        'Email' => options['email']
+        'Email' => options['email'],
+        'FriendlyName' => options['friendly_name'],
+        'Password' => options['password']
       }
 
       # Prepare and execute HttpRequest.

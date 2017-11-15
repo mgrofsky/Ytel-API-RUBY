@@ -110,7 +110,7 @@ module Message360
     # this Short Code
     # @param [String] to Optional parameter: Only list messages sent to this
     # number
-    # @param [Date] date_sent Optional parameter: Only list messages sent with
+    # @param [String] date_sent Optional parameter: Only list messages sent with
     # the specified date
     # @param [Integer] page Optional parameter: The page count to retrieve from
     # the total results in the collection. Page indexing starts at 1.

@@ -1,0 +1,15 @@
+# This file was automatically generated for ytel by APIMATIC v2.0
+# ( https://apimatic.io ).
+
+module Ytel
+  # send email TEXT or HTML format
+  class SendEmailAsEnum
+    SEND_EMAIL_AS_ENUM = [
+      # Email send as text format
+      TEXT = 'text'.freeze,
+
+      # Email send as HTML format
+      HTML = 'html'.freeze
+    ].freeze
+  end
+end

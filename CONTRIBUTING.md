@@ -17,8 +17,6 @@
     * File in the repo involved if known
     * Where you able to resolve the issue by making modifications?  If so, how?
 
-* For more detailed information on submitting a bug report and creating an issue, visit our [reporting guidelines](http://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html#reporting-an-issue).
-
 #### **Did you write a patch that fixes a bug?**
 
 * Open a new GitHub pull request with the patch.

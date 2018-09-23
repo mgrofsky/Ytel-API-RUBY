@@ -9,11 +9,13 @@
 
 * If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/mgrofsky/Ytel-API-RUBY/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or an **executable test case** demonstrating the expected behavior that is not occurring.
 
-* Issue Template:
-  * Description of the issue.
-  * How can we replicate the issue?
-  * File in the repo involved if known
-  * Where you able to resolve the issue by making modifications?  If so, how?
+* Issue Templates:
+  * [Bug Template](https://github.com/mgrofsky/Ytel-API-RUBY/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+  * [Feature Template](https://github.com/mgrofsky/Ytel-API-RUBY/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
+    * Description of the issue.
+    * How can we replicate the issue?
+    * File in the repo involved if known
+    * Where you able to resolve the issue by making modifications?  If so, how?
 
 * For more detailed information on submitting a bug report and creating an issue, visit our [reporting guidelines](http://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html#reporting-an-issue).
 
@@ -29,7 +31,7 @@ Changes that are cosmetic in nature and do not add anything substantial to the s
 
 #### **Do you intend to add a new feature or change an existing one?**
 
-* Suggest your change in the [Ytel Support System](https://support.ytel.com) and start writing code.
+* Suggest your change in the [Ytel Feature Template](https://github.com/mgrofsky/Ytel-API-RUBY/blob/master/.github/ISSUE_TEMPLATE/feature_request.md) and start writing code.
 
 * Do not open an issue on GitHub until you have collected positive feedback about the change. GitHub issues are primarily intended for bug reports and fixes.
 

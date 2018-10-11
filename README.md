@@ -7,54 +7,54 @@ Ytel API version 3
 This client library is a Ruby gem which can be compiled and used in your Ruby and Ruby on Rails project. This library requires a few gems from the RubyGems repository.
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
-2. Run ``` gem build ytel_api.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install ytel_api-3.11.0.gem ```
+2. Run ``` gem build ytel_apiv3.gemspec ``` to build the gem.
+3. Once built, the gem can be installed on the current work environment using ``` gem install ytel_apiv3-3.1.2.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Ytel%20API-Ruby&workspaceName=Ytel%20API-Ruby&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=Ytel%20API%20V3-Ruby&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 ## How to Use
 
-The following section explains how to use the YtelApi Ruby Gem in a new Rails project using RubyMine&trade;. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
+The following section explains how to use the YtelApiv3 Ruby Gem in a new Rails project using RubyMine&trade;. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
 
 ### 1. Starting a new project
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the YtelApi gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'ytel_api', '~> 3.11.0' ```
+In order to use the YtelApiv3 gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'ytel_apiv3', '~> 3.1.2' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2)
 
 ## How to Test
 
@@ -83,7 +83,7 @@ API client can be initialized as following.
 basic_auth_user_name = 'basic_auth_user_name' # The username to use with basic authentication
 basic_auth_password = 'basic_auth_password' # The password to use with basic authentication
 
-client = YtelApi::YtelApiClient.new(
+client = YtelApiv3::YtelApiv3Client.new(
   basic_auth_user_name: basic_auth_user_name,
   basic_auth_password: basic_auth_password
 )
@@ -91,7 +91,7 @@ client = YtelApi::YtelApiClient.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Ytel%20API-Ruby&workspaceName=YtelApi&projectName=ytel_api&gemName=ytel_api&gemVer=3.11.0&initLine=client%2520%253D%2520YtelApiClient.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Ytel%20API%20V3-Ruby&workspaceName=YtelApiv3&projectName=ytel_apiv3&gemName=ytel_apiv3&gemVer=3.1.2&initLine=client%2520%253D%2520YtelApiv3Client.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
 
 
 
@@ -127,13 +127,15 @@ The singleton instance of the ``` ShortCodeController ``` class can be accessed 
 shortCode_controller = client.short_code
 ```
 
-### <a name="create_dedicatedshortcode_listshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_dedicatedshortcode_listshortcode") create_dedicatedshortcode_listshortcode
+### <a name="create_list_shortcodes"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_shortcodes") create_list_shortcodes
 
 > Retrieve a list of Short Code assignment associated with your Ytel account.
 
 
 ```ruby
-def create_dedicatedshortcode_listshortcode(options = {}); end
+def create_list_shortcodes(shortcode = nil,
+                               page = nil,
+                               pagesize = nil); end
 ```
 
 #### Parameters
@@ -148,30 +150,193 @@ def create_dedicatedshortcode_listshortcode(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
 page = 'page'
-collect['page'] = page
-
 pagesize = 'pagesize'
-collect['pagesize'] = pagesize
 
-
-result = shortCode_controller.create_dedicatedshortcode_listshortcode(collect)
+result = shortCode_controller.create_list_shortcodes(shortcode, page, pagesize)
 
 ```
 
 
-### <a name="create_dedicatedshortcode_updateshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_dedicatedshortcode_updateshortcode") create_dedicatedshortcode_updateshortcode
+### <a name="create_view_sms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_view_sms") create_view_sms
+
+> Retrieve a single Short Code object by its shortcode assignment.
+
+
+```ruby
+def create_view_sms(shortcode); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | List of valid Dedicated Short Code to your Ytel account |
+
+
+#### Example Usage
+
+```ruby
+shortcode = 'Shortcode'
+
+result = shortCode_controller.create_view_sms(shortcode)
+
+```
+
+
+### <a name="create_view_sms1"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_view_sms1") create_view_sms1
+
+> View a single Sms Short Code message.
+
+
+```ruby
+def create_view_sms1(message_sid); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| message_sid |  ``` Required ```  | The unique identifier for the sms resource |
+
+
+#### Example Usage
+
+```ruby
+message_sid = 'MessageSid'
+
+result = shortCode_controller.create_view_sms1(message_sid)
+
+```
+
+
+### <a name="create_list_sms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_sms") create_list_sms
+
+> Retrieve a list of Short Code messages.
+
+
+```ruby
+def create_list_sms(shortcode = nil,
+                        to = nil,
+                        date_sent = nil,
+                        page = nil,
+                        page_size = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Optional ```  | Only list messages sent from this Short Code |
+| to |  ``` Optional ```  | Only list messages sent to this number |
+| date_sent |  ``` Optional ```  | Only list messages sent with the specified date |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | The count of objects to return per page. |
+
+
+#### Example Usage
+
+```ruby
+shortcode = 'Shortcode'
+to = 'To'
+date_sent = 'DateSent'
+page = 252
+page_size = 252
+
+result = shortCode_controller.create_list_sms(shortcode, to, date_sent, page, page_size)
+
+```
+
+
+### <a name="create_send_sms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_send_sms") create_send_sms
+
+> Send Dedicated Shortcode
+
+
+```ruby
+def create_send_sms(shortcode,
+                        to,
+                        body,
+                        method = nil,
+                        messagestatuscallback = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | Your dedicated shortcode |
+| to |  ``` Required ```  | The number to send your SMS to |
+| body |  ``` Required ```  | The body of your message |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
+
+
+#### Example Usage
+
+```ruby
+shortcode = 252
+to = 252.807308182962
+body = 'body'
+method = 'method'
+messagestatuscallback = 'messagestatuscallback'
+
+result = shortCode_controller.create_send_sms(shortcode, to, body, method, messagestatuscallback)
+
+```
+
+
+### <a name="create_list_inbound_sms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_list_inbound_sms") create_list_inbound_sms
+
+> Retrive a list of inbound Sms Short Code messages associated with your Ytel account.
+
+
+```ruby
+def create_list_inbound_sms(page = nil,
+                                pagesize = nil,
+                                from = nil,
+                                shortcode = nil,
+                                datecreated = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Only list SMS messages sent from this number |
+| shortcode |  ``` Optional ```  | Only list SMS messages sent to Shortcode |
+| datecreated |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
+
+
+#### Example Usage
+
+```ruby
+page = 39
+pagesize = 39
+from = 'From'
+shortcode = 'Shortcode'
+datecreated = 'Datecreated'
+
+result = shortCode_controller.create_list_inbound_sms(page, pagesize, from, shortcode, datecreated)
+
+```
+
+
+### <a name="update_shortcode"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.update_shortcode") update_shortcode
 
 > Update a dedicated shortcode.
 
 
 ```ruby
-def create_dedicatedshortcode_updateshortcode(options = {}); end
+def update_shortcode(shortcode,
+                         friendly_name = nil,
+                         callback_method = nil,
+                         callback_url = nil,
+                         fallback_method = nil,
+                         fallback_url = nil); end
 ```
 
 #### Parameters
@@ -189,218 +354,14 @@ def create_dedicatedshortcode_updateshortcode(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
 friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
 callback_method = 'CallbackMethod'
-collect['callback_method'] = callback_method
-
 callback_url = 'CallbackUrl'
-collect['callback_url'] = callback_url
-
 fallback_method = 'FallbackMethod'
-collect['fallback_method'] = fallback_method
-
 fallback_url = 'FallbackUrl'
-collect['fallback_url'] = fallback_url
 
-
-result = shortCode_controller.create_dedicatedshortcode_updateshortcode(collect)
-
-```
-
-
-### <a name="create_dedicatedshortcode_viewshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_dedicatedshortcode_viewshortcode") create_dedicatedshortcode_viewshortcode
-
-> Retrieve a single Short Code object by its shortcode assignment.
-
-
-```ruby
-def create_dedicatedshortcode_viewshortcode(shortcode); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | List of valid Dedicated Short Code to your Ytel account |
-
-
-#### Example Usage
-
-```ruby
-shortcode = 'Shortcode'
-
-result = shortCode_controller.create_dedicatedshortcode_viewshortcode(shortcode)
-
-```
-
-
-### <a name="create_shortcode_viewsms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_shortcode_viewsms") create_shortcode_viewsms
-
-> View a single Sms Short Code message.
-
-
-```ruby
-def create_shortcode_viewsms(message_sid); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| message_sid |  ``` Required ```  | The unique identifier for the sms resource |
-
-
-#### Example Usage
-
-```ruby
-message_sid = 'MessageSid'
-
-result = shortCode_controller.create_shortcode_viewsms(message_sid)
-
-```
-
-
-### <a name="create_dedicatedshortcode_getinboundsms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_dedicatedshortcode_getinboundsms") create_dedicatedshortcode_getinboundsms
-
-> Retrive a list of inbound Sms Short Code messages associated with your Ytel account.
-
-
-```ruby
-def create_dedicatedshortcode_getinboundsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Only list SMS messages sent from this number |
-| shortcode |  ``` Optional ```  | Only list SMS messages sent to Shortcode |
-| datecreated |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-from = 'From'
-collect['from'] = from
-
-shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
-datecreated = 'Datecreated'
-collect['datecreated'] = datecreated
-
-
-result = shortCode_controller.create_dedicatedshortcode_getinboundsms(collect)
-
-```
-
-
-### <a name="create_dedicatedshortcode_sendsms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_dedicatedshortcode_sendsms") create_dedicatedshortcode_sendsms
-
-> Send Dedicated Shortcode
-
-
-```ruby
-def create_dedicatedshortcode_sendsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | Your dedicated shortcode |
-| to |  ``` Required ```  | The number to send your SMS to |
-| body |  ``` Required ```  | The body of your message |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-shortcode = 145
-collect['shortcode'] = shortcode
-
-to = 145.796637321262
-collect['to'] = to
-
-body = 'body'
-collect['body'] = body
-
-method = 'method'
-collect['method'] = method
-
-messagestatuscallback = 'messagestatuscallback'
-collect['messagestatuscallback'] = messagestatuscallback
-
-
-result = shortCode_controller.create_dedicatedshortcode_sendsms(collect)
-
-```
-
-
-### <a name="create_shortcode_listsms"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.create_shortcode_listsms") create_shortcode_listsms
-
-> Retrieve a list of Short Code messages.
-
-
-```ruby
-def create_shortcode_listsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Optional ```  | Only list messages sent from this Short Code |
-| to |  ``` Optional ```  | Only list messages sent to this number |
-| date_sent |  ``` Optional ```  | Only list messages sent with the specified date |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
-to = 'To'
-collect['to'] = to
-
-date_sent = 'DateSent'
-collect['date_sent'] = date_sent
-
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-
-result = shortCode_controller.create_shortcode_listsms(collect)
+result = shortCode_controller.update_shortcode(shortcode, friendly_name, callback_method, callback_url, fallback_method, fallback_url)
 
 ```
 
@@ -417,13 +378,13 @@ The singleton instance of the ``` AreaMailController ``` class can be accessed f
 areaMail_controller = client.area_mail
 ```
 
-### <a name="create_areamail_delete"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_areamail_delete") create_areamail_delete
+### <a name="create_delete_area_mail"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_delete_area_mail") create_delete_area_mail
 
 > Remove an AreaMail object by its AreaMailId.
 
 
 ```ruby
-def create_areamail_delete(areamailid); end
+def create_delete_area_mail(areamailid); end
 ```
 
 #### Parameters
@@ -438,18 +399,85 @@ def create_areamail_delete(areamailid); end
 ```ruby
 areamailid = 'areamailid'
 
-result = areaMail_controller.create_areamail_delete(areamailid)
+result = areaMail_controller.create_delete_area_mail(areamailid)
 
 ```
 
 
-### <a name="create_areamail_create"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_areamail_create") create_areamail_create
+### <a name="create_view_area_mail"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_view_area_mail") create_view_area_mail
+
+> Retrieve an AreaMail object by its AreaMailId.
+
+
+```ruby
+def create_view_area_mail(areamailid); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
+
+
+#### Example Usage
+
+```ruby
+areamailid = 'areamailid'
+
+result = areaMail_controller.create_view_area_mail(areamailid)
+
+```
+
+
+### <a name="create_list_area_mails"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_list_area_mails") create_list_area_mails
+
+> Retrieve a list of AreaMail objects.
+
+
+```ruby
+def create_list_area_mails(page = nil,
+                               pagesize = nil,
+                               areamailsid = nil,
+                               date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| areamailsid |  ``` Optional ```  | The unique identifier for an AreaMail object. |
+| date_created |  ``` Optional ```  | The date the AreaMail was created. |
+
+
+#### Example Usage
+
+```ruby
+page = 39
+pagesize = 39
+areamailsid = 'areamailsid'
+date_created = 'dateCreated'
+
+result = areaMail_controller.create_list_area_mails(page, pagesize, areamailsid, date_created)
+
+```
+
+
+### <a name="create_area_mail"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_area_mail") create_area_mail
 
 > Create a new AreaMail object.
 
 
 ```ruby
-def create_areamail_create(options = {}); end
+def create_area_mail(routes,
+                         attachbyid,
+                         front,
+                         back,
+                         description = nil,
+                         targettype = nil,
+                         htmldata = nil); end
 ```
 
 #### Parameters
@@ -468,99 +496,15 @@ def create_areamail_create(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 routes = 'routes'
-collect['routes'] = routes
-
 attachbyid = 'attachbyid'
-collect['attachbyid'] = attachbyid
-
 front = 'front'
-collect['front'] = front
-
 back = 'back'
-collect['back'] = back
-
 description = 'description'
-collect['description'] = description
-
 targettype = 'targettype'
-collect['targettype'] = targettype
-
 htmldata = 'htmldata'
-collect['htmldata'] = htmldata
 
-
-result = areaMail_controller.create_areamail_create(collect)
-
-```
-
-
-### <a name="create_areamail_view"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_areamail_view") create_areamail_view
-
-> Retrieve an AreaMail object by its AreaMailId.
-
-
-```ruby
-def create_areamail_view(areamailid); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
-
-
-#### Example Usage
-
-```ruby
-areamailid = 'areamailid'
-
-result = areaMail_controller.create_areamail_view(areamailid)
-
-```
-
-
-### <a name="create_areamail_lists"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.create_areamail_lists") create_areamail_lists
-
-> Retrieve a list of AreaMail objects.
-
-
-```ruby
-def create_areamail_lists(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| areamailsid |  ``` Optional ```  | The unique identifier for an AreaMail object. |
-| date_created |  ``` Optional ```  | The date the AreaMail was created. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-areamailsid = 'areamailsid'
-collect['areamailsid'] = areamailsid
-
-date_created = 'dateCreated'
-collect['date_created'] = date_created
-
-
-result = areaMail_controller.create_areamail_lists(collect)
+result = areaMail_controller.create_area_mail(routes, attachbyid, front, back, description, targettype, htmldata)
 
 ```
 
@@ -577,13 +521,13 @@ The singleton instance of the ``` PostCardController ``` class can be accessed f
 postCard_controller = client.post_card
 ```
 
-### <a name="postcard_deletepostcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.postcard_deletepostcard") postcard_deletepostcard
+### <a name="create_delete_postcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.create_delete_postcard") create_delete_postcard
 
 > Remove a postcard object.
 
 
 ```ruby
-def postcard_deletepostcard(postcardid); end
+def create_delete_postcard(postcardid); end
 ```
 
 #### Parameters
@@ -598,18 +542,18 @@ def postcard_deletepostcard(postcardid); end
 ```ruby
 postcardid = 'postcardid'
 
-result = postCard_controller.postcard_deletepostcard(postcardid)
+result = postCard_controller.create_delete_postcard(postcardid)
 
 ```
 
 
-### <a name="postcard_viewpostcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.postcard_viewpostcard") postcard_viewpostcard
+### <a name="create_view_postcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.create_view_postcard") create_view_postcard
 
 > Retrieve a postcard object by its PostcardId.
 
 
 ```ruby
-def postcard_viewpostcard(postcardid); end
+def create_view_postcard(postcardid); end
 ```
 
 #### Parameters
@@ -624,60 +568,26 @@ def postcard_viewpostcard(postcardid); end
 ```ruby
 postcardid = 'postcardid'
 
-result = postCard_controller.postcard_viewpostcard(postcardid)
+result = postCard_controller.create_view_postcard(postcardid)
 
 ```
 
 
-### <a name="postcard_listpostcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.postcard_listpostcard") postcard_listpostcard
-
-> Retrieve a list of postcard objects. The postcards objects are sorted by creation date, with the most recently created postcards appearing first.
-
-
-```ruby
-def postcard_listpostcard(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| postcardid |  ``` Optional ```  | The unique identifier for a postcard object. |
-| date_created |  ``` Optional ```  | The date the postcard was created. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-postcardid = 'postcardid'
-collect['postcardid'] = postcardid
-
-date_created = 'dateCreated'
-collect['date_created'] = date_created
-
-
-result = postCard_controller.postcard_listpostcard(collect)
-
-```
-
-
-### <a name="postcard_createpostcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.postcard_createpostcard") postcard_createpostcard
+### <a name="create_postcard"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.create_postcard") create_postcard
 
 > Create, print, and mail a postcard to an address. The postcard front must be supplied as a PDF, image, or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom message.
 
 
 ```ruby
-def postcard_createpostcard(options = {}); end
+def create_postcard(to,
+                        from,
+                        attachbyid,
+                        front,
+                        back,
+                        message,
+                        setting,
+                        description = nil,
+                        htmldata = nil); end
 ```
 
 #### Parameters
@@ -698,37 +608,52 @@ def postcard_createpostcard(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 to = 'to'
-collect['to'] = to
-
 from = 'from'
-collect['from'] = from
-
 attachbyid = 'attachbyid'
-collect['attachbyid'] = attachbyid
-
 front = 'front'
-collect['front'] = front
-
 back = 'back'
-collect['back'] = back
-
 message = 'message'
-collect['message'] = message
-
 setting = 'setting'
-collect['setting'] = setting
-
 description = 'description'
-collect['description'] = description
-
 htmldata = 'htmldata'
-collect['htmldata'] = htmldata
+
+result = postCard_controller.create_postcard(to, from, attachbyid, front, back, message, setting, description, htmldata)
+
+```
 
 
-result = postCard_controller.postcard_createpostcard(collect)
+### <a name="create_list_postcards"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.create_list_postcards") create_list_postcards
+
+> Retrieve a list of postcard objects. The postcards objects are sorted by creation date, with the most recently created postcards appearing first.
+
+
+```ruby
+def create_list_postcards(page = nil,
+                              pagesize = nil,
+                              postcardid = nil,
+                              date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| postcardid |  ``` Optional ```  | The unique identifier for a postcard object. |
+| date_created |  ``` Optional ```  | The date the postcard was created. |
+
+
+#### Example Usage
+
+```ruby
+page = 39
+pagesize = 39
+postcardid = 'postcardid'
+date_created = 'dateCreated'
+
+result = postCard_controller.create_list_postcards(page, pagesize, postcardid, date_created)
 
 ```
 
@@ -745,13 +670,13 @@ The singleton instance of the ``` LetterController ``` class can be accessed fro
 letter_controller = client.letter
 ```
 
-### <a name="create_letter_delete"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_letter_delete") create_letter_delete
+### <a name="create_delete_letter"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_delete_letter") create_delete_letter
 
 > Remove a letter object by its LetterId.
 
 
 ```ruby
-def create_letter_delete(lettersid); end
+def create_delete_letter(lettersid); end
 ```
 
 #### Parameters
@@ -766,18 +691,18 @@ def create_letter_delete(lettersid); end
 ```ruby
 lettersid = 'lettersid'
 
-result = letter_controller.create_letter_delete(lettersid)
+result = letter_controller.create_delete_letter(lettersid)
 
 ```
 
 
-### <a name="create_letter_viewletter"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_letter_viewletter") create_letter_viewletter
+### <a name="create_view_letter"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_view_letter") create_view_letter
 
 > Retrieve a letter object by its LetterSid.
 
 
 ```ruby
-def create_letter_viewletter(lettersid); end
+def create_view_letter(lettersid); end
 ```
 
 #### Parameters
@@ -792,60 +717,27 @@ def create_letter_viewletter(lettersid); end
 ```ruby
 lettersid = 'lettersid'
 
-result = letter_controller.create_letter_viewletter(lettersid)
+result = letter_controller.create_view_letter(lettersid)
 
 ```
 
 
-### <a name="create_letter_listsletter"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_letter_listsletter") create_letter_listsletter
-
-> Retrieve a list of letter objects. The letter objects are sorted by creation date, with the most recently created letters appearing first.
-
-
-```ruby
-def create_letter_listsletter(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| lettersid |  ``` Optional ```  | The unique identifier for a letter object. |
-| date_created |  ``` Optional ```  | The date the letter was created. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-lettersid = 'lettersid'
-collect['lettersid'] = lettersid
-
-date_created = 'dateCreated'
-collect['date_created'] = date_created
-
-
-result = letter_controller.create_letter_listsletter(collect)
-
-```
-
-
-### <a name="create_letter_create"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_letter_create") create_letter_create
+### <a name="create_letter"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_letter") create_letter
 
 > Create, print, and mail a letter to an address. The letter file must be supplied as a PDF or an HTML string.
 
 
 ```ruby
-def create_letter_create(options = {}); end
+def create_letter(to,
+                      from,
+                      attachbyid,
+                      file,
+                      color,
+                      description = nil,
+                      extraservice = nil,
+                      doublesided = nil,
+                      template = nil,
+                      htmldata = nil); end
 ```
 
 #### Parameters
@@ -867,40 +759,53 @@ def create_letter_create(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 to = 'to'
-collect['to'] = to
-
 from = 'from'
-collect['from'] = from
-
 attachbyid = 'attachbyid'
-collect['attachbyid'] = attachbyid
-
 file = 'file'
-collect['file'] = file
-
 color = 'color'
-collect['color'] = color
-
 description = 'description'
-collect['description'] = description
-
 extraservice = 'extraservice'
-collect['extraservice'] = extraservice
-
 doublesided = 'doublesided'
-collect['doublesided'] = doublesided
-
 template = 'template'
-collect['template'] = template
-
 htmldata = 'htmldata'
-collect['htmldata'] = htmldata
+
+result = letter_controller.create_letter(to, from, attachbyid, file, color, description, extraservice, doublesided, template, htmldata)
+
+```
 
 
-result = letter_controller.create_letter_create(collect)
+### <a name="create_list_letters"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.create_list_letters") create_list_letters
+
+> Retrieve a list of letter objects. The letter objects are sorted by creation date, with the most recently created letters appearing first.
+
+
+```ruby
+def create_list_letters(page = nil,
+                            pagesize = nil,
+                            lettersid = nil,
+                            date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| lettersid |  ``` Optional ```  | The unique identifier for a letter object. |
+| date_created |  ``` Optional ```  | The date the letter was created. |
+
+
+#### Example Usage
+
+```ruby
+page = 39
+pagesize = 39
+lettersid = 'lettersid'
+date_created = 'dateCreated'
+
+result = letter_controller.create_list_letters(page, pagesize, lettersid, date_created)
 
 ```
 
@@ -917,13 +822,13 @@ The singleton instance of the ``` CallController ``` class can be accessed from 
 call_controller = client.call
 ```
 
-### <a name="create_calls_viewcalldetail"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_viewcalldetail") create_calls_viewcalldetail
+### <a name="create_view_call1"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_view_call1") create_view_call1
 
 > Retrieve a single voice call’s information by its CallSid.
 
 
 ```ruby
-def create_calls_viewcalldetail(call_sid); end
+def create_view_call1(call_sid); end
 ```
 
 #### Parameters
@@ -938,18 +843,18 @@ def create_calls_viewcalldetail(call_sid); end
 ```ruby
 call_sid = 'callSid'
 
-result = call_controller.create_calls_viewcalldetail(call_sid)
+result = call_controller.create_view_call1(call_sid)
 
 ```
 
 
-### <a name="create_calls_viewcalls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_viewcalls") create_calls_viewcalls
+### <a name="create_view_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_view_call") create_view_call
 
 > Retrieve a single voice call’s information by its CallSid.
 
 
 ```ruby
-def create_calls_viewcalls(callsid); end
+def create_view_call(callsid); end
 ```
 
 #### Parameters
@@ -964,18 +869,20 @@ def create_calls_viewcalls(callsid); end
 ```ruby
 callsid = 'callsid'
 
-result = call_controller.create_calls_viewcalls(callsid)
+result = call_controller.create_view_call(callsid)
 
 ```
 
 
-### <a name="create_calls_senddigits"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_senddigits") create_calls_senddigits
+### <a name="create_play_dtmf"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_play_dtmf") create_play_dtmf
 
 > Play Dtmf and send the Digit
 
 
 ```ruby
-def create_calls_senddigits(options = {}); end
+def create_play_dtmf(call_sid,
+                         play_dtmf,
+                         play_dtmf_direction = nil); end
 ```
 
 #### Parameters
@@ -990,432 +897,44 @@ def create_calls_senddigits(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 call_sid = 'CallSid'
-collect['call_sid'] = call_sid
-
 play_dtmf = 'PlayDtmf'
-collect['play_dtmf'] = play_dtmf
+play_dtmf_direction = YtelApiv3::PlayDtmfDirectionEnum::IN
 
-play_dtmf_direction = YtelApi::PlayDtmfDirectionEnum::IN
-collect['play_dtmf_direction'] = play_dtmf_direction
-
-
-result = call_controller.create_calls_senddigits(collect)
+result = call_controller.create_play_dtmf(call_sid, play_dtmf, play_dtmf_direction)
 
 ```
 
 
-### <a name="create_calls_makervm"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_makervm") create_calls_makervm
-
-> Initiate an outbound Ringless Voicemail through Ytel.
-
-
-```ruby
-def create_calls_makervm(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
-| rvm_caller_id |  ``` Required ```  | A required secondary Caller ID for RVM to work. |
-| to |  ``` Required ```  | A valid number (E.164 format) that will receive the phone call. |
-| voice_mail_url |  ``` Required ```  | The URL requested once the RVM connects. A set of default parameters will be sent here. |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
-| stats_call_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-from = 'From'
-collect['from'] = from
-
-rvm_caller_id = 'RVMCallerId'
-collect['rvm_caller_id'] = rvm_caller_id
-
-to = 'To'
-collect['to'] = to
-
-voice_mail_url = 'VoiceMailURL'
-collect['voice_mail_url'] = voice_mail_url
-
-method = 'GET'
-collect['method'] = method
-
-status_call_back_url = 'StatusCallBackUrl'
-collect['status_call_back_url'] = status_call_back_url
-
-stats_call_back_method = 'StatsCallBackMethod'
-collect['stats_call_back_method'] = stats_call_back_method
-
-
-result = call_controller.create_calls_makervm(collect)
-
-```
-
-
-### <a name="create_calls_listcalls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_listcalls") create_calls_listcalls
-
-> A list of calls associated with your Ytel account
-
-
-```ruby
-def create_calls_listcalls(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Filter calls that were sent to this 10-digit number (E.164 format). |
-| from |  ``` Optional ```  | Filter calls that were sent from this 10-digit number (E.164 format). |
-| date_created |  ``` Optional ```  | Return calls that are from a specified date. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-to = 'To'
-collect['to'] = to
-
-from = 'From'
-collect['from'] = from
-
-date_created = 'DateCreated'
-collect['date_created'] = date_created
-
-
-result = call_controller.create_calls_listcalls(collect)
-
-```
-
-
-### <a name="create_calls_interruptcalls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_interruptcalls") create_calls_interruptcalls
-
-> Interrupt the Call by Call Sid
-
-
-```ruby
-def create_calls_interruptcalls(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| call_sid |  ``` Required ```  | The unique identifier for voice call that is in progress. |
-| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
-| method |  ``` Optional ```  | The method used to request the above Url parameter |
-| status |  ``` Optional ```  | Status to set the in-progress call to |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-call_sid = 'CallSid'
-collect['call_sid'] = call_sid
-
-url = 'Url'
-collect['url'] = url
-
-method = 'Method'
-collect['method'] = method
-
-status = YtelApi::Status24Enum::CANCELED
-collect['status'] = status
-
-
-result = call_controller.create_calls_interruptcalls(collect)
-
-```
-
-
-### <a name="create_calls_recordcalls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_recordcalls") create_calls_recordcalls
-
-> Start or stop recording of an in-progress voice call.
-
-
-```ruby
-def create_calls_recordcalls(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| call_sid |  ``` Required ```  | The unique identifier of each call resource |
-| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
-| direction |  ``` Optional ```  | The leg of the call to record |
-| time_limit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
-| call_back_url |  ``` Optional ```  | URL consulted after the recording completes |
-| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-call_sid = 'CallSid'
-collect['call_sid'] = call_sid
-
-record = true
-collect['record'] = record
-
-direction = YtelApi::DirectionEnum::IN
-collect['direction'] = direction
-
-time_limit = 237
-collect['time_limit'] = time_limit
-
-call_back_url = 'CallBackUrl'
-collect['call_back_url'] = call_back_url
-
-fileformat = YtelApi::FileformatEnum::MP3
-collect['fileformat'] = fileformat
-
-
-result = call_controller.create_calls_recordcalls(collect)
-
-```
-
-
-### <a name="create_calls_playaudios"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_playaudios") create_calls_playaudios
-
-> Play Audio from a url
-
-
-```ruby
-def create_calls_playaudios(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| call_sid |  ``` Required ```  | The unique identifier of each call resource |
-| audio_url |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
-| say_text |  ``` Required ```  | Valid alphanumeric string that should be played to the In-progress call. |
-| length |  ``` Optional ```  | Time limit in seconds for audio play back |
-| direction |  ``` Optional ```  | The leg of the call audio will be played to |
-| mix |  ``` Optional ```  | If false, all other audio will be muted |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-call_sid = 'CallSid'
-collect['call_sid'] = call_sid
-
-audio_url = 'AudioUrl'
-collect['audio_url'] = audio_url
-
-say_text = 'SayText'
-collect['say_text'] = say_text
-
-length = 237
-collect['length'] = length
-
-direction = YtelApi::DirectionEnum::IN
-collect['direction'] = direction
-
-mix = true
-collect['mix'] = mix
-
-
-result = call_controller.create_calls_playaudios(collect)
-
-```
-
-
-### <a name="create_calls_voiceeffect"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_voiceeffect") create_calls_voiceeffect
-
-> Add audio voice effects to the an in-progress voice call.
-
-
-```ruby
-def create_calls_voiceeffect(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| call_sid |  ``` Required ```  | The unique identifier for the in-progress voice call. |
-| audio_direction |  ``` Optional ```  | The direction the audio effect should be placed on. If IN, the effects will occur on the incoming audio stream. If OUT, the effects will occur on the outgoing audio stream. |
-| pitch_semi_tones |  ``` Optional ```  | Set the pitch in semitone (half-step) intervals. Value between -14 and 14 |
-| pitch_octaves |  ``` Optional ```  | Set the pitch in octave intervals.. Value between -1 and 1 |
-| pitch |  ``` Optional ```  | Set the pitch (lowness/highness) of the audio. The higher the value, the higher the pitch. Value greater than 0 |
-| rate |  ``` Optional ```  | Set the rate for audio. The lower the value, the lower the rate. value greater than 0 |
-| tempo |  ``` Optional ```  | Set the tempo (speed) of the audio. A higher value denotes a faster tempo. Value greater than 0 |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-call_sid = 'CallSid'
-collect['call_sid'] = call_sid
-
-audio_direction = YtelApi::AudioDirectionEnum::IN
-collect['audio_direction'] = audio_direction
-
-pitch_semi_tones = 237.291919212924
-collect['pitch_semi_tones'] = pitch_semi_tones
-
-pitch_octaves = 237.291919212924
-collect['pitch_octaves'] = pitch_octaves
-
-pitch = 237.291919212924
-collect['pitch'] = pitch
-
-rate = 237.291919212924
-collect['rate'] = rate
-
-tempo = 237.291919212924
-collect['tempo'] = tempo
-
-
-result = call_controller.create_calls_voiceeffect(collect)
-
-```
-
-
-### <a name="create_calls_groupcall"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_groupcall") create_calls_groupcall
-
-> Group Call
-
-
-```ruby
-def create_calls_groupcall(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| to |  ``` Required ```  | Please enter multiple E164 number. You can add max 10 numbers. Add numbers separated with comma. e.g : 1111111111,2222222222 |
-| url |  ``` Required ```  | URL requested once the call connects |
-| group_confirm_key |  ``` Required ```  | Define the DTMF that the called party should send to bridge the call. Allowed Values : 0-9, #, * |
-| group_confirm_file |  ``` Required ```  | Specify the audio file you want to play when the called party picks up the call |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
-| status_call_back_method |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fall_back_url |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fall_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| heart_beat_url |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information. |
-| heart_beat_method |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) we should wait while the call is ringing before canceling the call |
-| play_dtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
-| hide_caller_id |  ``` Optional ```  | Specifies if the caller id will be hidden |
-| record |  ``` Optional ```  | Specifies if the call should be recorded |
-| record_call_back_url |  ``` Optional ```  | Recording parameters will be sent here upon completion |
-| record_call_back_method |  ``` Optional ```  | Method used to request the RecordCallback URL. |
-| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
-| transcribe_call_back_url |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-from = 'From'
-collect['from'] = from
-
-to = 'To'
-collect['to'] = to
-
-url = 'Url'
-collect['url'] = url
-
-group_confirm_key = 'GroupConfirmKey'
-collect['group_confirm_key'] = group_confirm_key
-
-group_confirm_file = YtelApi::GroupConfirmFileEnum::MP3
-collect['group_confirm_file'] = group_confirm_file
-
-method = 'Method'
-collect['method'] = method
-
-status_call_back_url = 'StatusCallBackUrl'
-collect['status_call_back_url'] = status_call_back_url
-
-status_call_back_method = 'StatusCallBackMethod'
-collect['status_call_back_method'] = status_call_back_method
-
-fall_back_url = 'FallBackUrl'
-collect['fall_back_url'] = fall_back_url
-
-fall_back_method = 'FallBackMethod'
-collect['fall_back_method'] = fall_back_method
-
-heart_beat_url = 'HeartBeatUrl'
-collect['heart_beat_url'] = heart_beat_url
-
-heart_beat_method = 'HeartBeatMethod'
-collect['heart_beat_method'] = heart_beat_method
-
-timeout = 237
-collect['timeout'] = timeout
-
-play_dtmf = 'PlayDtmf'
-collect['play_dtmf'] = play_dtmf
-
-hide_caller_id = 'HideCallerId'
-collect['hide_caller_id'] = hide_caller_id
-
-record = true
-collect['record'] = record
-
-record_call_back_url = 'RecordCallBackUrl'
-collect['record_call_back_url'] = record_call_back_url
-
-record_call_back_method = 'RecordCallBackMethod'
-collect['record_call_back_method'] = record_call_back_method
-
-transcribe = true
-collect['transcribe'] = transcribe
-
-transcribe_call_back_url = 'TranscribeCallBackUrl'
-collect['transcribe_call_back_url'] = transcribe_call_back_url
-
-
-result = call_controller.create_calls_groupcall(collect)
-
-```
-
-
-### <a name="create_calls_makecall"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_calls_makecall") create_calls_makecall
+### <a name="create_make_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_make_call") create_make_call
 
 > You can experiment with initiating a call through Ytel and view the request response generated when doing so and get the response in json
 
 
 ```ruby
-def create_calls_makecall(options = {}); end
+def create_make_call(from,
+                         to,
+                         url,
+                         method = nil,
+                         status_call_back_url = nil,
+                         status_call_back_method = nil,
+                         fall_back_url = nil,
+                         fall_back_method = nil,
+                         heart_beat_url = nil,
+                         heart_beat_method = nil,
+                         timeout = nil,
+                         play_dtmf = nil,
+                         hide_caller_id = nil,
+                         record = nil,
+                         record_call_back_url = nil,
+                         record_call_back_method = nil,
+                         transcribe = nil,
+                         transcribe_call_back_url = nil,
+                         if_machine = nil,
+                         if_machine_url = nil,
+                         if_machine_method = nil,
+                         feedback = nil,
+                         survey_id = nil); end
 ```
 
 #### Parameters
@@ -1450,79 +969,357 @@ def create_calls_makecall(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 from = 'From'
-collect['from'] = from
-
 to = 'To'
-collect['to'] = to
-
 url = 'Url'
-collect['url'] = url
-
 method = 'Method'
-collect['method'] = method
-
 status_call_back_url = 'StatusCallBackUrl'
-collect['status_call_back_url'] = status_call_back_url
-
 status_call_back_method = 'StatusCallBackMethod'
-collect['status_call_back_method'] = status_call_back_method
-
 fall_back_url = 'FallBackUrl'
-collect['fall_back_url'] = fall_back_url
-
 fall_back_method = 'FallBackMethod'
-collect['fall_back_method'] = fall_back_method
-
 heart_beat_url = 'HeartBeatUrl'
-collect['heart_beat_url'] = heart_beat_url
-
 heart_beat_method = 'HeartBeatMethod'
-collect['heart_beat_method'] = heart_beat_method
-
-timeout = 237
-collect['timeout'] = timeout
-
+timeout = 39
 play_dtmf = 'PlayDtmf'
-collect['play_dtmf'] = play_dtmf
-
-hide_caller_id = true
-collect['hide_caller_id'] = hide_caller_id
-
-record = true
-collect['record'] = record
-
+hide_caller_id = false
+record = false
 record_call_back_url = 'RecordCallBackUrl'
-collect['record_call_back_url'] = record_call_back_url
-
 record_call_back_method = 'RecordCallBackMethod'
-collect['record_call_back_method'] = record_call_back_method
-
-transcribe = true
-collect['transcribe'] = transcribe
-
+transcribe = false
 transcribe_call_back_url = 'TranscribeCallBackUrl'
-collect['transcribe_call_back_url'] = transcribe_call_back_url
-
-if_machine = YtelApi::IfMachineEnum::CONTINUE
-collect['if_machine'] = if_machine
-
+if_machine = YtelApiv3::IfMachineEnum::CONTINUE
 if_machine_url = 'IfMachineUrl'
-collect['if_machine_url'] = if_machine_url
-
 if_machine_method = 'IfMachineMethod'
-collect['if_machine_method'] = if_machine_method
-
-feedback = true
-collect['feedback'] = feedback
-
+feedback = false
 survey_id = 'SurveyId'
-collect['survey_id'] = survey_id
+
+result = call_controller.create_make_call(from, to, url, method, status_call_back_url, status_call_back_method, fall_back_url, fall_back_method, heart_beat_url, heart_beat_method, timeout, play_dtmf, hide_caller_id, record, record_call_back_url, record_call_back_method, transcribe, transcribe_call_back_url, if_machine, if_machine_url, if_machine_method, feedback, survey_id)
+
+```
 
 
-result = call_controller.create_calls_makecall(collect)
+### <a name="create_play_audio"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_play_audio") create_play_audio
+
+> Play Audio from a url
+
+
+```ruby
+def create_play_audio(call_sid,
+                          audio_url,
+                          say_text,
+                          length = nil,
+                          direction = nil,
+                          mix = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| call_sid |  ``` Required ```  | The unique identifier of each call resource |
+| audio_url |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
+| say_text |  ``` Required ```  | Valid alphanumeric string that should be played to the In-progress call. |
+| length |  ``` Optional ```  | Time limit in seconds for audio play back |
+| direction |  ``` Optional ```  | The leg of the call audio will be played to |
+| mix |  ``` Optional ```  | If false, all other audio will be muted |
+
+
+#### Example Usage
+
+```ruby
+call_sid = 'CallSid'
+audio_url = 'AudioUrl'
+say_text = 'SayText'
+length = 39
+direction = YtelApiv3::DirectionEnum::IN
+mix = false
+
+result = call_controller.create_play_audio(call_sid, audio_url, say_text, length, direction, mix)
+
+```
+
+
+### <a name="create_record_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_record_call") create_record_call
+
+> Start or stop recording of an in-progress voice call.
+
+
+```ruby
+def create_record_call(call_sid,
+                           record,
+                           direction = nil,
+                           time_limit = nil,
+                           call_back_url = nil,
+                           fileformat = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| call_sid |  ``` Required ```  | The unique identifier of each call resource |
+| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
+| direction |  ``` Optional ```  | The leg of the call to record |
+| time_limit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
+| call_back_url |  ``` Optional ```  | URL consulted after the recording completes |
+| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
+
+
+#### Example Usage
+
+```ruby
+call_sid = 'CallSid'
+record = false
+direction = YtelApiv3::Direction4Enum::IN
+time_limit = 39
+call_back_url = 'CallBackUrl'
+fileformat = YtelApiv3::FileformatEnum::MP3
+
+result = call_controller.create_record_call(call_sid, record, direction, time_limit, call_back_url, fileformat)
+
+```
+
+
+### <a name="create_voice_effect"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_voice_effect") create_voice_effect
+
+> Add audio voice effects to the an in-progress voice call.
+
+
+```ruby
+def create_voice_effect(call_sid,
+                            audio_direction = nil,
+                            pitch_semi_tones = nil,
+                            pitch_octaves = nil,
+                            pitch = nil,
+                            rate = nil,
+                            tempo = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| call_sid |  ``` Required ```  | The unique identifier for the in-progress voice call. |
+| audio_direction |  ``` Optional ```  | The direction the audio effect should be placed on. If IN, the effects will occur on the incoming audio stream. If OUT, the effects will occur on the outgoing audio stream. |
+| pitch_semi_tones |  ``` Optional ```  | Set the pitch in semitone (half-step) intervals. Value between -14 and 14 |
+| pitch_octaves |  ``` Optional ```  | Set the pitch in octave intervals.. Value between -1 and 1 |
+| pitch |  ``` Optional ```  | Set the pitch (lowness/highness) of the audio. The higher the value, the higher the pitch. Value greater than 0 |
+| rate |  ``` Optional ```  | Set the rate for audio. The lower the value, the lower the rate. value greater than 0 |
+| tempo |  ``` Optional ```  | Set the tempo (speed) of the audio. A higher value denotes a faster tempo. Value greater than 0 |
+
+
+#### Example Usage
+
+```ruby
+call_sid = 'CallSid'
+audio_direction = YtelApiv3::AudioDirectionEnum::IN
+pitch_semi_tones = 39.5304814095285
+pitch_octaves = 39.5304814095285
+pitch = 39.5304814095285
+rate = 39.5304814095285
+tempo = 39.5304814095285
+
+result = call_controller.create_voice_effect(call_sid, audio_direction, pitch_semi_tones, pitch_octaves, pitch, rate, tempo)
+
+```
+
+
+### <a name="create_interrupt_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_interrupt_call") create_interrupt_call
+
+> Interrupt the Call by Call Sid
+
+
+```ruby
+def create_interrupt_call(call_sid,
+                              url = nil,
+                              method = nil,
+                              status = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| call_sid |  ``` Required ```  | The unique identifier for voice call that is in progress. |
+| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
+| method |  ``` Optional ```  | The method used to request the above Url parameter |
+| status |  ``` Optional ```  | Status to set the in-progress call to |
+
+
+#### Example Usage
+
+```ruby
+call_sid = 'CallSid'
+url = 'Url'
+method = 'Method'
+status = YtelApiv3::StatusEnum::CANCELED
+
+result = call_controller.create_interrupt_call(call_sid, url, method, status)
+
+```
+
+
+### <a name="create_list_calls"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_list_calls") create_list_calls
+
+> A list of calls associated with your Ytel account
+
+
+```ruby
+def create_list_calls(page = nil,
+                          page_size = nil,
+                          to = nil,
+                          from = nil,
+                          date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Filter calls that were sent to this 10-digit number (E.164 format). |
+| from |  ``` Optional ```  | Filter calls that were sent from this 10-digit number (E.164 format). |
+| date_created |  ``` Optional ```  | Return calls that are from a specified date. |
+
+
+#### Example Usage
+
+```ruby
+page = 39
+page_size = 39
+to = 'To'
+from = 'From'
+date_created = 'DateCreated'
+
+result = call_controller.create_list_calls(page, page_size, to, from, date_created)
+
+```
+
+
+### <a name="create_send_rvm"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_send_rvm") create_send_rvm
+
+> Initiate an outbound Ringless Voicemail through Ytel.
+
+
+```ruby
+def create_send_rvm(from,
+                        rvm_caller_id,
+                        to,
+                        voice_mail_url,
+                        method = nil,
+                        status_call_back_url = nil,
+                        stats_call_back_method = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
+| rvm_caller_id |  ``` Required ```  | A required secondary Caller ID for RVM to work. |
+| to |  ``` Required ```  | A valid number (E.164 format) that will receive the phone call. |
+| voice_mail_url |  ``` Required ```  | The URL requested once the RVM connects. A set of default parameters will be sent here. |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| stats_call_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
+
+
+#### Example Usage
+
+```ruby
+from = 'From'
+rvm_caller_id = 'RVMCallerId'
+to = 'To'
+voice_mail_url = 'VoiceMailURL'
+method = 'Method'
+status_call_back_url = 'StatusCallBackUrl'
+stats_call_back_method = 'StatsCallBackMethod'
+
+result = call_controller.create_send_rvm(from, rvm_caller_id, to, voice_mail_url, method, status_call_back_url, stats_call_back_method)
+
+```
+
+
+### <a name="create_group_call"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.create_group_call") create_group_call
+
+> Group Call
+
+
+```ruby
+def create_group_call(from,
+                          to,
+                          url,
+                          group_confirm_key,
+                          group_confirm_file,
+                          method = nil,
+                          status_call_back_url = nil,
+                          status_call_back_method = nil,
+                          fall_back_url = nil,
+                          fall_back_method = nil,
+                          heart_beat_url = nil,
+                          heart_beat_method = nil,
+                          timeout = nil,
+                          play_dtmf = nil,
+                          hide_caller_id = nil,
+                          record = nil,
+                          record_call_back_url = nil,
+                          record_call_back_method = nil,
+                          transcribe = nil,
+                          transcribe_call_back_url = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| to |  ``` Required ```  | Please enter multiple E164 number. You can add max 10 numbers. Add numbers separated with comma. e.g : 1111111111,2222222222 |
+| url |  ``` Required ```  | URL requested once the call connects |
+| group_confirm_key |  ``` Required ```  | Define the DTMF that the called party should send to bridge the call. Allowed Values : 0-9, #, * |
+| group_confirm_file |  ``` Required ```  | Specify the audio file you want to play when the called party picks up the call |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| status_call_back_method |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fall_back_url |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fall_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| heart_beat_url |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information. |
+| heart_beat_method |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
+| timeout |  ``` Optional ```  | Time (in seconds) we should wait while the call is ringing before canceling the call |
+| play_dtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
+| hide_caller_id |  ``` Optional ```  | Specifies if the caller id will be hidden |
+| record |  ``` Optional ```  | Specifies if the call should be recorded |
+| record_call_back_url |  ``` Optional ```  | Recording parameters will be sent here upon completion |
+| record_call_back_method |  ``` Optional ```  | Method used to request the RecordCallback URL. |
+| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
+| transcribe_call_back_url |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
+
+
+#### Example Usage
+
+```ruby
+from = 'From'
+to = 'To'
+url = 'Url'
+group_confirm_key = 'GroupConfirmKey'
+group_confirm_file = YtelApiv3::GroupConfirmFileEnum::MP3
+method = 'Method'
+status_call_back_url = 'StatusCallBackUrl'
+status_call_back_method = 'StatusCallBackMethod'
+fall_back_url = 'FallBackUrl'
+fall_back_method = 'FallBackMethod'
+heart_beat_url = 'HeartBeatUrl'
+heart_beat_method = 'HeartBeatMethod'
+timeout = 203
+play_dtmf = 'PlayDtmf'
+hide_caller_id = 'HideCallerId'
+record = true
+record_call_back_url = 'RecordCallBackUrl'
+record_call_back_method = 'RecordCallBackMethod'
+transcribe = true
+transcribe_call_back_url = 'TranscribeCallBackUrl'
+
+result = call_controller.create_group_call(from, to, url, group_confirm_key, group_confirm_file, method, status_call_back_url, status_call_back_method, fall_back_url, fall_back_method, heart_beat_url, heart_beat_method, timeout, play_dtmf, hide_caller_id, record, record_call_back_url, record_call_back_method, transcribe, transcribe_call_back_url)
 
 ```
 
@@ -1539,13 +1336,13 @@ The singleton instance of the ``` PhoneNumberController ``` class can be accesse
 phoneNumber_controller = client.phone_number
 ```
 
-### <a name="create_incomingphone_getdidscore"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_getdidscore") create_incomingphone_getdidscore
+### <a name="create_get_did_score"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_get_did_score") create_get_did_score
 
 > Get DID Score Number
 
 
 ```ruby
-def create_incomingphone_getdidscore(phonenumber); end
+def create_get_did_score(phonenumber); end
 ```
 
 #### Parameters
@@ -1560,188 +1357,20 @@ def create_incomingphone_getdidscore(phonenumber); end
 ```ruby
 phonenumber = 'Phonenumber'
 
-result = phoneNumber_controller.create_incomingphone_getdidscore(phonenumber)
+result = phoneNumber_controller.create_get_did_score(phonenumber)
 
 ```
 
 
-### <a name="create_incomingphone_bulkbuy"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_bulkbuy") create_incomingphone_bulkbuy
-
-> Purchase a selected number of DID's from specific area codes to be used with your Ytel account.
-
-
-```ruby
-def create_incomingphone_bulkbuy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| number_type |  ``` Required ```  | The capability the number supports. |
-| area_code |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
-| quantity |  ``` Required ```  | A positive integer that tells how many number you want to buy at a time. |
-| leftover |  ``` Optional ```  | If desired quantity is unavailable purchase what is available . |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-number_type = YtelApi::Numbertype16Enum::ALL
-collect['number_type'] = number_type
-
-area_code = 'AreaCode'
-collect['area_code'] = area_code
-
-quantity = 'Quantity'
-collect['quantity'] = quantity
-
-leftover = 'Leftover'
-collect['leftover'] = leftover
-
-
-result = phoneNumber_controller.create_incomingphone_bulkbuy(collect)
-
-```
-
-
-### <a name="create_incomingphone_listnumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_listnumber") create_incomingphone_listnumber
-
-> Retrieve a list of purchased phones numbers associated with your Ytel account.
-
-
-```ruby
-def create_incomingphone_listnumber(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| number_type |  ``` Optional ```  | The capability supported by the number.Number type either SMS,Voice or all |
-| friendly_name |  ``` Optional ```  | A human-readable label added to the number object. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-number_type = YtelApi::Numbertype16Enum::ALL
-collect['number_type'] = number_type
-
-friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
-
-result = phoneNumber_controller.create_incomingphone_listnumber(collect)
-
-```
-
-
-### <a name="create_incomingphone_buynumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_buynumber") create_incomingphone_buynumber
-
-> Purchase a phone number to be used with your Ytel account
-
-
-```ruby
-def create_incomingphone_buynumber(phone_number); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
-
-
-#### Example Usage
-
-```ruby
-phone_number = 'PhoneNumber'
-
-result = phoneNumber_controller.create_incomingphone_buynumber(phone_number)
-
-```
-
-
-### <a name="create_incomingphone_releasenumber_by_response_type_post"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_releasenumber_by_response_type_post") create_incomingphone_releasenumber_by_response_type_post
-
-> Remove a purchased Ytel number from your account.
-
-
-```ruby
-def create_incomingphone_releasenumber_by_response_type_post(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
-| response_type |  ``` Required ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-phone_number = 'PhoneNumber'
-collect['phone_number'] = phone_number
-
-response_type = 'ResponseType'
-collect['response_type'] = response_type
-
-
-result = phoneNumber_controller.create_incomingphone_releasenumber_by_response_type_post(collect)
-
-```
-
-
-### <a name="create_incomingphone_viewnumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_viewnumber") create_incomingphone_viewnumber
-
-> Retrieve the details for a phone number by its number.
-
-
-```ruby
-def create_incomingphone_viewnumber(phone_number); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phone_number |  ``` Required ```  | A valid Ytel 10-digit phone number (E.164 format). |
-
-
-#### Example Usage
-
-```ruby
-phone_number = 'PhoneNumber'
-
-result = phoneNumber_controller.create_incomingphone_viewnumber(phone_number)
-
-```
-
-
-### <a name="create_incomingphone_transferphonenumbers"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_transferphonenumbers") create_incomingphone_transferphonenumbers
+### <a name="create_move_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_move_number") create_move_number
 
 > Transfer phone number that has been purchased for from one account to another account.
 
 
 ```ruby
-def create_incomingphone_transferphonenumbers(options = {}); end
+def create_move_number(phonenumber,
+                           fromaccountsid,
+                           toaccountsid); end
 ```
 
 #### Parameters
@@ -1756,30 +1385,103 @@ def create_incomingphone_transferphonenumbers(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 phonenumber = 'phonenumber'
-collect['phonenumber'] = phonenumber
-
 fromaccountsid = 'fromaccountsid'
-collect['fromaccountsid'] = fromaccountsid
-
 toaccountsid = 'toaccountsid'
-collect['toaccountsid'] = toaccountsid
 
-
-result = phoneNumber_controller.create_incomingphone_transferphonenumbers(collect)
+result = phoneNumber_controller.create_move_number(phonenumber, fromaccountsid, toaccountsid)
 
 ```
 
 
-### <a name="create_incomingphone_massreleasenumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_massreleasenumber") create_incomingphone_massreleasenumber
+### <a name="create_purchase_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_purchase_number") create_purchase_number
+
+> Purchase a phone number to be used with your Ytel account
+
+
+```ruby
+def create_purchase_number(phone_number); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
+
+
+#### Example Usage
+
+```ruby
+phone_number = 'PhoneNumber'
+
+result = phoneNumber_controller.create_purchase_number(phone_number)
+
+```
+
+
+### <a name="create_release_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_release_number") create_release_number
 
 > Remove a purchased Ytel number from your account.
 
 
 ```ruby
-def create_incomingphone_massreleasenumber(phone_number); end
+def create_release_number(response_type,
+                              phone_number); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| response_type |  ``` Required ```  | Response type format xml or json |
+| phone_number |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
+
+
+#### Example Usage
+
+```ruby
+response_type = 'ResponseType'
+phone_number = 'PhoneNumber'
+
+result = phoneNumber_controller.create_release_number(response_type, phone_number)
+
+```
+
+
+### <a name="create_view_details"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_view_details") create_view_details
+
+> Retrieve the details for a phone number by its number.
+
+
+```ruby
+def create_view_details(phone_number); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | A valid Ytel 10-digit phone number (E.164 format). |
+
+
+#### Example Usage
+
+```ruby
+phone_number = 'PhoneNumber'
+
+result = phoneNumber_controller.create_view_details(phone_number)
+
+```
+
+
+### <a name="create_bulk_release"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_bulk_release") create_bulk_release
+
+> Remove a purchased Ytel number from your account.
+
+
+```ruby
+def create_bulk_release(phone_number); end
 ```
 
 #### Parameters
@@ -1794,100 +1496,63 @@ def create_incomingphone_massreleasenumber(phone_number); end
 ```ruby
 phone_number = 'PhoneNumber'
 
-result = phoneNumber_controller.create_incomingphone_massreleasenumber(phone_number)
+result = phoneNumber_controller.create_bulk_release(phone_number)
 
 ```
 
 
-### <a name="create_incomingphone_massupdatenumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_massupdatenumber") create_incomingphone_massupdatenumber
+### <a name="create_available_numbers"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_available_numbers") create_available_numbers
 
-> Update properties for a Ytel numbers that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
+> Retrieve a list of available phone numbers that can be purchased and used for your Ytel account.
 
 
 ```ruby
-def create_incomingphone_massupdatenumber(options = {}); end
+def create_available_numbers(numbertype,
+                                 areacode,
+                                 pagesize = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phone_number |  ``` Required ```  | A valid comma(,) separated Ytel numbers. (E.164 format). |
-| voice_url |  ``` Required ```  | The URL returning InboundXML incoming calls should execute when connected. |
-| friendly_name |  ``` Optional ```  | A human-readable value for labeling the number. |
-| voice_method |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceUrl once incoming call connects. |
-| voice_fallback_url |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML on a call or at initial request of the voice url |
-| voice_fallback_method |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceFallbackUrl once incoming call connects. |
-| hangup_callback |  ``` Optional ```  | URL that can be requested to receive notification when and how incoming call has ended. |
-| hangup_callback_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HangupCallback URL. |
-| heartbeat_url |  ``` Optional ```  | URL that can be used to monitor the phone number. |
-| heartbeat_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HeartbeatUrl. |
-| sms_url |  ``` Optional ```  | URL requested when an SMS is received. |
-| sms_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the SmsUrl. |
-| sms_fallback_url |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
-| sms_fallback_method |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
+| numbertype |  ``` Required ```  | Number type either SMS,Voice or all |
+| areacode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
+| pagesize |  ``` Optional ```  | The count of objects to return. |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
+numbertype = YtelApiv3::NumbertypeEnum::ALL
+areacode = 'areacode'
+pagesize = 203
 
-phone_number = 'PhoneNumber'
-collect['phone_number'] = phone_number
-
-voice_url = 'VoiceUrl'
-collect['voice_url'] = voice_url
-
-friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
-voice_method = 'VoiceMethod'
-collect['voice_method'] = voice_method
-
-voice_fallback_url = 'VoiceFallbackUrl'
-collect['voice_fallback_url'] = voice_fallback_url
-
-voice_fallback_method = 'VoiceFallbackMethod'
-collect['voice_fallback_method'] = voice_fallback_method
-
-hangup_callback = 'HangupCallback'
-collect['hangup_callback'] = hangup_callback
-
-hangup_callback_method = 'HangupCallbackMethod'
-collect['hangup_callback_method'] = hangup_callback_method
-
-heartbeat_url = 'HeartbeatUrl'
-collect['heartbeat_url'] = heartbeat_url
-
-heartbeat_method = 'HeartbeatMethod'
-collect['heartbeat_method'] = heartbeat_method
-
-sms_url = 'SmsUrl'
-collect['sms_url'] = sms_url
-
-sms_method = 'SmsMethod'
-collect['sms_method'] = sms_method
-
-sms_fallback_url = 'SmsFallbackUrl'
-collect['sms_fallback_url'] = sms_fallback_url
-
-sms_fallback_method = 'SmsFallbackMethod'
-collect['sms_fallback_method'] = sms_fallback_method
-
-
-result = phoneNumber_controller.create_incomingphone_massupdatenumber(collect)
+result = phoneNumber_controller.create_available_numbers(numbertype, areacode, pagesize)
 
 ```
 
 
-### <a name="create_incomingphone_updatenumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_updatenumber") create_incomingphone_updatenumber
+### <a name="update_number"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.update_number") update_number
 
 > Update properties for a Ytel number that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
 
 
 ```ruby
-def create_incomingphone_updatenumber(options = {}); end
+def update_number(phone_number,
+                      voice_url,
+                      friendly_name = nil,
+                      voice_method = nil,
+                      voice_fallback_url = nil,
+                      voice_fallback_method = nil,
+                      hangup_callback = nil,
+                      hangup_callback_method = nil,
+                      heartbeat_url = nil,
+                      heartbeat_method = nil,
+                      sms_url = nil,
+                      sms_method = nil,
+                      sms_fallback_url = nil,
+                      sms_fallback_method = nil); end
 ```
 
 #### Parameters
@@ -1913,90 +1578,157 @@ def create_incomingphone_updatenumber(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 phone_number = 'PhoneNumber'
-collect['phone_number'] = phone_number
-
 voice_url = 'VoiceUrl'
-collect['voice_url'] = voice_url
-
 friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
 voice_method = 'VoiceMethod'
-collect['voice_method'] = voice_method
-
 voice_fallback_url = 'VoiceFallbackUrl'
-collect['voice_fallback_url'] = voice_fallback_url
-
 voice_fallback_method = 'VoiceFallbackMethod'
-collect['voice_fallback_method'] = voice_fallback_method
-
 hangup_callback = 'HangupCallback'
-collect['hangup_callback'] = hangup_callback
-
 hangup_callback_method = 'HangupCallbackMethod'
-collect['hangup_callback_method'] = hangup_callback_method
-
 heartbeat_url = 'HeartbeatUrl'
-collect['heartbeat_url'] = heartbeat_url
-
 heartbeat_method = 'HeartbeatMethod'
-collect['heartbeat_method'] = heartbeat_method
-
 sms_url = 'SmsUrl'
-collect['sms_url'] = sms_url
-
 sms_method = 'SmsMethod'
-collect['sms_method'] = sms_method
-
 sms_fallback_url = 'SmsFallbackUrl'
-collect['sms_fallback_url'] = sms_fallback_url
-
 sms_fallback_method = 'SmsFallbackMethod'
-collect['sms_fallback_method'] = sms_fallback_method
 
-
-result = phoneNumber_controller.create_incomingphone_updatenumber(collect)
+result = phoneNumber_controller.update_number(phone_number, voice_url, friendly_name, voice_method, voice_fallback_url, voice_fallback_method, hangup_callback, hangup_callback_method, heartbeat_url, heartbeat_method, sms_url, sms_method, sms_fallback_url, sms_fallback_method)
 
 ```
 
 
-### <a name="create_incomingphone_availablenumber"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_incomingphone_availablenumber") create_incomingphone_availablenumber
+### <a name="create_list_numbers"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_list_numbers") create_list_numbers
 
-> Retrieve a list of available phone numbers that can be purchased and used for your Ytel account.
+> Retrieve a list of purchased phones numbers associated with your Ytel account.
 
 
 ```ruby
-def create_incomingphone_availablenumber(options = {}); end
+def create_list_numbers(page = nil,
+                            page_size = nil,
+                            number_type = nil,
+                            friendly_name = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| numbertype |  ``` Required ```  | Number type either SMS,Voice or all |
-| areacode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return. |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| number_type |  ``` Optional ```  | The capability supported by the number.Number type either SMS,Voice or all |
+| friendly_name |  ``` Optional ```  | A human-readable label added to the number object. |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
+page = 203
+page_size = 203
+number_type = YtelApiv3::NumberType14Enum::ALL
+friendly_name = 'FriendlyName'
 
-numbertype = YtelApi::Numbertype16Enum::ALL
-collect['numbertype'] = numbertype
+result = phoneNumber_controller.create_list_numbers(page, page_size, number_type, friendly_name)
 
-areacode = 'areacode'
-collect['areacode'] = areacode
-
-pagesize = 10
-collect['pagesize'] = pagesize
+```
 
 
-result = phoneNumber_controller.create_incomingphone_availablenumber(collect)
+### <a name="create_bulk_update_numbers"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_bulk_update_numbers") create_bulk_update_numbers
+
+> Update properties for a Ytel numbers that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
+
+
+```ruby
+def create_bulk_update_numbers(phone_number,
+                                   voice_url,
+                                   friendly_name = nil,
+                                   voice_method = nil,
+                                   voice_fallback_url = nil,
+                                   voice_fallback_method = nil,
+                                   hangup_callback = nil,
+                                   hangup_callback_method = nil,
+                                   heartbeat_url = nil,
+                                   heartbeat_method = nil,
+                                   sms_url = nil,
+                                   sms_method = nil,
+                                   sms_fallback_url = nil,
+                                   sms_fallback_method = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phone_number |  ``` Required ```  | A valid comma(,) separated Ytel numbers. (E.164 format). |
+| voice_url |  ``` Required ```  | The URL returning InboundXML incoming calls should execute when connected. |
+| friendly_name |  ``` Optional ```  | A human-readable value for labeling the number. |
+| voice_method |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceUrl once incoming call connects. |
+| voice_fallback_url |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML on a call or at initial request of the voice url |
+| voice_fallback_method |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceFallbackUrl once incoming call connects. |
+| hangup_callback |  ``` Optional ```  | URL that can be requested to receive notification when and how incoming call has ended. |
+| hangup_callback_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HangupCallback URL. |
+| heartbeat_url |  ``` Optional ```  | URL that can be used to monitor the phone number. |
+| heartbeat_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HeartbeatUrl. |
+| sms_url |  ``` Optional ```  | URL requested when an SMS is received. |
+| sms_method |  ``` Optional ```  | The HTTP method Ytel will use when requesting the SmsUrl. |
+| sms_fallback_url |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
+| sms_fallback_method |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
+
+
+#### Example Usage
+
+```ruby
+phone_number = 'PhoneNumber'
+voice_url = 'VoiceUrl'
+friendly_name = 'FriendlyName'
+voice_method = 'VoiceMethod'
+voice_fallback_url = 'VoiceFallbackUrl'
+voice_fallback_method = 'VoiceFallbackMethod'
+hangup_callback = 'HangupCallback'
+hangup_callback_method = 'HangupCallbackMethod'
+heartbeat_url = 'HeartbeatUrl'
+heartbeat_method = 'HeartbeatMethod'
+sms_url = 'SmsUrl'
+sms_method = 'SmsMethod'
+sms_fallback_url = 'SmsFallbackUrl'
+sms_fallback_method = 'SmsFallbackMethod'
+
+result = phoneNumber_controller.create_bulk_update_numbers(phone_number, voice_url, friendly_name, voice_method, voice_fallback_url, voice_fallback_method, hangup_callback, hangup_callback_method, heartbeat_url, heartbeat_method, sms_url, sms_method, sms_fallback_url, sms_fallback_method)
+
+```
+
+
+### <a name="create_bulk_buy_numbers"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.create_bulk_buy_numbers") create_bulk_buy_numbers
+
+> Purchase a selected number of DID's from specific area codes to be used with your Ytel account.
+
+
+```ruby
+def create_bulk_buy_numbers(number_type,
+                                area_code,
+                                quantity,
+                                leftover = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| number_type |  ``` Required ```  | The capability the number supports. |
+| area_code |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
+| quantity |  ``` Required ```  | A positive integer that tells how many number you want to buy at a time. |
+| leftover |  ``` Optional ```  | If desired quantity is unavailable purchase what is available . |
+
+
+#### Example Usage
+
+```ruby
+number_type = YtelApiv3::NumberType15Enum::ALL
+area_code = 'AreaCode'
+quantity = 'Quantity'
+leftover = 'Leftover'
+
+result = phoneNumber_controller.create_bulk_buy_numbers(number_type, area_code, quantity, leftover)
 
 ```
 
@@ -2013,13 +1745,13 @@ The singleton instance of the ``` SMSController ``` class can be accessed from t
 sMS_controller = client.sms
 ```
 
-### <a name="create_sms_viewdetailsms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_sms_viewdetailsms") create_sms_viewdetailsms
+### <a name="create_view_sms1"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_view_sms1") create_view_sms1
 
 > Retrieve a single SMS message object with details by its SmsSid.
 
 
 ```ruby
-def create_sms_viewdetailsms(message_sid); end
+def create_view_sms1(message_sid); end
 ```
 
 #### Parameters
@@ -2034,18 +1766,18 @@ def create_sms_viewdetailsms(message_sid); end
 ```ruby
 message_sid = 'MessageSid'
 
-result = sMS_controller.create_sms_viewdetailsms(message_sid)
+result = sMS_controller.create_view_sms1(message_sid)
 
 ```
 
 
-### <a name="create_sms_viewsms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_sms_viewsms") create_sms_viewsms
+### <a name="create_view_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_view_sms") create_view_sms
 
 > Retrieve a single SMS message object by its SmsSid.
 
 
 ```ruby
-def create_sms_viewsms(message_sid); end
+def create_view_sms(message_sid); end
 ```
 
 #### Parameters
@@ -2060,110 +1792,24 @@ def create_sms_viewsms(message_sid); end
 ```ruby
 message_sid = 'MessageSid'
 
-result = sMS_controller.create_sms_viewsms(message_sid)
+result = sMS_controller.create_view_sms(message_sid)
 
 ```
 
 
-### <a name="create_sms_getinboundsms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_sms_getinboundsms") create_sms_getinboundsms
-
-> Retrieve a list of Inbound SMS message objects.
-
-
-```ruby
-def create_sms_getinboundsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
-| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
-| date_sent |  ``` Optional ```  | Filter sms message objects by this date. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-from = 'From'
-collect['from'] = from
-
-to = 'To'
-collect['to'] = to
-
-date_sent = 'DateSent'
-collect['date_sent'] = date_sent
-
-
-result = sMS_controller.create_sms_getinboundsms(collect)
-
-```
-
-
-### <a name="create_sms_listsms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_sms_listsms") create_sms_listsms
-
-> Retrieve a list of Outbound SMS message objects.
-
-
-```ruby
-def create_sms_listsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
-| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
-| date_sent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-from = 'From'
-collect['from'] = from
-
-to = 'To'
-collect['to'] = to
-
-date_sent = 'DateSent'
-collect['date_sent'] = date_sent
-
-
-result = sMS_controller.create_sms_listsms(collect)
-
-```
-
-
-### <a name="create_sms_sendsms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_sms_sendsms") create_sms_sendsms
+### <a name="create_send_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_send_sms") create_send_sms
 
 > Send an SMS from a Ytel number
 
 
 ```ruby
-def create_sms_sendsms(options = {}); end
+def create_send_sms(from,
+                        to,
+                        body,
+                        method = nil,
+                        message_status_callback = nil,
+                        smartsms = nil,
+                        delivery_status = nil); end
 ```
 
 #### Parameters
@@ -2175,38 +1821,98 @@ def create_sms_sendsms(options = {}); end
 | body |  ``` Required ```  | The body message that is to be sent in the text. |
 | method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
 | message_status_callback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
-| smartsms |  ``` Optional ```  ``` DefaultValue ```  | Check's 'to' number can receive sms or not using Carrier API, if wireless = true then text sms is sent, else wireless = false then call is recieved to end user with audible message. |
-| delivery_status |  ``` Optional ```  ``` DefaultValue ```  | Delivery reports are a method to tell your system if the message has arrived on the destination phone. |
+| smartsms |  ``` Optional ```  | Check's 'to' number can receive sms or not using Carrier API, if wireless = true then text sms is sent, else wireless = false then call is recieved to end user with audible message. |
+| delivery_status |  ``` Optional ```  | Delivery reports are a method to tell your system if the message has arrived on the destination phone. |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 from = 'From'
-collect['from'] = from
-
 to = 'To'
-collect['to'] = to
-
 body = 'Body'
-collect['body'] = body
-
 method = 'Method'
-collect['method'] = method
-
 message_status_callback = 'MessageStatusCallback'
-collect['message_status_callback'] = message_status_callback
+smartsms = true
+delivery_status = true
 
-smartsms = false
-collect['smartsms'] = smartsms
+result = sMS_controller.create_send_sms(from, to, body, method, message_status_callback, smartsms, delivery_status)
 
-delivery_status = false
-collect['delivery_status'] = delivery_status
+```
 
 
-result = sMS_controller.create_sms_sendsms(collect)
+### <a name="create_list_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_list_sms") create_list_sms
+
+> Retrieve a list of Outbound SMS message objects.
+
+
+```ruby
+def create_list_sms(page = nil,
+                        page_size = nil,
+                        from = nil,
+                        to = nil,
+                        date_sent = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
+| date_sent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+
+
+#### Example Usage
+
+```ruby
+page = 244
+page_size = 244
+from = 'From'
+to = 'To'
+date_sent = 'DateSent'
+
+result = sMS_controller.create_list_sms(page, page_size, from, to, date_sent)
+
+```
+
+
+### <a name="create_list_inbound_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.create_list_inbound_sms") create_list_inbound_sms
+
+> Retrieve a list of Inbound SMS message objects.
+
+
+```ruby
+def create_list_inbound_sms(page = nil,
+                                page_size = nil,
+                                from = nil,
+                                to = nil,
+                                date_sent = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | The count of objects to return per page. |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
+| date_sent |  ``` Optional ```  | Filter sms message objects by this date. |
+
+
+#### Example Usage
+
+```ruby
+page = 244
+page_size = 244
+from = 'From'
+to = 'To'
+date_sent = 'DateSent'
+
+result = sMS_controller.create_list_inbound_sms(page, page_size, from, to, date_sent)
 
 ```
 
@@ -2223,13 +1929,13 @@ The singleton instance of the ``` SharedShortCodeController ``` class can be acc
 sharedShortCode_controller = client.shared_short_code
 ```
 
-### <a name="create_shortcode_viewshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_shortcode_viewshortcode") create_shortcode_viewshortcode
+### <a name="create_view_shortcode"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_view_shortcode") create_view_shortcode
 
 > The response returned here contains all resource properties associated with the given Shortcode.
 
 
 ```ruby
-def create_shortcode_viewshortcode(shortcode); end
+def create_view_shortcode(shortcode); end
 ```
 
 #### Parameters
@@ -2244,18 +1950,18 @@ def create_shortcode_viewshortcode(shortcode); end
 ```ruby
 shortcode = 'Shortcode'
 
-result = sharedShortCode_controller.create_shortcode_viewshortcode(shortcode)
+result = sharedShortCode_controller.create_view_shortcode(shortcode)
 
 ```
 
 
-### <a name="create_keyword_view"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_keyword_view") create_keyword_view
+### <a name="create_view_keyword"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_view_keyword") create_view_keyword
 
 > View a set of properties for a single keyword.
 
 
 ```ruby
-def create_keyword_view(keywordid); end
+def create_view_keyword(keywordid); end
 ```
 
 #### Parameters
@@ -2270,18 +1976,230 @@ def create_keyword_view(keywordid); end
 ```ruby
 keywordid = 'Keywordid'
 
-result = sharedShortCode_controller.create_keyword_view(keywordid)
+result = sharedShortCode_controller.create_view_keyword(keywordid)
 
 ```
 
 
-### <a name="create_shortcode_updateshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_shortcode_updateshortcode") create_shortcode_updateshortcode
+### <a name="create_view_template"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_view_template") create_view_template
+
+> View a Shared ShortCode Template
+
+
+```ruby
+def create_view_template(template_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| template_id |  ``` Required ```  | The unique identifier for a template object |
+
+
+#### Example Usage
+
+```ruby
+template_id = UUID.new
+
+result = sharedShortCode_controller.create_view_template(template_id)
+
+```
+
+
+### <a name="create_list_inbound_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_list_inbound_sms") create_list_inbound_sms
+
+> List All Inbound ShortCode
+
+
+```ruby
+def create_list_inbound_sms(datecreated = nil,
+                                page = nil,
+                                pagesize = nil,
+                                from = nil,
+                                shortcode = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| datecreated |  ``` Optional ```  | Only list messages sent with the specified date |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound ShortCode |
+| shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
+
+
+#### Example Usage
+
+```ruby
+datecreated = 'Datecreated'
+page = 244
+pagesize = 244
+from = 'from'
+shortcode = 'Shortcode'
+
+result = sharedShortCode_controller.create_list_inbound_sms(datecreated, page, pagesize, from, shortcode)
+
+```
+
+
+### <a name="create_send_sms"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_send_sms") create_send_sms
+
+> Send an SMS from a Ytel ShortCode
+
+
+```ruby
+def create_send_sms(shortcode,
+                        to,
+                        templateid,
+                        data,
+                        method = nil,
+                        message_status_callback = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | The Short Code number that is the sender of this message |
+| to |  ``` Required ```  | A valid 10-digit number that should receive the message |
+| templateid |  ``` Required ```  | The unique identifier for the template used for the message |
+| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
+| message_status_callback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
+
+
+#### Example Usage
+
+```ruby
+shortcode = 'shortcode'
+to = 'to'
+templateid = UUID.new
+data = 'data'
+method = 'Method'
+message_status_callback = 'MessageStatusCallback'
+
+result = sharedShortCode_controller.create_send_sms(shortcode, to, templateid, data, method, message_status_callback)
+
+```
+
+
+### <a name="create_list_templates"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_list_templates") create_list_templates
+
+> List Shortcode Templates by Type
+
+
+```ruby
+def create_list_templates(type = nil,
+                              page = nil,
+                              pagesize = nil,
+                              shortcode = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| type |  ``` Optional ```  | The type (category) of template Valid values: marketing, authorization |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| shortcode |  ``` Optional ```  | Only list templates of type |
+
+
+#### Example Usage
+
+```ruby
+type = 'type'
+page = 244
+pagesize = 244
+shortcode = 'Shortcode'
+
+result = sharedShortCode_controller.create_list_templates(type, page, pagesize, shortcode)
+
+```
+
+
+### <a name="create_list_keywords"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_list_keywords") create_list_keywords
+
+> Retrieve a list of keywords associated with your Ytel account.
+
+
+```ruby
+def create_list_keywords(page = nil,
+                             pagesize = nil,
+                             keyword = nil,
+                             shortcode = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| keyword |  ``` Optional ```  | Only list keywords of keyword |
+| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
+
+
+#### Example Usage
+
+```ruby
+page = 244
+pagesize = 244
+keyword = 'Keyword'
+shortcode = 244
+
+result = sharedShortCode_controller.create_list_keywords(page, pagesize, keyword, shortcode)
+
+```
+
+
+### <a name="create_list_shortcodes"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_list_shortcodes") create_list_shortcodes
+
+> Retrieve a list of shortcode assignment associated with your Ytel account.
+
+
+```ruby
+def create_list_shortcodes(shortcode = nil,
+                               page = nil,
+                               pagesize = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+
+
+#### Example Usage
+
+```ruby
+shortcode = 'Shortcode'
+page = 244
+pagesize = 244
+
+result = sharedShortCode_controller.create_list_shortcodes(shortcode, page, pagesize)
+
+```
+
+
+### <a name="update_shortcode"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.update_shortcode") update_shortcode
 
 > Update Assignment
 
 
 ```ruby
-def create_shortcode_updateshortcode(options = {}); end
+def update_shortcode(shortcode,
+                         friendly_name = nil,
+                         callback_url = nil,
+                         callback_method = nil,
+                         fallback_url = nil,
+                         fallback_url_method = nil); end
 ```
 
 #### Parameters
@@ -2299,272 +2217,14 @@ def create_shortcode_updateshortcode(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
 friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
 callback_url = 'CallbackUrl'
-collect['callback_url'] = callback_url
-
 callback_method = 'CallbackMethod'
-collect['callback_method'] = callback_method
-
 fallback_url = 'FallbackUrl'
-collect['fallback_url'] = fallback_url
-
 fallback_url_method = 'FallbackUrlMethod'
-collect['fallback_url_method'] = fallback_url_method
 
-
-result = sharedShortCode_controller.create_shortcode_updateshortcode(collect)
-
-```
-
-
-### <a name="create_template_view"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_template_view") create_template_view
-
-> View a Shared ShortCode Template
-
-
-```ruby
-def create_template_view(template_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| template_id |  ``` Required ```  | The unique identifier for a template object |
-
-
-#### Example Usage
-
-```ruby
-template_id = UUID.new
-
-result = sharedShortCode_controller.create_template_view(template_id)
-
-```
-
-
-### <a name="create_shortcode_listshortcode"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_shortcode_listshortcode") create_shortcode_listshortcode
-
-> Retrieve a list of shortcode assignment associated with your Ytel account.
-
-
-```ruby
-def create_shortcode_listshortcode(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
-
-result = sharedShortCode_controller.create_shortcode_listshortcode(collect)
-
-```
-
-
-### <a name="create_keyword_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_keyword_lists") create_keyword_lists
-
-> Retrieve a list of keywords associated with your Ytel account.
-
-
-```ruby
-def create_keyword_lists(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| keyword |  ``` Optional ```  | Only list keywords of keyword |
-| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-keyword = 'Keyword'
-collect['keyword'] = keyword
-
-shortcode = 195
-collect['shortcode'] = shortcode
-
-
-result = sharedShortCode_controller.create_keyword_lists(collect)
-
-```
-
-
-### <a name="create_template_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_template_lists") create_template_lists
-
-> List Shortcode Templates by Type
-
-
-```ruby
-def create_template_lists(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| type |  ``` Optional ```  ``` DefaultValue ```  | The type (category) of template Valid values: marketing, authorization |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| shortcode |  ``` Optional ```  | Only list templates of type |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-type = 'authorization'
-collect['type'] = type
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
-
-result = sharedShortCode_controller.create_template_lists(collect)
-
-```
-
-
-### <a name="create_shortcode_sendsms"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_shortcode_sendsms") create_shortcode_sendsms
-
-> Send an SMS from a Ytel ShortCode
-
-
-```ruby
-def create_shortcode_sendsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | The Short Code number that is the sender of this message |
-| to |  ``` Required ```  | A valid 10-digit number that should receive the message |
-| templateid |  ``` Required ```  | The unique identifier for the template used for the message |
-| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
-| message_status_callback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-shortcode = 'shortcode'
-collect['shortcode'] = shortcode
-
-to = 'to'
-collect['to'] = to
-
-templateid = UUID.new
-collect['templateid'] = templateid
-
-data = 'data'
-collect['data'] = data
-
-method = 'GET'
-collect['method'] = method
-
-message_status_callback = 'MessageStatusCallback'
-collect['message_status_callback'] = message_status_callback
-
-
-result = sharedShortCode_controller.create_shortcode_sendsms(collect)
-
-```
-
-
-### <a name="create_shortcode_getinboundsms"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.create_shortcode_getinboundsms") create_shortcode_getinboundsms
-
-> List All Inbound ShortCode
-
-
-```ruby
-def create_shortcode_getinboundsms(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound ShortCode |
-| shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
-| datecreated |  ``` Optional ```  | Only list messages sent with the specified date |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-from = 'from'
-collect['from'] = from
-
-shortcode = 'Shortcode'
-collect['shortcode'] = shortcode
-
-datecreated = 'Datecreated'
-collect['datecreated'] = datecreated
-
-
-result = sharedShortCode_controller.create_shortcode_getinboundsms(collect)
+result = sharedShortCode_controller.update_shortcode(shortcode, friendly_name, callback_url, callback_method, fallback_url, fallback_url_method)
 
 ```
 
@@ -2581,13 +2241,15 @@ The singleton instance of the ``` ConferenceController ``` class can be accessed
 conference_controller = client.conference
 ```
 
-### <a name="create_conferences_play_audio"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_play_audio") create_conferences_play_audio
+### <a name="create_play_audio"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_play_audio") create_play_audio
 
 > Play an audio file during a conference.
 
 
 ```ruby
-def create_conferences_play_audio(options = {}); end
+def create_play_audio(conference_sid,
+                          participant_sid,
+                          audio_url); end
 ```
 
 #### Parameters
@@ -2602,64 +2264,51 @@ def create_conferences_play_audio(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 conference_sid = 'ConferenceSid'
-collect['conference_sid'] = conference_sid
-
 participant_sid = 'ParticipantSid'
-collect['participant_sid'] = participant_sid
+audio_url = YtelApiv3::AudioUrlEnum::MP3
 
-audio_url = YtelApi::AudioUrlEnum::MP3
-collect['audio_url'] = audio_url
-
-
-result = conference_controller.create_conferences_play_audio(collect)
+result = conference_controller.create_play_audio(conference_sid, participant_sid, audio_url)
 
 ```
 
 
-### <a name="create_conferences_hangup_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_hangup_participant") create_conferences_hangup_participant
+### <a name="create_hangup_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_hangup_participant") create_hangup_participant
 
 > Remove a participant from a conference.
 
 
 ```ruby
-def create_conferences_hangup_participant(options = {}); end
+def create_hangup_participant(participant_sid,
+                                  conference_sid); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| conference_sid |  ``` Required ```  | The unique identifier for a conference object. |
 | participant_sid |  ``` Required ```  | The unique identifier for a participant object. |
+| conference_sid |  ``` Required ```  | The unique identifier for a conference object. |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
-conference_sid = 'ConferenceSid'
-collect['conference_sid'] = conference_sid
-
 participant_sid = 'ParticipantSid'
-collect['participant_sid'] = participant_sid
+conference_sid = 'ConferenceSid'
 
-
-result = conference_controller.create_conferences_hangup_participant(collect)
+result = conference_controller.create_hangup_participant(participant_sid, conference_sid)
 
 ```
 
 
-### <a name="create_conferences_viewconference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_viewconference") create_conferences_viewconference
+### <a name="create_view_conference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_view_conference") create_view_conference
 
 > Retrieve information about a conference by its ConferenceSid.
 
 
 ```ruby
-def create_conferences_viewconference(conference_sid); end
+def create_view_conference(conference_sid); end
 ```
 
 #### Parameters
@@ -2674,106 +2323,19 @@ def create_conferences_viewconference(conference_sid); end
 ```ruby
 conference_sid = 'ConferenceSid'
 
-result = conference_controller.create_conferences_viewconference(conference_sid)
+result = conference_controller.create_view_conference(conference_sid)
 
 ```
 
 
-### <a name="create_conferences_listconference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_listconference") create_conferences_listconference
-
-> Retrieve a list of conference objects.
-
-
-```ruby
-def create_conferences_listconference(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| friendly_name |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
-| date_created |  ``` Optional ```  | Conference created date |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
-date_created = 'DateCreated'
-collect['date_created'] = date_created
-
-
-result = conference_controller.create_conferences_listconference(collect)
-
-```
-
-
-### <a name="create_conferences_list_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_list_participant") create_conferences_list_participant
-
-> Retrieve a list of participants for an in-progress conference.
-
-
-```ruby
-def create_conferences_list_participant(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| conference_sid |  ``` Required ```  | The unique identifier for a conference. |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| muted |  ``` Optional ```  | Specifies if participant should be muted. |
-| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-conference_sid = 'ConferenceSid'
-collect['conference_sid'] = conference_sid
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-muted = true
-collect['muted'] = muted
-
-deaf = true
-collect['deaf'] = deaf
-
-
-result = conference_controller.create_conferences_list_participant(collect)
-
-```
-
-
-### <a name="create_conferences_view_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_view_participant") create_conferences_view_participant
+### <a name="create_view_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_view_participant") create_view_participant
 
 > Retrieve information about a participant by its ParticipantSid.
 
 
 ```ruby
-def create_conferences_view_participant(options = {}); end
+def create_view_participant(conference_sid,
+                                participant_sid); end
 ```
 
 #### Parameters
@@ -2787,147 +2349,24 @@ def create_conferences_view_participant(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 conference_sid = 'ConferenceSid'
-collect['conference_sid'] = conference_sid
-
 participant_sid = 'ParticipantSid'
-collect['participant_sid'] = participant_sid
 
-
-result = conference_controller.create_conferences_view_participant(collect)
+result = conference_controller.create_view_participant(conference_sid, participant_sid)
 
 ```
 
 
-### <a name="create_conferences_add_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_add_participant") create_conferences_add_participant
-
-> Add Participant in conference 
-
-
-```ruby
-def create_conferences_add_participant(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| conference_sid |  ``` Required ```  | The unique identifier for a conference object. |
-| participant_number |  ``` Required ```  | The phone number of the participant to be added. |
-| muted |  ``` Optional ```  | Specifies if participant should be muted. |
-| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-conference_sid = 'ConferenceSid'
-collect['conference_sid'] = conference_sid
-
-participant_number = 'ParticipantNumber'
-collect['participant_number'] = participant_number
-
-muted = true
-collect['muted'] = muted
-
-deaf = true
-collect['deaf'] = deaf
-
-
-result = conference_controller.create_conferences_add_participant(collect)
-
-```
-
-
-### <a name="create_conferences_create_conference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_create_conference") create_conferences_create_conference
-
-> Here you can experiment with initiating a conference call through Ytel and view the request response generated when doing so.
-
-
-```ruby
-def create_conferences_create_conference(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | A valid 10-digit number (E.164 format) that will be initiating the conference call. |
-| to |  ``` Required ```  | A valid 10-digit number (E.164 format) that is to receive the conference call. |
-| url |  ``` Required ```  | URL requested once the conference connects |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the conference is finished. |
-| status_call_back_method |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallback_url |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallback_method |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| record |  ``` Optional ```  | Specifies if the conference should be recorded. |
-| record_call_back_url |  ``` Optional ```  | Recording parameters will be sent here upon completion. |
-| record_call_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
-| schedule_time |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
-| timeout |  ``` Optional ```  | The number of seconds the call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-from = 'From'
-collect['from'] = from
-
-to = 'To'
-collect['to'] = to
-
-url = 'Url'
-collect['url'] = url
-
-method = 'POST'
-collect['method'] = method
-
-status_call_back_url = 'StatusCallBackUrl'
-collect['status_call_back_url'] = status_call_back_url
-
-status_call_back_method = 'StatusCallBackMethod'
-collect['status_call_back_method'] = status_call_back_method
-
-fallback_url = 'FallbackUrl'
-collect['fallback_url'] = fallback_url
-
-fallback_method = 'FallbackMethod'
-collect['fallback_method'] = fallback_method
-
-record = true
-collect['record'] = record
-
-record_call_back_url = 'RecordCallBackUrl'
-collect['record_call_back_url'] = record_call_back_url
-
-record_call_back_method = 'RecordCallBackMethod'
-collect['record_call_back_method'] = record_call_back_method
-
-schedule_time = 'ScheduleTime'
-collect['schedule_time'] = schedule_time
-
-timeout = 195
-collect['timeout'] = timeout
-
-
-result = conference_controller.create_conferences_create_conference(collect)
-
-```
-
-
-### <a name="create_conferences_deaf_mute_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conferences_deaf_mute_participant") create_conferences_deaf_mute_participant
+### <a name="create_silence_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_silence_participant") create_silence_participant
 
 > Deaf Mute Participant
 
 
 ```ruby
-def create_conferences_deaf_mute_participant(options = {}); end
+def create_silence_participant(conference_sid,
+                                   participant_sid,
+                                   muted = nil,
+                                   deaf = nil); end
 ```
 
 #### Parameters
@@ -2943,22 +2382,182 @@ def create_conferences_deaf_mute_participant(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 conference_sid = 'conferenceSid'
-collect['conference_sid'] = conference_sid
-
 participant_sid = 'ParticipantSid'
-collect['participant_sid'] = participant_sid
-
 muted = true
-collect['muted'] = muted
-
 deaf = true
-collect['deaf'] = deaf
+
+result = conference_controller.create_silence_participant(conference_sid, participant_sid, muted, deaf)
+
+```
 
 
-result = conference_controller.create_conferences_deaf_mute_participant(collect)
+### <a name="add_participant"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.add_participant") add_participant
+
+> Add Participant in conference 
+
+
+```ruby
+def add_participant(conference_sid,
+                        participant_number,
+                        muted = nil,
+                        deaf = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| conference_sid |  ``` Required ```  | The unique identifier for a conference object. |
+| participant_number |  ``` Required ```  | The phone number of the participant to be added. |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
+
+
+#### Example Usage
+
+```ruby
+conference_sid = 'ConferenceSid'
+participant_number = 'ParticipantNumber'
+muted = true
+deaf = true
+
+result = conference_controller.add_participant(conference_sid, participant_number, muted, deaf)
+
+```
+
+
+### <a name="create_conference"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_conference") create_conference
+
+> Here you can experiment with initiating a conference call through Ytel and view the request response generated when doing so.
+
+
+```ruby
+def create_conference(url,
+                          from,
+                          to,
+                          method = nil,
+                          status_call_back_url = nil,
+                          status_call_back_method = nil,
+                          fallback_url = nil,
+                          fallback_method = nil,
+                          record = nil,
+                          record_call_back_url = nil,
+                          record_call_back_method = nil,
+                          schedule_time = nil,
+                          timeout = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| url |  ``` Required ```  | URL requested once the conference connects |
+| from |  ``` Required ```  | A valid 10-digit number (E.164 format) that will be initiating the conference call. |
+| to |  ``` Required ```  | A valid 10-digit number (E.164 format) that is to receive the conference call. |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| status_call_back_url |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the conference is finished. |
+| status_call_back_method |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fallback_url |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallback_method |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| record |  ``` Optional ```  | Specifies if the conference should be recorded. |
+| record_call_back_url |  ``` Optional ```  | Recording parameters will be sent here upon completion. |
+| record_call_back_method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
+| schedule_time |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
+| timeout |  ``` Optional ```  | The number of seconds the call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set. |
+
+
+#### Example Usage
+
+```ruby
+url = 'Url'
+from = 'From'
+to = 'To'
+method = 'Method'
+status_call_back_url = 'StatusCallBackUrl'
+status_call_back_method = 'StatusCallBackMethod'
+fallback_url = 'FallbackUrl'
+fallback_method = 'FallbackMethod'
+record = true
+record_call_back_url = 'RecordCallBackUrl'
+record_call_back_method = 'RecordCallBackMethod'
+schedule_time = 'ScheduleTime'
+timeout = 244
+
+result = conference_controller.create_conference(url, from, to, method, status_call_back_url, status_call_back_method, fallback_url, fallback_method, record, record_call_back_url, record_call_back_method, schedule_time, timeout)
+
+```
+
+
+### <a name="create_list_participants"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_list_participants") create_list_participants
+
+> Retrieve a list of participants for an in-progress conference.
+
+
+```ruby
+def create_list_participants(conference_sid,
+                                 page = nil,
+                                 pagesize = nil,
+                                 muted = nil,
+                                 deaf = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| conference_sid |  ``` Required ```  | The unique identifier for a conference. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
+
+
+#### Example Usage
+
+```ruby
+conference_sid = 'ConferenceSid'
+page = 244
+pagesize = 244
+muted = true
+deaf = true
+
+result = conference_controller.create_list_participants(conference_sid, page, pagesize, muted, deaf)
+
+```
+
+
+### <a name="create_list_conferences"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.create_list_conferences") create_list_conferences
+
+> Retrieve a list of conference objects.
+
+
+```ruby
+def create_list_conferences(page = nil,
+                                pagesize = nil,
+                                friendly_name = nil,
+                                date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| friendly_name |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
+| date_created |  ``` Optional ```  | Conference created date |
+
+
+#### Example Usage
+
+```ruby
+page = 244
+pagesize = 244
+friendly_name = 'FriendlyName'
+date_created = 'DateCreated'
+
+result = conference_controller.create_list_conferences(page, pagesize, friendly_name, date_created)
 
 ```
 
@@ -2975,13 +2574,13 @@ The singleton instance of the ``` CarrierController ``` class can be accessed fr
 carrier_controller = client.carrier
 ```
 
-### <a name="create_carrier_lookup"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_carrier_lookup") create_carrier_lookup
+### <a name="create_lookup_carrier"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_lookup_carrier") create_lookup_carrier
 
 > Get the Carrier Lookup
 
 
 ```ruby
-def create_carrier_lookup(phone_number); end
+def create_lookup_carrier(phone_number); end
 ```
 
 #### Parameters
@@ -2996,41 +2595,36 @@ def create_carrier_lookup(phone_number); end
 ```ruby
 phone_number = 'PhoneNumber'
 
-result = carrier_controller.create_carrier_lookup(phone_number)
+result = carrier_controller.create_lookup_carrier(phone_number)
 
 ```
 
 
-### <a name="create_carrier_lookuplist"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_carrier_lookuplist") create_carrier_lookuplist
+### <a name="create_carrier_results"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.create_carrier_results") create_carrier_results
 
 > Retrieve a list of carrier lookup objects.
 
 
 ```ruby
-def create_carrier_lookuplist(options = {}); end
+def create_carrier_results(page = nil,
+                               page_size = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| page_size |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| page_size |  ``` Optional ```  | The count of objects to return per page. |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
+page = 244
+page_size = 244
 
-page = 1
-collect['page'] = page
-
-page_size = 10
-collect['page_size'] = page_size
-
-
-result = carrier_controller.create_carrier_lookuplist(collect)
+result = carrier_controller.create_carrier_results(page, page_size)
 
 ```
 
@@ -3047,13 +2641,13 @@ The singleton instance of the ``` EmailController ``` class can be accessed from
 email_controller = client.email
 ```
 
-### <a name="create_email_deleteinvalidemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_deleteinvalidemail") create_email_deleteinvalidemail
+### <a name="create_remove_invalid_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_remove_invalid_email") create_remove_invalid_email
 
 > Remove an email from the invalid email list.
 
 
 ```ruby
-def create_email_deleteinvalidemail(email); end
+def create_remove_invalid_email(email); end
 ```
 
 #### Parameters
@@ -3068,18 +2662,19 @@ def create_email_deleteinvalidemail(email); end
 ```ruby
 email = 'Email'
 
-result = email_controller.create_email_deleteinvalidemail(email)
+result = email_controller.create_remove_invalid_email(email)
 
 ```
 
 
-### <a name="create_email_listblockemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_listblockemail") create_email_listblockemail
+### <a name="create_blocked_emails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_blocked_emails") create_blocked_emails
 
 > Retrieve a list of emails that have been blocked.
 
 
 ```ruby
-def create_email_listblockemail(options = {}); end
+def create_blocked_emails(offset = nil,
+                              limit = nil); end
 ```
 
 #### Parameters
@@ -3093,27 +2688,22 @@ def create_email_listblockemail(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 offset = 'Offset'
-collect['offset'] = offset
-
 limit = 'Limit'
-collect['limit'] = limit
 
-
-result = email_controller.create_email_listblockemail(collect)
+result = email_controller.create_blocked_emails(offset, limit)
 
 ```
 
 
-### <a name="create_email_listspamemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_listspamemail") create_email_listspamemail
+### <a name="create_spam_emails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_spam_emails") create_spam_emails
 
 > Retrieve a list of emails that are on the spam list.
 
 
 ```ruby
-def create_email_listspamemail(options = {}); end
+def create_spam_emails(offset = nil,
+                           limit = nil); end
 ```
 
 #### Parameters
@@ -3127,27 +2717,22 @@ def create_email_listspamemail(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 offset = 'Offset'
-collect['offset'] = offset
-
 limit = 'Limit'
-collect['limit'] = limit
 
-
-result = email_controller.create_email_listspamemail(collect)
+result = email_controller.create_spam_emails(offset, limit)
 
 ```
 
 
-### <a name="create_email_listbounceemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_listbounceemail") create_email_listbounceemail
+### <a name="create_bounced_emails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_bounced_emails") create_bounced_emails
 
 > Retrieve a list of emails that have bounced.
 
 
 ```ruby
-def create_email_listbounceemail(options = {}); end
+def create_bounced_emails(offset = nil,
+                              limit = nil); end
 ```
 
 #### Parameters
@@ -3161,27 +2746,21 @@ def create_email_listbounceemail(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 offset = 'Offset'
-collect['offset'] = offset
-
 limit = 'Limit'
-collect['limit'] = limit
 
-
-result = email_controller.create_email_listbounceemail(collect)
+result = email_controller.create_bounced_emails(offset, limit)
 
 ```
 
 
-### <a name="create_email_deletebouncesemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_deletebouncesemail") create_email_deletebouncesemail
+### <a name="create_remove_bounced_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_remove_bounced_email") create_remove_bounced_email
 
 > Remove an email address from the bounced list.
 
 
 ```ruby
-def create_email_deletebouncesemail(email); end
+def create_remove_bounced_email(email); end
 ```
 
 #### Parameters
@@ -3196,18 +2775,19 @@ def create_email_deletebouncesemail(email); end
 ```ruby
 email = 'Email'
 
-result = email_controller.create_email_deletebouncesemail(email)
+result = email_controller.create_remove_bounced_email(email)
 
 ```
 
 
-### <a name="create_email_listinvalidemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_listinvalidemail") create_email_listinvalidemail
+### <a name="create_invalid_emails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_invalid_emails") create_invalid_emails
 
 > Retrieve a list of invalid email addresses.
 
 
 ```ruby
-def create_email_listinvalidemail(options = {}); end
+def create_invalid_emails(offset = nil,
+                              limit = nil); end
 ```
 
 #### Parameters
@@ -3221,27 +2801,22 @@ def create_email_listinvalidemail(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 offset = 'Offset'
-collect['offset'] = offset
-
 limit = 'Limit'
-collect['limit'] = limit
 
-
-result = email_controller.create_email_listinvalidemail(collect)
+result = email_controller.create_invalid_emails(offset, limit)
 
 ```
 
 
-### <a name="create_email_listunsubscribedemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_listunsubscribedemail") create_email_listunsubscribedemail
+### <a name="create_list_unsubscribed_emails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_list_unsubscribed_emails") create_list_unsubscribed_emails
 
 > Retrieve a list of email addresses from the unsubscribe list.
 
 
 ```ruby
-def create_email_listunsubscribedemail(options = {}); end
+def create_list_unsubscribed_emails(offset = nil,
+                                        limit = nil); end
 ```
 
 #### Parameters
@@ -3255,27 +2830,21 @@ def create_email_listunsubscribedemail(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 offset = 'Offset'
-collect['offset'] = offset
-
 limit = 'Limit'
-collect['limit'] = limit
 
-
-result = email_controller.create_email_listunsubscribedemail(collect)
+result = email_controller.create_list_unsubscribed_emails(offset, limit)
 
 ```
 
 
-### <a name="create_email_deleteunsubscribedemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_deleteunsubscribedemail") create_email_deleteunsubscribedemail
+### <a name="create_remove_unsubscribed_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_remove_unsubscribed_email") create_remove_unsubscribed_email
 
 > Remove an email address from the list of unsubscribed emails.
 
 
 ```ruby
-def create_email_deleteunsubscribedemail(email); end
+def create_remove_unsubscribed_email(email); end
 ```
 
 #### Parameters
@@ -3290,18 +2859,18 @@ def create_email_deleteunsubscribedemail(email); end
 ```ruby
 email = 'email'
 
-result = email_controller.create_email_deleteunsubscribedemail(email)
+result = email_controller.create_remove_unsubscribed_email(email)
 
 ```
 
 
-### <a name="create_email_addunsubscribesemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_addunsubscribesemail") create_email_addunsubscribesemail
+### <a name="add_email_unsubscribe"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.add_email_unsubscribe") add_email_unsubscribe
 
 > Add an email to the unsubscribe list
 
 
 ```ruby
-def create_email_addunsubscribesemail(email); end
+def add_email_unsubscribe(email); end
 ```
 
 #### Parameters
@@ -3316,18 +2885,18 @@ def create_email_addunsubscribesemail(email); end
 ```ruby
 email = 'email'
 
-result = email_controller.create_email_addunsubscribesemail(email)
+result = email_controller.add_email_unsubscribe(email)
 
 ```
 
 
-### <a name="create_email_deleteblocksemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_deleteblocksemail") create_email_deleteblocksemail
+### <a name="create_remove_blocked_address"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_remove_blocked_address") create_remove_blocked_address
 
 > Remove an email from blocked emails list.
 
 
 ```ruby
-def create_email_deleteblocksemail(email); end
+def create_remove_blocked_address(email); end
 ```
 
 #### Parameters
@@ -3342,18 +2911,18 @@ def create_email_deleteblocksemail(email); end
 ```ruby
 email = 'Email'
 
-result = email_controller.create_email_deleteblocksemail(email)
+result = email_controller.create_remove_blocked_address(email)
 
 ```
 
 
-### <a name="create_email_deletespamemail"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_deletespamemail") create_email_deletespamemail
+### <a name="create_remove_spam_address"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_remove_spam_address") create_remove_spam_address
 
 > Remove an email from the spam email list.
 
 
 ```ruby
-def create_email_deletespamemail(email); end
+def create_remove_spam_address(email); end
 ```
 
 #### Parameters
@@ -3368,18 +2937,25 @@ def create_email_deletespamemail(email); end
 ```ruby
 email = 'Email'
 
-result = email_controller.create_email_deletespamemail(email)
+result = email_controller.create_remove_spam_address(email)
 
 ```
 
 
-### <a name="create_email_sendemails"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_email_sendemails") create_email_sendemails
+### <a name="create_send_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
 
 > Create and submit an email message to one or more email addresses.
 
 
 ```ruby
-def create_email_sendemails(options = {}); end
+def create_send_email(to,
+                          type,
+                          subject,
+                          message,
+                          from = nil,
+                          cc = nil,
+                          bcc = nil,
+                          attachment = nil); end
 ```
 
 #### Parameters
@@ -3399,34 +2975,16 @@ def create_email_sendemails(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 to = 'To'
-collect['to'] = to
-
-type = YtelApi::TypeEnum::TEXT
-collect['type'] = type
-
+type = YtelApiv3::TypeEnum::TEXT
 subject = 'Subject'
-collect['subject'] = subject
-
 message = 'Message'
-collect['message'] = message
-
 from = 'From'
-collect['from'] = from
-
 cc = 'Cc'
-collect['cc'] = cc
-
 bcc = 'Bcc'
-collect['bcc'] = bcc
-
 attachment = 'Attachment'
-collect['attachment'] = attachment
 
-
-result = email_controller.create_email_sendemails(collect)
+result = email_controller.create_send_email(to, type, subject, message, from, cc, bcc, attachment)
 
 ```
 
@@ -3443,13 +3001,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 account_controller = client.account
 ```
 
-### <a name="create_accounts_viewaccount"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_accounts_viewaccount") create_accounts_viewaccount
+### <a name="create_view_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_view_account") create_view_account
 
 > Retrieve information regarding your Ytel account by a specific date. The response object will contain data such as account status, balance, and account usage totals.
 
 
 ```ruby
-def create_accounts_viewaccount(date); end
+def create_view_account(date); end
 ```
 
 #### Parameters
@@ -3464,7 +3022,7 @@ def create_accounts_viewaccount(date); end
 ```ruby
 date = 'Date'
 
-result = account_controller.create_accounts_viewaccount(date)
+result = account_controller.create_view_account(date)
 
 ```
 
@@ -3481,13 +3039,14 @@ The singleton instance of the ``` SubAccountController ``` class can be accessed
 subAccount_controller = client.sub_account
 ```
 
-### <a name="create_user_subaccountactivation"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_user_subaccountactivation") create_user_subaccountactivation
+### <a name="create_toggle_subaccount_status"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_toggle_subaccount_status") create_toggle_subaccount_status
 
 > Suspend or unsuspend
 
 
 ```ruby
-def create_user_subaccountactivation(options = {}); end
+def create_toggle_subaccount_status(sub_account_sid,
+                                        m_activate); end
 ```
 
 #### Parameters
@@ -3501,27 +3060,22 @@ def create_user_subaccountactivation(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 sub_account_sid = 'SubAccountSID'
-collect['sub_account_sid'] = sub_account_sid
+m_activate = YtelApiv3::MActivateEnum::ENUM_1
 
-m_activate = YtelApi::MActivateEnum::ACTIVATE
-collect['m_activate'] = m_activate
-
-
-result = subAccount_controller.create_user_subaccountactivation(collect)
+result = subAccount_controller.create_toggle_subaccount_status(sub_account_sid, m_activate)
 
 ```
 
 
-### <a name="create_user_deletesubaccount"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_user_deletesubaccount") create_user_deletesubaccount
+### <a name="create_delete_subaccount"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_delete_subaccount") create_delete_subaccount
 
 > Delete sub account or merge numbers into parent
 
 
 ```ruby
-def create_user_deletesubaccount(options = {}); end
+def create_delete_subaccount(sub_account_sid,
+                                 merge_number); end
 ```
 
 #### Parameters
@@ -3535,27 +3089,25 @@ def create_user_deletesubaccount(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 sub_account_sid = 'SubAccountSID'
-collect['sub_account_sid'] = sub_account_sid
+merge_number = YtelApiv3::MergeNumberEnum::ENUM_0
 
-merge_number = YtelApi::MergeNumberEnum::DELETE
-collect['merge_number'] = merge_number
-
-
-result = subAccount_controller.create_user_deletesubaccount(collect)
+result = subAccount_controller.create_delete_subaccount(sub_account_sid, merge_number)
 
 ```
 
 
-### <a name="create_user_createsubaccount"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_user_createsubaccount") create_user_createsubaccount
+### <a name="create_subaccount"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.create_subaccount") create_subaccount
 
 > Create a sub user account under the parent account
 
 
 ```ruby
-def create_user_createsubaccount(options = {}); end
+def create_subaccount(first_name,
+                          last_name,
+                          email,
+                          friendly_name,
+                          password); end
 ```
 
 #### Parameters
@@ -3572,25 +3124,13 @@ def create_user_createsubaccount(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 first_name = 'FirstName'
-collect['first_name'] = first_name
-
 last_name = 'LastName'
-collect['last_name'] = last_name
-
 email = 'Email'
-collect['email'] = email
-
 friendly_name = 'FriendlyName'
-collect['friendly_name'] = friendly_name
-
 password = 'Password'
-collect['password'] = password
 
-
-result = subAccount_controller.create_user_createsubaccount(collect)
+result = subAccount_controller.create_subaccount(first_name, last_name, email, friendly_name, password)
 
 ```
 
@@ -3607,13 +3147,13 @@ The singleton instance of the ``` AddressController ``` class can be accessed fr
 address_controller = client.address
 ```
 
-### <a name="address_deleteaddress"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.address_deleteaddress") address_deleteaddress
+### <a name="create_delete_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_delete_address") create_delete_address
 
 > To delete Address to your address book
 
 
 ```ruby
-def address_deleteaddress(addressid); end
+def create_delete_address(addressid); end
 ```
 
 #### Parameters
@@ -3628,18 +3168,18 @@ def address_deleteaddress(addressid); end
 ```ruby
 addressid = 'addressid'
 
-result = address_controller.address_deleteaddress(addressid)
+result = address_controller.create_delete_address(addressid)
 
 ```
 
 
-### <a name="address_verifyaddress"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.address_verifyaddress") address_verifyaddress
+### <a name="create_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_verify_address") create_verify_address
 
 > Validates an address given.
 
 
 ```ruby
-def address_verifyaddress(addressid); end
+def create_verify_address(addressid); end
 ```
 
 #### Parameters
@@ -3654,18 +3194,18 @@ def address_verifyaddress(addressid); end
 ```ruby
 addressid = 'addressid'
 
-result = address_controller.address_verifyaddress(addressid)
+result = address_controller.create_verify_address(addressid)
 
 ```
 
 
-### <a name="address_viewaddress"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.address_viewaddress") address_viewaddress
+### <a name="create_view_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_view_address") create_view_address
 
 > View Address Specific address Book by providing the address id
 
 
 ```ruby
-def address_viewaddress(addressid); end
+def create_view_address(addressid); end
 ```
 
 #### Parameters
@@ -3680,18 +3220,61 @@ def address_viewaddress(addressid); end
 ```ruby
 addressid = 'addressid'
 
-result = address_controller.address_viewaddress(addressid)
+result = address_controller.create_view_address(addressid)
 
 ```
 
 
-### <a name="address_createaddress"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.address_createaddress") address_createaddress
+### <a name="create_list_addresses"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_list_addresses") create_list_addresses
+
+> List All Address 
+
+
+```ruby
+def create_list_addresses(page = nil,
+                              pagesize = nil,
+                              addressid = nil,
+                              date_created = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | How many results to return, default is 10, max is 100, must be an integer |
+| addressid |  ``` Optional ```  | addresses Sid |
+| date_created |  ``` Optional ```  | date created address. |
+
+
+#### Example Usage
+
+```ruby
+page = 153
+pagesize = 153
+addressid = 'addressid'
+date_created = 'dateCreated'
+
+result = address_controller.create_list_addresses(page, pagesize, addressid, date_created)
+
+```
+
+
+### <a name="create_address"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.create_address") create_address
 
 > To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
 
 
 ```ruby
-def address_createaddress(options = {}); end
+def create_address(name,
+                       address,
+                       country,
+                       state,
+                       city,
+                       zip,
+                       description = nil,
+                       email = nil,
+                       phone = nil); end
 ```
 
 #### Parameters
@@ -3712,79 +3295,17 @@ def address_createaddress(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
 name = 'Name'
-collect['name'] = name
-
 address = 'Address'
-collect['address'] = address
-
 country = 'Country'
-collect['country'] = country
-
 state = 'State'
-collect['state'] = state
-
 city = 'City'
-collect['city'] = city
-
 zip = 'Zip'
-collect['zip'] = zip
-
 description = 'Description'
-collect['description'] = description
-
 email = 'email'
-collect['email'] = email
-
 phone = 'Phone'
-collect['phone'] = phone
 
-
-result = address_controller.address_createaddress(collect)
-
-```
-
-
-### <a name="address_listaddress"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.address_listaddress") address_listaddress
-
-> List All Address 
-
-
-```ruby
-def address_listaddress(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
-| addressid |  ``` Optional ```  | addresses Sid |
-| date_created |  ``` Optional ```  | date created address. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-addressid = 'addressid'
-collect['addressid'] = addressid
-
-date_created = 'dateCreated'
-collect['date_created'] = date_created
-
-
-result = address_controller.address_listaddress(collect)
+result = address_controller.create_address(name, address, country, state, city, zip, description, email, phone)
 
 ```
 
@@ -3801,13 +3322,13 @@ The singleton instance of the ``` RecordingController ``` class can be accessed 
 recording_controller = client.recording
 ```
 
-### <a name="create_recording_deleterecording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_recording_deleterecording") create_recording_deleterecording
+### <a name="create_delete_recording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_delete_recording") create_delete_recording
 
 > Remove a recording from your Ytel account.
 
 
 ```ruby
-def create_recording_deleterecording(recordingsid); end
+def create_delete_recording(recordingsid); end
 ```
 
 #### Parameters
@@ -3822,18 +3343,18 @@ def create_recording_deleterecording(recordingsid); end
 ```ruby
 recordingsid = 'recordingsid'
 
-result = recording_controller.create_recording_deleterecording(recordingsid)
+result = recording_controller.create_delete_recording(recordingsid)
 
 ```
 
 
-### <a name="create_recording_viewrecording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_recording_viewrecording") create_recording_viewrecording
+### <a name="create_view_recording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_view_recording") create_view_recording
 
 > Retrieve the recording of a call by its RecordingSid. This resource will return information regarding the call such as start time, end time, duration, and so forth.
 
 
 ```ruby
-def create_recording_viewrecording(recordingsid); end
+def create_view_recording(recordingsid); end
 ```
 
 #### Parameters
@@ -3848,26 +3369,29 @@ def create_recording_viewrecording(recordingsid); end
 ```ruby
 recordingsid = 'recordingsid'
 
-result = recording_controller.create_recording_viewrecording(recordingsid)
+result = recording_controller.create_view_recording(recordingsid)
 
 ```
 
 
-### <a name="create_recording_listrecording"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_recording_listrecording") create_recording_listrecording
+### <a name="create_list_recordings"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.create_list_recordings") create_list_recordings
 
 > Retrieve a list of recording objects.
 
 
 ```ruby
-def create_recording_listrecording(options = {}); end
+def create_list_recordings(page = nil,
+                               pagesize = nil,
+                               datecreated = nil,
+                               callsid = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
 | datecreated |  ``` Optional ```  | Filter results by creation date |
 | callsid |  ``` Optional ```  | The unique identifier for a call. |
 
@@ -3875,22 +3399,12 @@ def create_recording_listrecording(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
+page = 153
+pagesize = 153
 datecreated = 'Datecreated'
-collect['datecreated'] = datecreated
-
 callsid = 'callsid'
-collect['callsid'] = callsid
 
-
-result = recording_controller.create_recording_listrecording(collect)
+result = recording_controller.create_list_recordings(page, pagesize, datecreated, callsid)
 
 ```
 
@@ -3907,13 +3421,13 @@ The singleton instance of the ``` TranscriptionController ``` class can be acces
 transcription_controller = client.transcription
 ```
 
-### <a name="create_transcriptions_audiourltranscription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcriptions_audiourltranscription") create_transcriptions_audiourltranscription
+### <a name="create_transcribe_audio_url"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcribe_audio_url") create_transcribe_audio_url
 
 > Transcribe an audio recording from a file.
 
 
 ```ruby
-def create_transcriptions_audiourltranscription(audiourl); end
+def create_transcribe_audio_url(audiourl); end
 ```
 
 #### Parameters
@@ -3928,18 +3442,18 @@ def create_transcriptions_audiourltranscription(audiourl); end
 ```ruby
 audiourl = 'audiourl'
 
-result = transcription_controller.create_transcriptions_audiourltranscription(audiourl)
+result = transcription_controller.create_transcribe_audio_url(audiourl)
 
 ```
 
 
-### <a name="create_transcriptions_recordingtranscription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcriptions_recordingtranscription") create_transcriptions_recordingtranscription
+### <a name="create_transcribe_recording"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcribe_recording") create_transcribe_recording
 
 > Transcribe a recording by its RecordingSid.
 
 
 ```ruby
-def create_transcriptions_recordingtranscription(recording_sid); end
+def create_transcribe_recording(recording_sid); end
 ```
 
 #### Parameters
@@ -3954,18 +3468,18 @@ def create_transcriptions_recordingtranscription(recording_sid); end
 ```ruby
 recording_sid = 'recordingSid'
 
-result = transcription_controller.create_transcriptions_recordingtranscription(recording_sid)
+result = transcription_controller.create_transcribe_recording(recording_sid)
 
 ```
 
 
-### <a name="create_transcriptions_viewtranscription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcriptions_viewtranscription") create_transcriptions_viewtranscription
+### <a name="create_view_transcription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_view_transcription") create_view_transcription
 
 > Retrieve information about a transaction by its TranscriptionSid.
 
 
 ```ruby
-def create_transcriptions_viewtranscription(transcriptionsid); end
+def create_view_transcription(transcriptionsid); end
 ```
 
 #### Parameters
@@ -3980,26 +3494,29 @@ def create_transcriptions_viewtranscription(transcriptionsid); end
 ```ruby
 transcriptionsid = 'transcriptionsid'
 
-result = transcription_controller.create_transcriptions_viewtranscription(transcriptionsid)
+result = transcription_controller.create_view_transcription(transcriptionsid)
 
 ```
 
 
-### <a name="create_transcriptions_listtranscription"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_transcriptions_listtranscription") create_transcriptions_listtranscription
+### <a name="create_list_transcriptions"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.create_list_transcriptions") create_list_transcriptions
 
 > Retrieve a list of transcription objects for your Ytel account.
 
 
 ```ruby
-def create_transcriptions_listtranscription(options = {}); end
+def create_list_transcriptions(page = nil,
+                                   pagesize = nil,
+                                   status = nil,
+                                   date_transcribed = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
 | status |  ``` Optional ```  | The state of the transcription. |
 | date_transcribed |  ``` Optional ```  | The date the transcription took place. |
 
@@ -4007,22 +3524,12 @@ def create_transcriptions_listtranscription(options = {}); end
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
-page = 1
-collect['page'] = page
-
-pagesize = 10
-collect['pagesize'] = pagesize
-
-status = YtelApi::StatusEnum::INPROGRESS
-collect['status'] = status
-
+page = 153
+pagesize = 153
+status = YtelApiv3::Status12Enum::INPROGRESS
 date_transcribed = 'dateTranscribed'
-collect['date_transcribed'] = date_transcribed
 
-
-result = transcription_controller.create_transcriptions_listtranscription(collect)
+result = transcription_controller.create_list_transcriptions(page, pagesize, status, date_transcribed)
 
 ```
 
@@ -4039,44 +3546,37 @@ The singleton instance of the ``` UsageController ``` class can be accessed from
 usage_controller = client.usage
 ```
 
-### <a name="create_usage_listusage"></a>![Method: ](https://apidocs.io/img/method.png ".UsageController.create_usage_listusage") create_usage_listusage
+### <a name="create_list_usage"></a>![Method: ](https://apidocs.io/img/method.png ".UsageController.create_list_usage") create_list_usage
 
 > Retrieve usage metrics regarding your Ytel account. The results includes inbound/outbound voice calls and inbound/outbound SMS messages as well as carrier lookup requests.
 
 
 ```ruby
-def create_usage_listusage(options = {}); end
+def create_list_usage(product_code = nil,
+                          start_date = nil,
+                          end_date = nil,
+                          include_sub_accounts = nil); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| product_code |  ``` Optional ```  ``` DefaultValue ```  | Filter usage results by product type. |
-| start_date |  ``` Optional ```  ``` DefaultValue ```  | Filter usage objects by start date. |
-| end_date |  ``` Optional ```  ``` DefaultValue ```  | Filter usage objects by end date. |
+| product_code |  ``` Optional ```  | Filter usage results by product type. |
+| start_date |  ``` Optional ```  | Filter usage objects by start date. |
+| end_date |  ``` Optional ```  | Filter usage objects by end date. |
 | include_sub_accounts |  ``` Optional ```  | Will include all subaccount usage data |
 
 
 #### Example Usage
 
 ```ruby
-collect = Hash.new
-
-product_code = YtelApi::ProductCode27Enum::ALL
-collect['product_code'] = product_code
-
-start_date = '2016-09-06'
-collect['start_date'] = start_date
-
-end_date = '2016-09-06'
-collect['end_date'] = end_date
-
+product_code = YtelApiv3::ProductCodeEnum::ENUM_0
+start_date = 'startDate'
+end_date = 'endDate'
 include_sub_accounts = 'IncludeSubAccounts'
-collect['include_sub_accounts'] = include_sub_accounts
 
-
-result = usage_controller.create_usage_listusage(collect)
+result = usage_controller.create_list_usage(product_code, start_date, end_date, include_sub_accounts)
 
 ```
 
